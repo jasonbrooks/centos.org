@@ -34,7 +34,7 @@ May be in RPM:
   * asciidoc
   * nokogiri
 
-Installing on Fedora 20:
+Installing on Fedora 19/20:
 
 <pre>
 sudo yum install ruby asciidoc nokogiri
