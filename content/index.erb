@@ -1,0 +1,67 @@
+---
+title: CentOS Project
+is_hidden: true
+---
+<script type="text/javascript" >
+$(document).ready(function () {
+        $('#divRss').FeedEk({
+            FeedUrl: document.location.protocol + '//www.centos.org/assets/seven.rss',
+            DescCharacterLimit:100,
+            MaxCount: 4
+        });
+});
+</script>
+
+<div class="row">
+  <div class="jumbotron col-md-12">
+    <h1>New Look. New CentOS.</h1>
+    <p>CentOS has joined forces with Red Hat, working to provide a common platform for open source community project needs. <a href="http://lists.centos.org/pipermail/centos-announce/2014-January/020100.html">Read our announcement here</a>, then come join the conversation on <a href="http://wiki.centos.org/irc">irc</a>, the <a href="http://lists.centos.org/mailman/listinfo/">mailing lists</a> or the <a href="https://www.centos.org/forums/">forums</a>.</p>
+    <p>To help drive this common platform, CentOS Project has created a new official meritocratic <a href="/about/governance/">governance policy </a> with a focus on helping new projects grow and distribute a full-featured, easy-to-use environment.</p>
+    <p>Groups such as OpenStack, Xen4, Gluster, and oVirt can now customize CentOS Linux directly <em>inside the project</em>, building CentOS variants for new workloads on top of the slow-and-steady core platform. <a href="/variants">Read more about the variants proposal&raquo;</a></p>
+    <p></p>
+    <div class="downloadbutton"><a href="/download/">Get CentOS Linux Now</a></div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+    <h2 class="text-center">EL7 Progress</h2>
+    <div id="divRss">
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <h2 class="text-center">News & Events</h2>
+    <dl>
+      <dt><a href="http://wiki.centos.org/Events/Dojo/Brussels2014">Brussels-Belgium</a></dt><dd> &raquo; Jan 31st, 2014 - <a href="http://ibmbecentosdojo2014.eventbrite.com/">Register Now</a></dd>
+      <dt><a href="http://wiki.centos.org/Events/Dojo/">China</a></dt><dd> &raquo; Coming in 2014</dd>
+      <dt><a href="http://wiki.centos.org/Events/Dojo/">Phoenix, AZ, USA</a></dt><dd> &raquo; Coming in 2014</dd>
+      <dd><a href="http://wiki.centos.org/Events/Dojo/">More about Dojos</a></dd>
+    </ul>
+    <div class="media">
+      <a class="pull-left" href="#">
+        <img class="media-object img-rounded" src="/images/centoslogo-32.png" width="32" alt="..."></a>
+      <div class="media-body">
+        <h4 class="media-heading"><a href="/download/">New 6.5 release</a> <small><em>December 1st 2013</em></small></h4>
+        <p>The CentOS team is pleased to announce the immediate availability of CentOS 6.5 for i386 and x86_64 architectures.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <h2 class="text-center">Sponsorship</h2>
+    <p>CentOS would not be possible without the support of our sponsors. We would like to thank the following product/service for being a CentOS sponsor:</p>
+    <div class='cycle-slideshow' 
+      data-cycle-random="true"
+      data-cycle-timeout="3000" 
+      data-cycle-fx="fade" 
+      data-cycle-center-horz=true 
+      data-cycle-center-vert=true 
+      data-cycle-loader="wait" 
+      data-cycle-progressive="#images"
+      data-cycle-slides="> a"
+      data-cycle-pause-on-hover="true" >
+      <% @site.items.select { |i| i[:sponsor] }.each do|i| %>
+        <a href="<%= i[:url] %>"><img class="img-rounded" src="<%= i[:img] %>" /></a> <% end %>
+    </div>
+    <br /> 
+    <p><a href="/sponsors/">If you value our work, please consider becoming a sponsor!</a></p>
+  </div>
+</div>

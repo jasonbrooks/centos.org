@@ -1,0 +1,7 @@
+*~
+output/*
+tmp/*
+.sass-cache/*
+Guardfile
+output.diff
+crash.log

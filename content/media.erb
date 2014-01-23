@@ -1,0 +1,29 @@
+---
+title: Media
+presentation_title: Office Hours - Cloud SIG
+presenter: CentOS
+iframe_url: <iframe width="640" height="390" src="http://www.youtube.com/embed/VKKYY_5SOWw" frameborder="0" allowfullscreen></iframe>
+event: Office Hours
+stream: true
+---
+<% if @item[:stream] %>
+
+  <% if @item[:presentation_title] %>
+    <h1 class="video"> <%= @item[:presentation_title] %> </h1>
+  <% end %>
+  <% if @item[:presenter] %>
+    <h2 class="video"> Presenter: <%= @item[:presenter] %>
+  <% end %>
+  <br />
+  <br />
+  <%= @item[:iframe_url] %>
+
+  <% if @item[:event] %>
+    <h3 class="video">Stream of: <%= @item[:event] %>
+  <% end %>
+<% else %>
+<h1 class="video"> No Live Broadcast</h1>
+<h2 class="video">Videos from Past Events</h2>
+<iframe width="560" height="315" src="http://www.youtube.com/embed/videoseries?list=PLuRtbOXpVDjC0WAkHx0oW4Y6gu8uBWHmf" frameborder="0" ></iframe>
+<% end %>
+
