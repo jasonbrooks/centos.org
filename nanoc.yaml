@@ -82,10 +82,10 @@ watcher:
 
 #Deployment
 deploy:
-  staging:
+  dev:
     kind: rsync
-    dst: "root@10.10.171.50:/var/www/html"
-    options: [ '-aP', '--delete-after' ]
+    dst: "webcontent@c6pn1.centos.in:/var/www/html/websitev2"
+    options: [ '-aP', '--delete-after', '--exclude="*.csv"', '--exclude="*.rss"' ]
   prod1:
     kind: rsync
     dst: "webcontent@newweb.centos.org:/var/www/html/websitev2"
