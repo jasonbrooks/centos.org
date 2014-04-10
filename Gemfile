@@ -11,7 +11,8 @@ gem "rubypants", "~> 0.2.0"
 gem "rainpress", "~> 1.0"
 gem "kramdown", '~> 1.3.3'
 gem 'systemu', '~> 2.6.4'
-
+gem 'adsf'
+gem 'guard-nanoc'
 
 # Debugger / REPL alternative to irb
 gem 'pry'
