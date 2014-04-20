@@ -221,3 +221,8 @@ ul#markdown-toc:before {
 #CSVTable a {
   color: #ddd;
 }
+
+ul.sessions a {
+  font-weight: 600;
+  color: #aaa;
+}
