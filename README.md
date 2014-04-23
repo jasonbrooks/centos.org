@@ -37,7 +37,7 @@ May be in RPM:
 Installing on Fedora 19/20:
 
 <pre>
-sudo yum install ruby asciidoc nokogiri
+sudo yum install ruby asciidoc rubygem-nokogiri
 gem install nanoc adsf cri compass haml kramdown pry rainpress rubypants sass susy systemu
 </pre>
 
