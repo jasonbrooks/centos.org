@@ -55,12 +55,12 @@ Security Architect at Rackspace but I'm still a big fan of CentOS for my
 personal projects.
 
 If you'd like to get in touch with me, find me on Twitter[1] or on IRC 
-(rackerhacker on Freenode).  I've made plenty of posts regarding CentOS, 
+(mhayden on Freenode).  I've made plenty of posts regarding CentOS, 
 Red Hat, and Fedora tips on my blog[2] and I maintain some Fedora/EPEL 
 packages[3] that may be of interest.
 
 1.  [http://twitter.com/majorhayden/](http://twitter.com/majorhayden/)
-2.  [http://rackerhacker.com/](http://rackerhacker.com/)
+2.  [http://major.io/](http://major.io/)
 3.  [https://admin.fedoraproject.org/pkgdb/users/packages/mhayden](https://admin.fedoraproject.org/pkgdb/users/packages/mhayden)
 
 ##Christoph Galuschka
