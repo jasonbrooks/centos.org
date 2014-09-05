@@ -103,7 +103,7 @@ You may not change any logo except to scale it. This means you may not add eleme
 
 #Contact Information
 
-If you have any questions about these Guidelines or uses of the CentOS Marks not addressed in the Guidelines, or if you encounter any confusing use or misuse of the CentOS Marks, please contact centos-tm@redhat.com.
+If you have any questions about these Guidelines or uses of the CentOS Marks not addressed in the Guidelines, or if you encounter any confusing use or misuse of the CentOS Marks, please contact centos-tm@centos.org.
 
 #License and Attribution
 These Guidelines are based in part on the [Model Trademark Guidelines](http://modeltrademarkguidelines.org/index.php?title=Home:_Model_Trademark_Guidelines). Both these Guidelines and the Model Trademark Guidelines are licensed  under a [Creative Commons Attribution 3.0 Unported license](https://creativecommons.org/licenses/by/3.0/deed.en_US).
