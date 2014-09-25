@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<title>#centos-devel: cbs/infra</title>
+<style type="text/css">
+/* This is for the .html in the HTML2 writer */
+body {
+    font-family: Helvetica, sans-serif;
+    font-size:14px;
+}
+h1 {
+    text-align: center;
+}
+a {
+    color:navy;
+    text-decoration: none;
+    border-bottom:1px dotted navy;
+}
+a:hover {
+    text-decoration:none;
+    border-bottom: 0;
+    color:#0000B9;
+}
+hr {
+    border: 1px solid #ccc;
+}
+/* The (nick, time) item pairs, and other body text things. */
+.details {
+    font-size: 12px;
+    font-weight:bold;
+}
+/* The 'AGREED:', 'IDEA', etc, prefix to lines. */
+.itemtype {
+    font-style: normal;    /* un-italics it */
+    font-weight: bold;
+}
+/* Example: change single item types.  Capitalized command name.
+/* .TOPIC  {  color:navy;  } */
+/* .AGREED {  color:lime;  } */
+
+</style>
+</head>
+
+<body>
+<h1>#centos-devel: cbs/infra</h1>
+<span class="details">
+Meeting started by bstinson at 13:02:39 UTC
+(<a href="centos-devel.2014-09-22-13.02.log.html">full logs</a>).</span>
+
+<br><br>
+
+
+
+<h3>Meeting summary</h3>
+<ol>
+<li>
+<ol type="a">
+  <li><a
+    href="https://trello.com/b/CKGGvcKU/cbs-centos-org">https://trello.com/b/CKGGvcKU/cbs-centos-org</a>
+    is the url to the board <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-5'>kbsingh</a>,
+    13:02:50)</span></li>
+</ol>
+<br></li>
+<li><b class="TOPIC">Greetings / Who's Here?</b> <span class="details">(<a href='centos-devel.2014-09-22-13.02.log.html#l-6'>bstinson</a>, 13:03:03)</span>
+<br></li>
+<li><b class="TOPIC">Agenda</b> <span class="details">(<a href='centos-devel.2014-09-22-13.02.log.html#l-16'>bstinson</a>, 13:04:21)</span>
+<ol type="a">
+  <li><span class="INFO">FAS/IPA Testing - Short Status Update</span>
+    <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-17'>bstinson</a>,
+    13:04:24)</span></li>
+  <li><span class="INFO">Centpkg Progress - Short Status Update</span>
+    <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-18'>bstinson</a>,
+    13:04:28)</span></li>
+  <li><span class="INFO">Blocker List</span> <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-19'>bstinson</a>,
+    13:04:32)</span></li>
+  <li><span class="INFO">Brainstorming SIG Branch and Build Target
+    Names</span> <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-20'>bstinson</a>,
+    13:04:35)</span></li>
+  <li><span class="INFO">Open Floor</span> <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-21'>bstinson</a>,
+    13:04:41)</span></li>
+</ol>
+<br></li>
+<li><b class="TOPIC">FAS/IPA Testing</b> <span class="details">(<a href='centos-devel.2014-09-22-13.02.log.html#l-25'>bstinson</a>, 13:05:28)</span>
+<ol type="a">
+  <li><span class="INFO">Infra team provisioned three VMs last week to
+    use for FAS &amp; IPA testing</span> <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-29'>quaid</a>,
+    13:06:27)</span></li>
+  <li><span class="INFO">can use the mailing list discussion to get
+    requirements</span> <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-45'>quaid</a>,
+    13:10:06)</span></li>
+  <li><i class="itemtype">ACTION</i>: <span class="ACTION">quaid can
+    write-up the requirements in to a wiki page to reference</span>
+    <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-46'>quaid</a>,
+    13:10:39)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">should we have a
+    second koji for ease of SSL testing, etc.?</span> <span
+    class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-59'>quaid</a>,
+    13:13:31)</span></li>
+  <li><span class="INFO">dev.git.centos.org can be used for testing git
+    connection</span> <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-78'>quaid</a>,
+    13:18:38)</span></li>
+</ol>
+<br></li>
+<li><b class="TOPIC">Centpkg Progress</b> <span class="details">(<a href='centos-devel.2014-09-22-13.02.log.html#l-84'>bstinson</a>, 13:20:00)</span>
+<ol type="a">
+  <li><span class="INFO">centpkg is reading in user certs and is able to
+    kick off koji builds</span> <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-89'>quaid</a>,
+    13:21:16)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">put git branch to
+    koji target in a config file instead of being hard-coded</span>
+    <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-95'>quaid</a>,
+    13:21:53)</span></li>
+  <li><i class="itemtype">ACTION</i>: <span class="ACTION">bstinson will
+    clean up his commits and send centpkg patches to the mailing
+    list</span> <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-106'>bstinson</a>,
+    13:25:15)</span></li>
+  <li><a
+    href="http://copr.fedoraproject.org/coprs/bstinson/Centpkg/">http://copr.fedoraproject.org/coprs/bstinson/Centpkg/</a>
+    <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-114'>bstinson</a>,
+    13:27:13)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">have centpkg
+    eventually live in e.g. CentOS Extras</span> <span
+    class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-115'>quaid</a>,
+    13:27:33)</span></li>
+  <li><span class="INFO">not currently relying upon EPEL directly,
+    anything needed gets pulled in to local build, e.g. rpkg</span>
+    <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-127'>quaid</a>,
+    13:29:59)</span></li>
+</ol>
+<br></li>
+<li><b class="TOPIC">Blocker List</b> <span class="details">(<a href='centos-devel.2014-09-22-13.02.log.html#l-134'>bstinson</a>, 13:31:44)</span>
+<ol type="a">
+  <li><span class="INFO">integrate upstream patch in koji to support
+    git.c.o</span> <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-135'>alphacc</a>,
+    13:32:23)</span></li>
+  <li><i class="itemtype">ACTION</i>: <span class="ACTION">Build CentOS
+    koji rpms and install them (server-side).</span> <span
+    class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-142'>alphacc</a>,
+    13:35:52)</span></li>
+  <li><i class="itemtype">AGREED</i>: <span class="AGREED">Project will
+    carry own koji RPMs to carry our own patches etc.</span> <span
+    class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-149'>quaid</a>,
+    13:39:28)</span></li>
+  <li><span class="INFO">can't use sshkeys for auth for git, needs to go
+    over https for code pathway</span> <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-169'>quaid</a>,
+    13:47:27)</span></li>
+  <li><a
+    href="https://git.centos.org/summary/centpkg.git">https://git.centos.org/summary/centpkg.git</a>
+    <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-184'>kbsingh</a>,
+    13:54:07)</span></li>
+  <li><span class="INFO">need to settle on temp auth method for
+    git.centos.org over https</span> <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-214'>quaid</a>,
+    14:03:27)</span></li>
+  <li><span class="INFO">Next Meeting: Monday 29-Sept, 13:00 UTC</span>
+    <span class="details">(<a
+    href='centos-devel.2014-09-22-13.02.log.html#l-224'>bstinson</a>,
+    14:06:19)</span></li>
+</ol>
+</li>
+</ol>
+<br><br>
+
+
+
+<span class="details">
+Meeting ended at 14:06:55 UTC
+(<a href="centos-devel.2014-09-22-13.02.log.html">full logs</a>).</span>
+
+<br><br>
+
+
+
+<h3>Action items</h3>
+<ol>
+  <li>quaid can write-up the requirements in to a wiki page to reference</li>
+  <li>bstinson will clean up his commits and send centpkg patches to the mailing list</li>
+  <li>Build CentOS koji rpms and install them (server-side).</li>
+</ol>
+<br><br>
+
+
+
+<h3>Action items, by person</h3>
+<ol>
+  <li> bstinson <ol>
+    <li>bstinson will clean up his commits and send centpkg patches to the mailing list</li>
+  </ol></li>
+  <li> quaid <ol>
+    <li>quaid can write-up the requirements in to a wiki page to reference</li>
+  </ol></li>
+</ol>
+<br><br>
+
+
+
+<h3>People present (lines said)</h3>
+<ol>
+  <li>kbsingh (55)</li>
+  <li>MerlinTHP (48)</li>
+  <li>bstinson (46)</li>
+  <li>quaid (33)</li>
+  <li>alphacc (19)</li>
+  <li>Evolution (9)</li>
+  <li>centbot (5)</li>
+  <li>gwd (3)</li>
+  <li>mattymo (3)</li>
+  <li>Arrfab (3)</li>
+  <li>mikem (3)</li>
+  <li>wolfy (1)</li>
+  <li>jitseklomp (1)</li>
+</ol>
+<br><br>
+
+
+
+<span class="details">Generated by <a href="http://wiki.debian.org/MeetBot">MeetBot</a> 0.1.4.</span>
+</body></html>

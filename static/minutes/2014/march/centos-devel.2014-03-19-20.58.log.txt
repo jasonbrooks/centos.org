@@ -1,0 +1,88 @@
+20:58:13 <quaid> #startmeeting Board meeting live http://centos.org/media - agenda for today:  Storage and Cloud-related SIG proposals
+20:58:13 <centbot> Meeting started Wed Mar 19 20:58:13 2014 UTC.  The chair is quaid. Information about MeetBot at http://wiki.debian.org/MeetBot.
+20:58:13 <centbot> Useful Commands: #action #agreed #help #info #idea #link #topic.
+20:58:40 <quaid> #chair Evolution hughesjr range tru_tru kbsingh mikem23 Arrfab
+20:58:40 <centbot> Current chairs: Arrfab Evolution hughesjr kbsingh mikem23 quaid range tru_tru
+21:01:26 <kbsingh> scuttlemonkey: around ?
+21:01:38 <scuttlemonkey> kbsingh: yep, watching the stream now
+21:01:45 <alphacc> hi guys, is there a hangout link ?
+21:03:19 <TrevorH> the audio is barely functional :(
+21:03:23 <quaid> just getting ready
+21:03:45 <quaid> alphacc: for watching, you should be able to find it at http://centos.org/media
+21:03:53 <quaid> or on the YouTube channel?
+21:04:01 <Evolution> quaid: not until I get the updated youtube url he can't :-P
+21:04:06 <kbsingh> quaid: that url needs to be updated i think
+21:04:06 <quaid> erps
+21:04:08 <Evolution> I need the url to put on media
+21:04:12 <quaid> you still can't get that in advance?
+21:04:13 <Evolution> er, /media
+21:04:26 <kbsingh> http://www.youtube.com/watch?v=muUOhg12FKs
+21:04:28 <Evolution> the person who starts them sees it
+21:04:31 <Evolution> ah, there we go
+21:04:33 <Evolution> one sec
+21:05:25 <Evolution> okay, pushing now
+21:06:57 <alphacc> youtube link is ok, nothing on media yet. thx !
+21:07:26 <quaid> #topic Storage SIG proposal
+21:07:28 <quaid> http://wiki.centos.org/SpecialInterestGroup/Storage/Proposal
+21:08:31 <quaid> scuttlemonkey == Patrick?
+21:08:39 <scuttlemonkey> yep, that's me
+21:09:25 <quaid> #agreed we have a quorum
+21:10:45 <TrevorH> kbsingh: yes, your audio is much better now, less Herbie Hancock
+21:11:51 <kbsingh> woo!
+21:12:20 <quaid> #info SIG members currently include Ceph and Gluster
+21:13:28 <quaid> #info SIG members include Patrick Mcgarry (Ceph) and Lalatendu Mohanty (GlusterFS) and KBSingh (Board mentor/liaison)
+21:16:14 <quaid> scuttlemonkey: yeah, it's "building bridges" not "burning" them ;-D
+21:16:20 <scuttlemonkey> hehe
+21:16:26 * quaid is Karsten btw
+21:16:37 <scuttlemonkey> sorry, that's my own turn of phrase
+21:16:43 <scuttlemonkey> I shouldn't use that in mixed company
+21:17:20 <scuttlemonkey> I tend to eschew your typical calloquialisms
+21:17:44 <quaid> heh
+21:18:00 <quaid> oh, no, it made sense to me, from the way you phrased it in context :)
+21:18:16 <quaid> #info Need to work on repository structure
+21:18:56 <quaid> #info qemu dependencies mean work with the Cloud * SIG who adopts qemu to figure out if it can be worked together, hierarchical setup, with maintain-your-own the last possible answer :)
+21:22:16 <alphacc> I don't know if I can ask question but can't we consider rhev rebuild for a qemu-kvm that works out of the box(accross sigs). It may not fit gluster team as it ship with some specific gluster version. (it's what we do in prod at CERN)
+21:22:45 <quaid> #info a storage SIG repository could be cleaner and keep things out of CentOS Extras and CentOS Plus
+21:22:52 * quaid hoped he simplified that well
+21:23:54 <scuttlemonkey> yeah, Ceph is already in centos-extras...we were hoping to make it easier to deploy storage options through this effort
+21:24:40 <quaid> alphacc: I think it's relevant, sure; the point around the SIG is a gathering of people around a technology who are willing to maintain and grow community around the technology
+21:25:30 <quaid> alphacc: so my initial thought is, who is offering to maintain that rebuild? and does it fit in one or more existing SIGs? if yes, then those SIGs need to weigh in on how it could work; if not, then is it a standalone SIG?
+21:26:37 <kbsingh> quaid: alphacc: i think the virtsig might be a good place to curate that
+21:26:47 <kbsingh> but can do we discussion
+21:26:59 <alphacc> yes my idea was to solve the qemu-kvm issues this way. HAve an effort to rebuild a cloud oriented qemu-kvm.
+21:27:12 <kbsingh> alphacc: the trick is going to be finding where to host it
+21:27:27 <quaid> #action need to consider best way to handle questions from IRC, Twitter, etc. for live Board hangouts.
+21:27:52 <kbsingh> woo! xen qemu could use ceph
+21:36:01 <quaid> #agreed start new SIG work on main -devel and users lists, then branch as needed
+21:36:24 <quaid> #idea having an all-SIGs-overview mailing list for cross-SIG coordination (esp. if things move from -devel)
+21:37:18 <quaid> #action make sure new SIG work gets exposure of ~first 3 months on main centos-devel list
+21:37:45 <quaid> #idea have a SIG coordinators (or all maintainers) should have a chat every few weeks, such as a public Hangout or IRC
+21:39:48 <quaid> #agreed quorum voted yes to Storage SIG propsals
+21:40:00 <quaid> #action KB to follow up with Jim and Tru
+21:40:11 <quaid> #action KB to send call-to-action to -devel list
+21:40:16 <range> I think the "sig coordinator mailing list" isn't a bad idea. We have the same for the people running the foreign language mailing lists. Not that that list has any traffic at all ...
+21:40:41 <quaid> #idea include CentOS package/build expert, Ceph will bring their maintainer
+21:42:06 <kbsingh> http://wiki.centos.org/SpecialInterestGroup/CloudInstance/Proposal
+21:42:08 <mikem23> http://wiki.centos.org/SpecialInterestGroup/CloudInstance/Proposal
+21:42:22 <quaid> #topic Cloud Instance SIG
+21:42:27 <quaid> http://wiki.centos.org/SpecialInterestGroup/CloudInstance/Proposal
+21:43:24 <quaid> #info the intention of this SIG is to have folks who know what they are doing and represent mindshare, come together and help us build images that work across cloud providers, meet best practices, development environments, tuned up for environments.
+21:43:36 <quaid> #info primary charter is to bring in existing experts to help us build images
+21:49:53 <quaid> #info SIG will deliver a basic image that others can bundle with their RPMs to do their own image
+21:50:13 <quaid> #info cloud-init, minimizing for certain instances, perf tuning for certain hypervisors
+21:50:37 <quaid> #info most of the work will be kickstart files v. RPMs
+21:51:47 <quaid> #idea SIG is focused on tuning and curating the image, but there is room in the scope to provide multiple images tuned for various environments
+21:53:00 <TrevorH> you need an authentication SIG ;)
+21:53:40 <quaid> #info Primary interface will be with the Core SIG
+21:54:30 <quaid> #info SIG is requesting cloud.centos.org as a source (with an API?) for distributing images, cf. mirror.centos.org for packages
+22:00:10 <quaid> #info QA for images are basic/essential, may look to spread out toward different hypervisors
+22:00:24 <quaid> #idea having 2 physical machines ready for a few hours every day for QA
+22:01:29 <alphacc> it would be nice to have a process to promote image when they get enough testing/traction to official installation media.
+22:03:54 <quaid> alphacc: can you repeat that with '#idea' in front? that helps it get in the discussion/minutes from here
+22:04:42 <alphacc> #idea it would be nice to have a process to promote image when they get enough testing/traction to official installation media.
+22:06:37 <quaid> thanks :)
+22:07:45 <quaid> #agreed Vote agrees to the Cloud Instance SIG proposal; follow-up to happen with Jim and Tru to confirm their votes
+22:08:03 <quaid> #action KB to follow-up with Jim and Tru about this vote
+22:08:18 <quaid> #action SIG needs to define primary point of contact/coordinator
+22:09:09 <quaid> finishing ...
+22:09:20 <quaid> #endmeeting

@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<title>#centos-devel log</title>
+<style type="text/css">
+/* For the .log.html */
+pre { /*line-height: 125%;*/
+      white-space: pre-wrap; }
+body { background: #f0f0f0; }
+
+body .tm  { color: #007020 }                      /* time */
+body .nk  { color: #062873; font-weight: bold }   /* nick, regular */
+body .nka { color: #007020; font-weight: bold }  /* action nick */
+body .ac  { color: #00A000 }                      /* action line */
+body .hi  { color: #4070a0 }                 /* hilights */
+/* Things to make particular MeetBot commands stick out */
+body .topic     { color: #007020; font-weight: bold }
+body .topicline { color: #000080; font-weight: bold }
+body .cmd       { color: #007020; font-weight: bold }
+body .cmdline  { font-weight: bold }
+
+</style>
+</head>
+
+<body>
+<pre><a name="l-1"></a><span class="tm">16:20:21</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#startmeeting</span><span class="cmdline"></span>
+<a name="l-2"></a><span class="tm">16:20:21</span><span class="nk"> &lt;centbot&gt;</span> Meeting started Thu Jan 23 16:20:21 2014 UTC.  The chair is quaid. Information about MeetBot at http://wiki.debian.org/MeetBot.
+<a name="l-3"></a><span class="tm">16:20:21</span><span class="nk"> &lt;centbot&gt;</span> Useful Commands: #action #agreed #help #info #idea #link #topic.
+<a name="l-4"></a><span class="tm">16:20:53</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">around Java jars, all that matters is redistributability -- if you want to maintain N jars for your users, that's up to you</span>
+<a name="l-5"></a><span class="tm">16:21:45</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">branding forum to discuss and resolve, cf. fedora-legal list</span>
+<a name="l-6"></a><span class="tm">16:22:09</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#action </span><span class="cmdline">quaid to talk with fontana about branding forum</span>
+<a name="l-7"></a><span class="tm">16:22:20</span><span class="nk"> &lt;quaid&gt;</span> anyone else who wants to help keep notes from the meeting, go ahead
+<a name="l-8"></a><span class="tm">16:22:31</span><span class="nk"> &lt;quaid&gt;</span> I'm not sure where the logs write to yet ...
+<a name="l-9"></a><span class="tm">16:23:00</span><span class="nk"> &lt;DrBacchus&gt;</span> You'll get a URL when you end the meeting.
+<a name="l-10"></a><span class="tm">16:23:17</span><span class="nk"> &lt;DrBacchus&gt;</span> Several of them, in fact.
+<a name="l-11"></a><span class="tm">16:23:27</span><span class="nk"> &lt;goozbach&gt;</span> <span class="hi">quaid:</span> you'll need to add whoever wants to add notes to #chair
+<a name="l-12"></a><span class="tm">16:23:50</span><span class="nk"> &lt;quaid&gt;</span> right, the last one I saw from output didn't show the full URL just the local path, not sure what host it's on in other words
+<a name="l-13"></a><span class="tm">16:24:12</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">goozbach:</span> I think anyone can do #idea and #info, only #agreed and #topic and a few others are saved to chair iirc
+<a name="l-14"></a><span class="tm">16:25:12</span><span class="nk"> &lt;Evolution&gt;</span> we ( Bahhumbug ) will be improving centbot in the coming days, so there should be some additional improvements
+<a name="l-15"></a><span class="tm">16:25:20</span><span class="nk"> &lt;DrBacchus&gt;</span> Someone needs to mute.
+<a name="l-16"></a><span class="tm">16:25:27</span><span class="nk"> &lt;goozbach&gt;</span> There definately is a call for something around rebrandability/interoperability SIG
+<a name="l-17"></a><span class="tm">16:26:02</span><span class="nk"> &lt;goozbach&gt;</span> <span class="hi">Evolution:</span> I've got a patch for meetbot which sends email to a list when finished
+<a name="l-18"></a><span class="tm">16:26:05</span><span class="nk"> &lt;goozbach&gt;</span> if you're interested
+<a name="l-19"></a><span class="tm">16:26:18</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">breaking out CLoud Infra and Instance as different SIGs</span>
+<a name="l-20"></a><span class="tm">16:26:55</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">goozbach:</span> that sounds great, my least favorite part of it is having to construct that email at the end :)
+<a name="l-21"></a><span class="tm">16:27:04</span><span class="nk"> &lt;mburned&gt;</span> does the cloud instance sig exist yet?
+<a name="l-22"></a><span class="tm">16:27:12</span><span class="nk"> &lt;kbsingh&gt;</span> <span class="hi">mburned:</span> yes
+<a name="l-23"></a><span class="tm">16:27:12</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">yes, oVirt is distributed via RPMs</span>
+<a name="l-24"></a><span class="tm">16:27:13</span><span class="nk"> &lt;pixelb&gt;</span> Yes RDO uses either packstack or foreman as separate installers (puppet underneath)
+<a name="l-25"></a><span class="tm">16:27:14 </span><span class="nka">* mburned</span> <span class="ac">probably needs to pay attention to that too</span>
+<a name="l-26"></a><span class="tm">16:27:27</span><span class="nk"> &lt;kbsingh&gt;</span> http://wiki.centos.org/SpecialInterestGroup/CloudInstance
+<a name="l-27"></a><span class="tm">16:27:38</span><span class="nk"> &lt;mburned&gt;</span> <span class="hi">kbsingh:</span> thanks
+<a name="l-28"></a><span class="tm">16:27:40</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">ROD users either packstack or foreman as separate installers (puppet underneath)</span>
+<a name="l-29"></a><span class="tm">16:28:45</span><span class="nk"> &lt;hughesjr&gt;</span> ok, so then for the most part, people just want content installed and then configured later
+<a name="l-30"></a><span class="tm">16:29:28</span><span class="nk"> &lt;hughesjr&gt;</span> that lends itself to these SIGs just being repos and no changes to anaconda or isos
+<a name="l-31"></a><span class="tm">16:29:46</span><span class="nk"> &lt;pixelb&gt;</span> hughesjr, I concur
+<a name="l-32"></a><span class="tm">16:30:21</span><span class="nk"> &lt;hughesjr&gt;</span> that makes the delivery system much easier if we can get away with it
+<a name="l-33"></a><span class="tm">16:30:25</span><span class="nk"> &lt;kbsingh&gt;</span> yea
+<a name="l-34"></a><span class="tm">16:30:36</span><span class="nk"> &lt;mburned&gt;</span> i might argue that adding additional repos and/or pre-defined package sets might be useful
+<a name="l-35"></a><span class="tm">16:30:36</span><span class="nk"> &lt;kbsingh&gt;</span> but that would need to fit into the overall scope
+<a name="l-36"></a><span class="tm">16:30:41</span><span class="nk"> &lt;DrBacchus&gt;</span> And then variants - liveCDs, perhaps - of preconfigured systems, like the RDO one.
+<a name="l-37"></a><span class="tm">16:30:42</span><span class="nk"> &lt;Evolution&gt;</span> <span class="hi">goozbach:</span> yes please, or send it off as a pull request on github
+<a name="l-38"></a><span class="tm">16:31:18</span><span class="nk"> &lt;goozbach&gt;</span> for the voip sig (at least for FreePBX) we want an easier way to rebrand/re-relase isos/anaconda
+<a name="l-39"></a><span class="tm">16:31:37</span><span class="nk"> &lt;mburned&gt;</span> <span class="hi">DrBacchus:</span> right
+<a name="l-40"></a><span class="tm">16:32:09</span><span class="nk"> &lt;goozbach&gt;</span> I think the hardest part of getting a custom "installer" is the lack of documentation/tools on how to create a new spin
+<a name="l-41"></a><span class="tm">16:32:23</span><span class="nk"> &lt;kbsingh&gt;</span> <span class="hi">goozbach:</span> i disagree
+<a name="l-42"></a><span class="tm">16:32:47</span><span class="nk"> &lt;Bahhumbug&gt;</span> <span class="hi">goozbach:</span> Any information you can provide me regarding that patch would be welcome.
+<a name="l-43"></a><span class="tm">16:33:38</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">ke4qqq:</span> another trick of having your bits in a central yum repo is that, if Foo is in git.centos.org, Foo can be called CentOS - this resolves the question that gregdek had earlier, right?
+<a name="l-44"></a><span class="tm">16:33:54</span><span class="nk"> &lt;goozbach&gt;</span> <span class="hi">kbsingh:</span> ok well the "how" isn't too bad it's the "what" needs to changed to comply with trademark issues
+<a name="l-45"></a><span class="tm">16:34:07</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">ke4qqq:</span> we're looking at a future leg of the community build system that is Coprs-like - either user Coprs or build it in to Koji, for example
+<a name="l-46"></a><span class="tm">16:34:13</span><span class="nk"> &lt;goozbach&gt;</span> Bahhumbug, Evolution I'll have the patch up on github shortly
+<a name="l-47"></a><span class="tm">16:34:25</span><span class="nk"> &lt;Bahhumbug&gt;</span> <span class="hi">goozbach:</span> Thank you.
+<a name="l-48"></a><span class="tm">16:34:47</span><span class="nk"> &lt;Evolution&gt;</span> <span class="hi">goozbach:</span> yes. thank you. the more work I can pile on Bahhumbug the better
+<a name="l-49"></a><span class="tm">16:34:48</span><span class="nk"> &lt;Evolution&gt;</span> :-P
+<a name="l-50"></a><span class="tm">16:34:59 </span><span class="nka">* Bahhumbug</span> <span class="ac">hides</span>
+<a name="l-51"></a><span class="tm">16:35:14</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">ke4qqq:</span> meaning, we can lower the barrier to doing scratch builds from accepted source, making those repos available, etc.
+<a name="l-52"></a><span class="tm">16:39:46</span><span class="nk"> &lt;quaid&gt;</span> yeah, folks are already doing all this ship and support bundled libs, not going to be any harder to do in CentOS
+<a name="l-53"></a><span class="tm">16:41:35</span><span class="nk"> &lt;goozbach&gt;</span> <span class="hi">Bahhumbug:</span> Evolution the code as-is is here: https://github.com/gooseproject/meetbot/blob/master/ircmeeting/meeting.py
+<a name="l-54"></a><span class="tm">16:41:50</span><span class="nk"> &lt;goozbach&gt;</span> don't have a good pull request as it's spread across three different commits
+<a name="l-55"></a><span class="tm">16:42:12</span><span class="nk"> &lt;goozbach&gt;</span> and I don't have time to re-do it as proper branch/and --squash
+<a name="l-56"></a><span class="tm">16:44:46</span><span class="nk"> &lt;mikem23&gt;</span> Koji supports building with Maven actually
+<a name="l-57"></a><span class="tm">16:44:57</span><span class="nk"> &lt;mikem23&gt;</span> though the feature is not used the the Fedora instance
+<a name="l-58"></a><span class="tm">16:45:47</span><span class="nk"> &lt;Bahhumbug&gt;</span> <span class="hi">goozbach:</span> Thank you.
+<a name="l-59"></a><span class="tm">16:46:09</span><span class="nk"> &lt;quaid&gt;</span> I missed that
+<a name="l-60"></a><span class="tm">16:46:12</span><span class="nk"> &lt;quaid&gt;</span> what is the common thing therre?
+<a name="l-61"></a><span class="tm">16:46:23</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#chair </span><span class="cmdline">Evolution</span>
+<a name="l-62"></a><span class="tm">16:46:23</span><span class="nk"> &lt;centbot&gt;</span> Current chairs: Evolution quaid
+<a name="l-63"></a><span class="tm">16:47:00</span><span class="nk"> &lt;quaid&gt;</span> what was the question KB just got +1 all around for?
+<a name="l-64"></a><span class="tm">16:47:02</span><span class="nk"> &lt;goozbach&gt;</span> we'd (FreePBX) like the that pushbutton iso dealio too
+<a name="l-65"></a><span class="tm">16:47:03</span><span class="nk"> &lt;quaid&gt;</span> something about live CD?
+<a name="l-66"></a><span class="tm">16:47:06</span><span class="nk"> &lt;quaid&gt;</span> ah
+<a name="l-67"></a><span class="tm">16:47:24</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#agreed </span><span class="cmdline">worth working on a pushbutton ISO tool as part of the CentOS Project</span>
+<a name="l-68"></a><span class="tm">16:48:48</span><span class="nk"> &lt;mikem23&gt;</span> koji also supports building livecds and virt images
+<a name="l-69"></a><span class="tm">16:49:04</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">have upstream merit be the basis for who gets commit access, rather than CentOS having to track it</span>
+<a name="l-70"></a><span class="tm">16:49:13</span><span class="nk"> &lt;hughesjr&gt;</span> <span class="hi">mikem23:</span> well then set it up :D
+<a name="l-71"></a><span class="tm">16:50:51</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">within CentOS Project tools, have it be possible for someone in the SIG to get tired of greenlighting patches from a known good person, so proposes that person to the SIG for commit access directly -- this would happen outside of the upstream's own contributor growth pathway</span>
+<a name="l-72"></a><span class="tm">16:50:59</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">jzb:</span> is the above fair?
+<a name="l-73"></a><span class="tm">16:51:08</span><span class="nk"> &lt;Evolution&gt;</span> lets get some authentication in place, so that we can do much of this.
+<a name="l-74"></a><span class="tm">16:51:15</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#chair </span><span class="cmdline">jzb ke4qqq mikem23 samkottler</span>
+<a name="l-75"></a><span class="tm">16:51:15</span><span class="nk"> &lt;centbot&gt;</span> Current chairs: Evolution jzb ke4qqq mikem23 quaid samkottler
+<a name="l-76"></a><span class="tm">16:51:17</span><span class="nk"> &lt;Evolution&gt;</span> quite a bit of what we're dealing with depends on auth.
+<a name="l-77"></a><span class="tm">16:51:20</span><span class="nk"> &lt;jzb&gt;</span> <span class="hi">quaid:</span> yes
+<a name="l-78"></a><span class="tm">16:51:24</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#chair </span><span class="cmdline">mburned</span>
+<a name="l-79"></a><span class="tm">16:51:24</span><span class="nk"> &lt;centbot&gt;</span> Current chairs: Evolution jzb ke4qqq mburned mikem23 quaid samkottler
+<a name="l-80"></a><span class="tm">16:51:44</span><span class="nk"> &lt;kbsingh&gt;</span> the livecd and image from git stuff already works, so we dont need to block on other stuff. its a simple low hanging fruit thing that we can use to setup a relationship with
+<a name="l-81"></a><span class="tm">16:52:13</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">the livecd and image from git stuff already works, so we dont need to block on other stuff. its a simple low hanging fruit thing that we can use to setup a relationship with</span>
+<a name="l-82"></a><span class="tm">16:53:08</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">ke4qqq:</span> jzb I think we don't have consensus on how to handle merit and commit access to git.centos.org, I suspect it will be a blend of those two ideas; let's continue that discussion in The Usual Places
+<a name="l-83"></a><span class="tm">16:53:41</span><span class="nk"> &lt;jzb&gt;</span> <span class="hi">quaid:</span> might be something to handle organically?
+<a name="l-84"></a><span class="tm">16:53:55</span><span class="nk"> &lt;jzb&gt;</span> <span class="hi">quaid:</span>  as it happens, rather than trying to put all the ideas in place day one?
+<a name="l-85"></a><span class="tm">16:53:58</span><span class="nk"> &lt;jzb&gt;</span> (day one-ish)
+<a name="l-86"></a><span class="tm">16:54:05</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">Seed a few committers to git.centos.org from each upstream, add new commiters as per $formula_to_be_determined but which could be a combination of merit-within-CentOS and merit-within-$upstream</span>
+<a name="l-87"></a><span class="tm">16:54:24</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">jzb:</span> +1 sure, i.e., no-new-thread-needed :)
+<a name="l-88"></a><span class="tm">16:54:41</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">handle organically, don't sweat</span>
+<a name="l-89"></a><span class="tm">16:54:55</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#agreed </span><span class="cmdline">CentOS is using the meritocracy spotlight, somehow :)</span>
+<a name="l-90"></a><span class="tm">16:55:25</span><span class="nk"> &lt;goozbach&gt;</span> &lt;-- doing anaconda "stuff" now
+<a name="l-91"></a><span class="tm">16:56:12</span><span class="nk"> &lt;quaid&gt;</span> sounds like an episode of "Dirty Jobs"
+<a name="l-92"></a><span class="tm">16:56:55</span><span class="nk"> &lt;hughesjr&gt;</span> :)
+<a name="l-93"></a><span class="tm">16:57:59</span><span class="nk"> &lt;jzb&gt;</span> quaid, kbsingh is there any thought to creating SIG-specific mailing lists?
+<a name="l-94"></a><span class="tm">16:58:16</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">jzb:</span> I think we were going to start on devel and split if needd
+<a name="l-95"></a><span class="tm">16:58:21</span><span class="nk"> &lt;DrBacchus&gt;</span> <span class="hi">jzb:</span> As I understood it, it'll be on centos-devel until it gets too noisy.
+<a name="l-96"></a><span class="tm">16:58:24</span><span class="nk"> &lt;quaid&gt;</span> it's been a rather quiet list
+<a name="l-97"></a><span class="tm">16:58:33</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">kbsingh:</span> can I help you with getting your notes in to this meetbot instance now?
+<a name="l-98"></a><span class="tm">16:58:36</span><span class="nk"> &lt;goozbach&gt;</span> <span class="hi">quaid:</span> it is a dirty job
+<a name="l-99"></a><span class="tm">16:59:02</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">DrBacchus:</span> yeah, I refer to that as "standard operating procedure" - wait until it's annoying, then split :)
+<a name="l-100"></a><span class="tm">16:59:05</span><span class="nk"> &lt;kbsingh&gt;</span> <span class="hi">jzb:</span> yes, once the SIG needs it and there is traffic that is SIG specific, lets mailing list it ( eg. CentOS-Virt is a list )
+<a name="l-101"></a><span class="tm">17:00:43</span><span class="nk"> &lt;jzb&gt;</span> <span class="hi">kbsingh:</span> gotcha
+<a name="l-102"></a><span class="tm">17:03:33</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">kbsingh:</span> do you have any notes for the meeting before I close it?
+<a name="l-103"></a><span class="tm">17:03:49</span><span class="nk"> &lt;kbsingh&gt;</span> <span class="hi">quaid:</span> just that i will write up notes from the call, and propose
+<a name="l-104"></a><span class="tm">17:10:54</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">kbsingh:</span> OK
+<a name="l-105"></a><span class="tm">17:10:58</span><span class="nk"> &lt;quaid&gt;</span> closing the meeting in a moment
+<a name="l-106"></a><span class="tm">17:13:15</span><span class="nk"> &lt;kbsingh&gt;</span> <span class="hi">quaid:</span> ta
+<a name="l-107"></a><span class="tm">17:17:32</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#endmeeting</span><span class="cmdline"></span></pre>
+</body></html>

@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<title>#centos-devel log</title>
+<style type="text/css">
+/* For the .log.html */
+pre { /*line-height: 125%;*/
+      white-space: pre-wrap; }
+body { background: #f0f0f0; }
+
+body .tm  { color: #007020 }                      /* time */
+body .nk  { color: #062873; font-weight: bold }   /* nick, regular */
+body .nka { color: #007020; font-weight: bold }  /* action nick */
+body .ac  { color: #00A000 }                      /* action line */
+body .hi  { color: #4070a0 }                 /* hilights */
+/* Things to make particular MeetBot commands stick out */
+body .topic     { color: #007020; font-weight: bold }
+body .topicline { color: #000080; font-weight: bold }
+body .cmd       { color: #007020; font-weight: bold }
+body .cmdline  { font-weight: bold }
+
+</style>
+</head>
+
+<body>
+<pre><a name="l-1"></a><span class="tm">21:04:16</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#startmeeting </span><span class="cmdline">CentOS Board public meeting</span>
+<a name="l-2"></a><span class="tm">21:04:16</span><span class="nk"> &lt;centbot&gt;</span> Meeting started Wed Mar  5 21:04:16 2014 UTC.  The chair is quaid. Information about MeetBot at http://wiki.debian.org/MeetBot.
+<a name="l-3"></a><span class="tm">21:04:16</span><span class="nk"> &lt;centbot&gt;</span> Useful Commands: #action #agreed #help #info #idea #link #topic.
+<a name="l-4"></a><span class="tm">21:07:11</span><span class="nk"> &lt;quaid&gt;</span> <span class="topic">#topic </span><span class="topicline">Core S</span>
+<a name="l-5"></a><span class="tm">21:07:19</span><span class="nk"> &lt;quaid&gt;</span> <span class="topic">#topic </span><span class="topicline">Core SIG</span>
+<a name="l-6"></a><span class="tm">21:07:36 </span><span class="nka">* quaid</span> <span class="ac">thinks that is in the log although centbot doesn't have OPs to change the local channel topic</span>
+<a name="l-7"></a><span class="tm">21:08:39</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">although RHEL 7 upstream isn't doing a 32-bit build, we have reason to do it as part of building the main distro.</span>
+<a name="l-8"></a><span class="tm">21:08:44</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">32-bit is part of Core SIG</span>
+<a name="l-9"></a><span class="tm">21:08:49</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">or 32-bit is it's own SIG</span>
+<a name="l-10"></a><span class="tm">21:09:37</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">for 64-bit we don't need to build 32-bit ISOs, make sure installs work, and make sure kernels work</span>
+<a name="l-11"></a><span class="tm">21:09:54</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">we could do most of the work in the Core SIG and have the 32-bit SIG focus on the final ISO building and testing</span>
+<a name="l-12"></a><span class="tm">21:16:42</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#agreed </span><span class="cmdline">Core SIG can produce 32-bit RPMs, and 32-bit SIG can focus on building and testing ISOs; as that SIG gains merit they can gain more access to do the work; all of the work could be tested as part of the QA.</span>
+<a name="l-13"></a><span class="tm">21:17:09</span><span class="nk"> &lt;quaid&gt;</span> <span class="topic">#topic </span><span class="topicline">Virt SIG proposal</span>
+<a name="l-14"></a><span class="tm">21:25:36</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">Virt SIG would be for all virtualization-related updated software needs, bootstrapping with Xen</span>
+<a name="l-15"></a><span class="tm">21:30:39</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">SIGs should look to the common e.g. qemu in Virt SIG (even to maybe carry a patch for them) before carrying their own variation of a package in their own SIG</span>
+<a name="l-16"></a><span class="tm">21:31:02</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">make it so everyone can consume from central</span>
+<a name="l-17"></a><span class="tm">21:31:25</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">Virt SIG could be a good place for carrying the latest upstream KVM for those who want it</span>
+<a name="l-18"></a><span class="tm">21:31:47</span><span class="nk"> &lt;hughesjr&gt;</span> also a new libvirt is going to be needed
+<a name="l-19"></a><span class="tm">21:31:56</span><span class="nk"> &lt;ccmolik&gt;</span> +1 on new kvm shinynes
+<a name="l-20"></a><span class="tm">21:32:14</span><span class="nk"> &lt;csieh&gt;</span> So is there a "charter" for what the Core SIG should do
+<a name="l-21"></a><span class="tm">21:32:17</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">Virt SIG will also need to carry a new libvirt</span>
+<a name="l-22"></a><span class="tm">21:32:31</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">hughesjr:</span> was that an accurate capture of your statement?
+<a name="l-23"></a><span class="tm">21:32:53</span><span class="nk"> &lt;hughesjr&gt;</span> yes
+<a name="l-24"></a><span class="tm">21:32:55</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">csieh:</span> this is the best for now:
+<a name="l-25"></a><span class="tm">21:32:57</span><span class="nk"> &lt;quaid&gt;</span> http://wiki.centos.org/SpecialInterestGroup/Core
+<a name="l-26"></a><span class="tm">21:33:12</span><span class="nk"> &lt;quaid&gt;</span> but it could be updated, such as to include the 32-bit discussion for Cent 7
+<a name="l-27"></a><span class="tm">21:34:15</span><span class="nk"> &lt;Evolution&gt;</span> <span class="hi">csieh:</span> is there something in that you'd like to see updated or changed?
+<a name="l-28"></a><span class="tm">21:35:38</span><span class="nk"> &lt;csieh&gt;</span> just would like the goal to be documented,  if changed that is ok just need to document it so others can know what is going on
+<a name="l-29"></a><span class="tm">21:36:12</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#action </span><span class="cmdline">Core SIG needs to update it's charter &amp; run that by the Board</span>
+<a name="l-30"></a><span class="tm">21:36:44</span><span class="nk"> &lt;csieh&gt;</span> so the above web page talks about CentOS,  so what really is CentOS as far as this discussion is concerned
+<a name="l-31"></a><span class="tm">21:37:57</span><span class="nk"> &lt;Evolution&gt;</span> <span class="hi">csieh:</span> yeah, we need to word that loads better. I think it needs to reference the packages (and build requirements) for the upstream(rh) packages only.
+<a name="l-32"></a><span class="tm">21:38:10</span><span class="nk"> &lt;kbsingh&gt;</span> so, CentOS Linux
+<a name="l-33"></a><span class="tm">21:38:13</span><span class="nk"> &lt;hughesjr&gt;</span> it says CentOS Linux ... so it controls everything that is NON-SIG
+<a name="l-34"></a><span class="tm">21:38:23</span><span class="nk"> &lt;hughesjr&gt;</span> or CoreOS
+<a name="l-35"></a><span class="tm">21:39:09</span><span class="nk"> &lt;hughesjr&gt;</span> and manages all infrastructure owned by the project
+<a name="l-36"></a><span class="tm">21:40:25</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">'CentOS' in the Core SIG description means "CentOS Linux, controls everything not done by other SIGs, is the core OS"</span>
+<a name="l-37"></a><span class="tm">21:40:43</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">hughesjr:</span> I thought we had the Infra SIG as a different SIG, with Core SIG maintaining the build system(s)?
+<a name="l-38"></a><span class="tm">21:41:04</span><span class="nk"> &lt;hughesjr&gt;</span> we WILL have one, but not yet
+<a name="l-39"></a><span class="tm">21:41:08</span><span class="nk"> &lt;quaid&gt;</span> in that I'd like us to be able to add people to Infra SIG without being part of the Core SIG - diff skillsets, merit criteria, etc.
+<a name="l-40"></a><span class="tm">21:41:12</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">hughesjr:</span> ok, thanks
+<a name="l-41"></a><span class="tm">21:41:38</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">have an Infra SIG that takes the infrastructure management work off the hands of the Core SIG, who can then maintian just the build system (or systems for the community builders)</span>
+<a name="l-42"></a><span class="tm">21:42:16</span><span class="nk"> &lt;toracat&gt;</span> who would maintain the source files through git.centos.org ?
+<a name="l-43"></a><span class="tm">21:42:38</span><span class="nk"> &lt;Evolution&gt;</span> <span class="hi">toracat:</span> depends on which code you mean?
+<a name="l-44"></a><span class="tm">21:42:47</span><span class="nk"> &lt;toracat&gt;</span> RHEL
+<a name="l-45"></a><span class="tm">21:43:28</span><span class="nk"> &lt;Evolution&gt;</span> we would, the same/similar way we do so now in the private build setup. it'll be read-only and branched
+<a name="l-46"></a><span class="tm">21:43:57</span><span class="nk"> &lt;Evolution&gt;</span> the rhel code would be able to be branched/forked etc. but  not edited.
+<a name="l-47"></a><span class="tm">21:44:08</span><span class="nk"> &lt;toracat&gt;</span> we == Core SIG ?
+<a name="l-48"></a><span class="tm">21:44:10</span><span class="nk"> &lt;hughesjr&gt;</span> the Core SIG will maintain the CentOS Linux source code in git.centos.org ... other SIGs will maintain their code in there
+<a name="l-49"></a><span class="tm">21:44:19</span><span class="nk"> &lt;Evolution&gt;</span> <span class="hi">toracat:</span> yes.
+<a name="l-50"></a><span class="tm">21:44:24</span><span class="nk"> &lt;toracat&gt;</span> thanks
+<a name="l-51"></a><span class="tm">21:45:20</span><span class="nk"> &lt;Evolution&gt;</span> <span class="hi">toracat:</span> sorry. abusing the 'royal we'
+<a name="l-52"></a><span class="tm">21:45:41</span><span class="nk"> &lt;toracat&gt;</span> :D
+<a name="l-53"></a><span class="tm">21:45:43</span><span class="nk"> &lt;hughesjr&gt;</span> we is we and it is everyone who is not they :D
+<a name="l-54"></a><span class="tm">21:46:30</span><span class="nk"> &lt;Evolution&gt;</span> <span class="hi">toracat:</span> good point/question though
+<a name="l-55"></a><span class="tm">21:46:39</span><span class="nk"> &lt;toracat&gt;</span> I want to hear range talk :) he is too quiet
+<a name="l-56"></a><span class="tm">21:47:04</span><span class="nk"> &lt;Arrfab&gt;</span> <span class="hi">toracat:</span> .eu people are silent and almost sleeping :-p
+<a name="l-57"></a><span class="tm">21:47:06</span><span class="nk"> &lt;hughesjr&gt;</span> he is asleep
+<a name="l-58"></a><span class="tm">21:47:17</span><span class="nk"> &lt;toracat&gt;</span> I see now
+<a name="l-59"></a><span class="tm">21:48:58</span><span class="nk"> &lt;Evolution&gt;</span> $5 says range has a nice lager/ale beside him.
+<a name="l-60"></a><span class="tm">21:49:02</span><span class="nk"> &lt;quaid&gt;</span> range looks a bit like a monk in his mini-vid inset pic
+<a name="l-61"></a><span class="tm">21:49:58</span><span class="nk"> &lt;quaid&gt;</span> yeah, I want video voting cards
+<a name="l-62"></a><span class="tm">21:50:37</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#agreed </span><span class="cmdline">tentatively agreed to approve Virt SIG proposal as new charter, upcoming content on the Wiki; need to get input from Tru</span>
+<a name="l-63"></a><span class="tm">21:50:42</span><span class="nk"> &lt;Evolution&gt;</span> <span class="hi">toracat:</span> anything you'd like to hear covered?
+<a name="l-64"></a><span class="tm">21:50:43</span><span class="nk"> &lt;quaid&gt;</span> <span class="topic">#topic </span><span class="topicline">Any other business?</span>
+<a name="l-65"></a><span class="tm">21:50:53</span><span class="nk"> &lt;Evolution&gt;</span> <span class="hi">csieh:</span> you as well
+<a name="l-66"></a><span class="tm">21:50:56</span><span class="nk"> &lt;toracat&gt;</span> <span class="hi">Evolution:</span> not for today
+<a name="l-67"></a><span class="tm">21:51:26</span><span class="nk"> &lt;quaid&gt;</span> what do we want to do about the functional SIGs? e.g. QA in particular
+<a name="l-68"></a><span class="tm">21:51:52</span><span class="nk"> &lt;csieh&gt;</span> no other business from me
+<a name="l-69"></a><span class="tm">21:52:21</span><span class="nk"> &lt;toracat&gt;</span> <span class="hi">csieh:</span> hi, good to see you here :)
+<a name="l-70"></a><span class="tm">21:56:18</span><span class="nk"> &lt;kbsingh&gt;</span> range looks very pensive
+<a name="l-71"></a><span class="tm">21:56:23</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">In general, we'll be able to bring up functional SIGs e.g. Documentation, QA, Promo, Artwork, etc.; have a dependency on an auth system to share resources granularly v. all-or-nothing</span>
+<a name="l-72"></a><span class="tm">21:58:08</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">Jim Perring has been working with FreeIPA and Fedora Auth System (FAS) to see how they compare; FreeIPA looks really nice &amp; would be a good reference story; FAS has all the features we need but is really customized.</span>
+<a name="l-73"></a><span class="tm">22:00:43</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#undo</span><span class="cmdline"></span>
+<a name="l-74"></a><span class="tm">22:00:43</span><span class="nk"> &lt;centbot&gt;</span> Removing item from minutes: &lt;MeetBot.items.Info object at 0x17c0f90&gt;
+<a name="l-75"></a><span class="tm">22:00:49</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">Jim Perrin has been working with FreeIPA and Fedora Auth System (FAS) to see how they compare; FreeIPA looks really nice &amp; would be a good reference story; FAS has all the features we need but is really customized.</span>
+<a name="l-76"></a><span class="tm">22:00:53</span><span class="nk"> &lt;quaid&gt;</span> hate when I do that to his name
+<a name="l-77"></a><span class="tm">22:00:58</span><span class="nk"> &lt;Evolution&gt;</span> <span class="hi">toracat:</span> I'm sorry if I butched your name
+<a name="l-78"></a><span class="tm">22:01:07</span><span class="nk"> &lt;toracat&gt;</span> close
+<a name="l-79"></a><span class="tm">22:01:20</span><span class="nk"> &lt;quaid&gt;</span> btw, others can do #info, #idea, only Chairs can do #agreed, #undo
+<a name="l-80"></a><span class="tm">22:01:27</span><span class="nk"> &lt;range&gt;</span> Okay, no hoodie next time :)
+<a name="l-81"></a><span class="tm">22:01:27</span><span class="nk"> &lt;quaid&gt;</span> I'll pass out #chair next time
+<a name="l-82"></a><span class="tm">22:01:31</span><span class="nk"> &lt;Evolution&gt;</span> <span class="hi">toracat:</span> phonetic spelling?
+<a name="l-83"></a><span class="tm">22:01:36</span><span class="nk"> &lt;Evolution&gt;</span> <span class="hi">toracat:</span> how do I say it?
+<a name="l-84"></a><span class="tm">22:01:45</span><span class="nk"> &lt;quaid&gt;</span> always a good idea to spread chair in case the meeting starter is netsplit
+<a name="l-85"></a><span class="tm">22:01:48</span><span class="nk"> &lt;toracat&gt;</span> <span class="hi">Evolution:</span> yes. ah-keh-me
+<a name="l-86"></a><span class="tm">22:01:59</span><span class="nk"> &lt;Evolution&gt;</span> ah, so no long ee sound.
+<a name="l-87"></a><span class="tm">22:02:36</span><span class="nk"> &lt;range&gt;</span> <span class="hi">Evolution:</span> No, the lager is on the balcony.
+<a name="l-88"></a><span class="tm">22:02:48</span><span class="nk"> &lt;range&gt;</span> (I might get one, though).
+<a name="l-89"></a><span class="tm">22:02:48</span><span class="nk"> &lt;toracat&gt;</span> now range is awake
+<a name="l-90"></a><span class="tm">22:03:06</span><span class="nk"> &lt;range&gt;</span> Yeah, completely missed this channel :)
+<a name="l-91"></a><span class="tm">22:03:41</span><span class="nk"> &lt;quaid&gt;</span> ok, closing the minutes/log
+<a name="l-92"></a><span class="tm">22:03:45</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#endmeeting</span><span class="cmdline"></span></pre>
+</body></html>

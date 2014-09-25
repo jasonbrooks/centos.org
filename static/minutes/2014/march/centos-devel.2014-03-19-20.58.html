@@ -1,0 +1,281 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<title>#centos-devel: Board meeting live http://centos.org/media - agenda for today:  Storage and Cloud-related SIG proposals</title>
+<style type="text/css">
+/* This is for the .html in the HTML2 writer */
+body {
+    font-family: Helvetica, sans-serif;
+    font-size:14px;
+}
+h1 {
+    text-align: center;
+}
+a {
+    color:navy;
+    text-decoration: none;
+    border-bottom:1px dotted navy;
+}
+a:hover {
+    text-decoration:none;
+    border-bottom: 0;
+    color:#0000B9;
+}
+hr {
+    border: 1px solid #ccc;
+}
+/* The (nick, time) item pairs, and other body text things. */
+.details {
+    font-size: 12px;
+    font-weight:bold;
+}
+/* The 'AGREED:', 'IDEA', etc, prefix to lines. */
+.itemtype {
+    font-style: normal;    /* un-italics it */
+    font-weight: bold;
+}
+/* Example: change single item types.  Capitalized command name.
+/* .TOPIC  {  color:navy;  } */
+/* .AGREED {  color:lime;  } */
+
+</style>
+</head>
+
+<body>
+<h1>#centos-devel: Board meeting live http://centos.org/media - agenda for today:  Storage and Cloud-related SIG proposals</h1>
+<span class="details">
+Meeting started by quaid at 20:58:13 UTC
+(<a href="centos-devel.2014-03-19-20.58.log.html">full logs</a>).</span>
+
+<br><br>
+
+
+
+<h3>Meeting summary</h3>
+<ol>
+<li>
+<ol type="a">
+  <li><a
+    href="http://www.youtube.com/watch?v=muUOhg12FKs">http://www.youtube.com/watch?v=muUOhg12FKs</a>
+    <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-19'>kbsingh</a>,
+    21:04:26)</span></li>
+</ol>
+<br></li>
+<li><b class="TOPIC">Storage SIG proposal</b> <span class="details">(<a href='centos-devel.2014-03-19-20.58.log.html#l-25'>quaid</a>, 21:07:26)</span>
+<ol type="a">
+  <li><a
+    href="http://wiki.centos.org/SpecialInterestGroup/Storage/Proposal">http://wiki.centos.org/SpecialInterestGroup/Storage/Proposal</a>
+    <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-26'>quaid</a>,
+    21:07:28)</span></li>
+  <li><i class="itemtype">AGREED</i>: <span class="AGREED">we have a
+    quorum</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-29'>quaid</a>,
+    21:09:25)</span></li>
+  <li><span class="INFO">SIG members currently include Ceph and
+    Gluster</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-32'>quaid</a>,
+    21:12:20)</span></li>
+  <li><span class="INFO">SIG members include Patrick Mcgarry (Ceph) and
+    Lalatendu Mohanty (GlusterFS) and KBSingh (Board
+    mentor/liaison)</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-33'>quaid</a>,
+    21:13:28)</span></li>
+  <li><span class="INFO">Need to work on repository structure</span>
+    <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-42'>quaid</a>,
+    21:18:16)</span></li>
+  <li><span class="INFO">qemu dependencies mean work with the Cloud *
+    SIG who adopts qemu to figure out if it can be worked together,
+    hierarchical setup, with maintain-your-own the last possible answer
+    :)</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-43'>quaid</a>,
+    21:18:56)</span></li>
+  <li><span class="INFO">a storage SIG repository could be cleaner and
+    keep things out of CentOS Extras and CentOS Plus</span> <span
+    class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-45'>quaid</a>,
+    21:22:45)</span></li>
+  <li><i class="itemtype">ACTION</i>: <span class="ACTION">need to
+    consider best way to handle questions from IRC, Twitter, etc. for
+    live Board hangouts.</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-54'>quaid</a>,
+    21:27:27)</span></li>
+  <li><i class="itemtype">AGREED</i>: <span class="AGREED">start new SIG
+    work on main -devel and users lists, then branch as needed</span>
+    <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-56'>quaid</a>,
+    21:36:01)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">having an
+    all-SIGs-overview mailing list for cross-SIG coordination (esp. if
+    things move from -devel)</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-57'>quaid</a>,
+    21:36:24)</span></li>
+  <li><i class="itemtype">ACTION</i>: <span class="ACTION">make sure new
+    SIG work gets exposure of ~first 3 months on main centos-devel
+    list</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-58'>quaid</a>,
+    21:37:18)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">have a SIG
+    coordinators (or all maintainers) should have a chat every few
+    weeks, such as a public Hangout or IRC</span> <span
+    class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-59'>quaid</a>,
+    21:37:45)</span></li>
+  <li><i class="itemtype">AGREED</i>: <span class="AGREED">quorum voted
+    yes to Storage SIG propsals</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-60'>quaid</a>,
+    21:39:48)</span></li>
+  <li><i class="itemtype">ACTION</i>: <span class="ACTION">KB to follow
+    up with Jim and Tru</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-61'>quaid</a>,
+    21:40:00)</span></li>
+  <li><i class="itemtype">ACTION</i>: <span class="ACTION">KB to send
+    call-to-action to -devel list</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-62'>quaid</a>,
+    21:40:11)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">include CentOS
+    package/build expert, Ceph will bring their maintainer</span> <span
+    class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-64'>quaid</a>,
+    21:40:41)</span></li>
+  <li><a
+    href="http://wiki.centos.org/SpecialInterestGroup/CloudInstance/Proposal">http://wiki.centos.org/SpecialInterestGroup/CloudInstance/Proposal</a>
+    <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-65'>kbsingh</a>,
+    21:42:06)</span></li>
+  <li><a
+    href="http://wiki.centos.org/SpecialInterestGroup/CloudInstance/Proposal">http://wiki.centos.org/SpecialInterestGroup/CloudInstance/Proposal</a>
+    <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-66'>mikem23</a>,
+    21:42:08)</span></li>
+</ol>
+<br></li>
+<li><b class="TOPIC">Cloud Instance SIG</b> <span class="details">(<a href='centos-devel.2014-03-19-20.58.log.html#l-67'>quaid</a>, 21:42:22)</span>
+<ol type="a">
+  <li><a
+    href="http://wiki.centos.org/SpecialInterestGroup/CloudInstance/Proposal">http://wiki.centos.org/SpecialInterestGroup/CloudInstance/Proposal</a>
+    <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-68'>quaid</a>,
+    21:42:27)</span></li>
+  <li><span class="INFO">the intention of this SIG is to have folks who
+    know what they are doing and represent mindshare, come together and
+    help us build images that work across cloud providers, meet best
+    practices, development environments, tuned up for
+    environments.</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-69'>quaid</a>,
+    21:43:24)</span></li>
+  <li><span class="INFO">primary charter is to bring in existing experts
+    to help us build images</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-70'>quaid</a>,
+    21:43:36)</span></li>
+  <li><span class="INFO">SIG will deliver a basic image that others can
+    bundle with their RPMs to do their own image</span> <span
+    class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-71'>quaid</a>,
+    21:49:53)</span></li>
+  <li><span class="INFO">cloud-init, minimizing for certain instances,
+    perf tuning for certain hypervisors</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-72'>quaid</a>,
+    21:50:13)</span></li>
+  <li><span class="INFO">most of the work will be kickstart files v.
+    RPMs</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-73'>quaid</a>,
+    21:50:37)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">SIG is focused on
+    tuning and curating the image, but there is room in the scope to
+    provide multiple images tuned for various environments</span> <span
+    class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-74'>quaid</a>,
+    21:51:47)</span></li>
+  <li><span class="INFO">Primary interface will be with the Core
+    SIG</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-76'>quaid</a>,
+    21:53:40)</span></li>
+  <li><span class="INFO">SIG is requesting cloud.centos.org as a source
+    (with an API?) for distributing images, cf. mirror.centos.org for
+    packages</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-77'>quaid</a>,
+    21:54:30)</span></li>
+  <li><span class="INFO">QA for images are basic/essential, may look to
+    spread out toward different hypervisors</span> <span
+    class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-78'>quaid</a>,
+    22:00:10)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">having 2 physical
+    machines ready for a few hours every day for QA</span> <span
+    class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-79'>quaid</a>,
+    22:00:24)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">it would be nice
+    to have a process to promote image when they get enough
+    testing/traction to official installation media.</span> <span
+    class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-82'>alphacc</a>,
+    22:04:42)</span></li>
+  <li><i class="itemtype">AGREED</i>: <span class="AGREED">Vote agrees
+    to the Cloud Instance SIG proposal; follow-up to happen with Jim and
+    Tru to confirm their votes</span> <span class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-84'>quaid</a>,
+    22:07:45)</span></li>
+  <li><i class="itemtype">ACTION</i>: <span class="ACTION">KB to
+    follow-up with Jim and Tru about this vote</span> <span
+    class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-85'>quaid</a>,
+    22:08:03)</span></li>
+  <li><i class="itemtype">ACTION</i>: <span class="ACTION">SIG needs to
+    define primary point of contact/coordinator</span> <span
+    class="details">(<a
+    href='centos-devel.2014-03-19-20.58.log.html#l-86'>quaid</a>,
+    22:08:18)</span></li>
+</ol>
+</li>
+</ol>
+<br><br>
+
+
+
+<span class="details">
+Meeting ended at 22:09:20 UTC
+(<a href="centos-devel.2014-03-19-20.58.log.html">full logs</a>).</span>
+
+<br><br>
+
+
+
+<h3>Action items</h3>
+<ol>
+  <li>need to consider best way to handle questions from IRC, Twitter, etc. for live Board hangouts.</li>
+  <li>make sure new SIG work gets exposure of ~first 3 months on main centos-devel list</li>
+  <li>KB to follow up with Jim and Tru</li>
+  <li>KB to send call-to-action to -devel list</li>
+  <li>KB to follow-up with Jim and Tru about this vote</li>
+  <li>SIG needs to define primary point of contact/coordinator</li>
+</ol>
+<br><br>
+
+
+
+<h3>People present (lines said)</h3>
+<ol>
+  <li>quaid (51)</li>
+  <li>kbsingh (9)</li>
+  <li>Evolution (7)</li>
+  <li>scuttlemonkey (7)</li>
+  <li>alphacc (6)</li>
+  <li>centbot (3)</li>
+  <li>TrevorH (3)</li>
+  <li>range (1)</li>
+  <li>mikem23 (1)</li>
+  <li>hughesjr (0)</li>
+  <li>Arrfab (0)</li>
+  <li>tru_tru (0)</li>
+</ol>
+<br><br>
+
+
+
+<span class="details">Generated by <a href="http://wiki.debian.org/MeetBot">MeetBot</a> 0.1.4.</span>
+</body></html>

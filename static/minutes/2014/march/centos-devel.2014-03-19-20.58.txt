@@ -1,0 +1,141 @@
+======================================================================================================================
+#centos-devel: Board meeting live http://centos.org/media - agenda for today:  Storage and Cloud-related SIG proposals
+======================================================================================================================
+
+
+Meeting started by quaid at 20:58:13 UTC. The full logs are available at
+centos-devel/2014/centos-devel.2014-03-19-20.58.log.html .
+
+
+
+Meeting summary
+---------------
+* LINK: http://www.youtube.com/watch?v=muUOhg12FKs   (kbsingh, 21:04:26)
+* Storage SIG proposal  (quaid, 21:07:26)
+  * LINK: http://wiki.centos.org/SpecialInterestGroup/Storage/Proposal
+    (quaid, 21:07:28)
+  * AGREED: we have a quorum  (quaid, 21:09:25)
+  * SIG members currently include Ceph and Gluster  (quaid, 21:12:20)
+  * SIG members include Patrick Mcgarry (Ceph) and Lalatendu Mohanty
+    (GlusterFS) and KBSingh (Board mentor/liaison)  (quaid, 21:13:28)
+  * Need to work on repository structure  (quaid, 21:18:16)
+  * qemu dependencies mean work with the Cloud * SIG who adopts qemu to
+    figure out if it can be worked together, hierarchical setup, with
+    maintain-your-own the last possible answer :)  (quaid, 21:18:56)
+  * a storage SIG repository could be cleaner and keep things out of
+    CentOS Extras and CentOS Plus  (quaid, 21:22:45)
+  * ACTION: need to consider best way to handle questions from IRC,
+    Twitter, etc. for live Board hangouts.  (quaid, 21:27:27)
+  * AGREED: start new SIG work on main -devel and users lists, then
+    branch as needed  (quaid, 21:36:01)
+  * IDEA: having an all-SIGs-overview mailing list for cross-SIG
+    coordination (esp. if things move from -devel)  (quaid, 21:36:24)
+  * ACTION: make sure new SIG work gets exposure of ~first 3 months on
+    main centos-devel list  (quaid, 21:37:18)
+  * IDEA: have a SIG coordinators (or all maintainers) should have a
+    chat every few weeks, such as a public Hangout or IRC  (quaid,
+    21:37:45)
+  * AGREED: quorum voted yes to Storage SIG propsals  (quaid, 21:39:48)
+  * ACTION: KB to follow up with Jim and Tru  (quaid, 21:40:00)
+  * ACTION: KB to send call-to-action to -devel list  (quaid, 21:40:11)
+  * IDEA: include CentOS package/build expert, Ceph will bring their
+    maintainer  (quaid, 21:40:41)
+  * LINK:
+    http://wiki.centos.org/SpecialInterestGroup/CloudInstance/Proposal
+    (kbsingh, 21:42:06)
+  * LINK:
+    http://wiki.centos.org/SpecialInterestGroup/CloudInstance/Proposal
+    (mikem23, 21:42:08)
+
+* Cloud Instance SIG  (quaid, 21:42:22)
+  * LINK:
+    http://wiki.centos.org/SpecialInterestGroup/CloudInstance/Proposal
+    (quaid, 21:42:27)
+  * the intention of this SIG is to have folks who know what they are
+    doing and represent mindshare, come together and help us build
+    images that work across cloud providers, meet best practices,
+    development environments, tuned up for environments.  (quaid,
+    21:43:24)
+  * primary charter is to bring in existing experts to help us build
+    images  (quaid, 21:43:36)
+  * SIG will deliver a basic image that others can bundle with their
+    RPMs to do their own image  (quaid, 21:49:53)
+  * cloud-init, minimizing for certain instances, perf tuning for
+    certain hypervisors  (quaid, 21:50:13)
+  * most of the work will be kickstart files v. RPMs  (quaid, 21:50:37)
+  * IDEA: SIG is focused on tuning and curating the image, but there is
+    room in the scope to provide multiple images tuned for various
+    environments  (quaid, 21:51:47)
+  * Primary interface will be with the Core SIG  (quaid, 21:53:40)
+  * SIG is requesting cloud.centos.org as a source (with an API?) for
+    distributing images, cf. mirror.centos.org for packages  (quaid,
+    21:54:30)
+  * QA for images are basic/essential, may look to spread out toward
+    different hypervisors  (quaid, 22:00:10)
+  * IDEA: having 2 physical machines ready for a few hours every day for
+    QA  (quaid, 22:00:24)
+  * IDEA: it would be nice to have a process to promote image when they
+    get enough testing/traction to official installation media.
+    (alphacc, 22:04:42)
+  * AGREED: Vote agrees to the Cloud Instance SIG proposal; follow-up to
+    happen with Jim and Tru to confirm their votes  (quaid, 22:07:45)
+  * ACTION: KB to follow-up with Jim and Tru about this vote  (quaid,
+    22:08:03)
+  * ACTION: SIG needs to define primary point of contact/coordinator
+    (quaid, 22:08:18)
+
+Meeting ended at 22:09:20 UTC.
+
+
+
+
+Action Items
+------------
+* need to consider best way to handle questions from IRC, Twitter, etc.
+  for live Board hangouts.
+* make sure new SIG work gets exposure of ~first 3 months on main
+  centos-devel list
+* KB to follow up with Jim and Tru
+* KB to send call-to-action to -devel list
+* KB to follow-up with Jim and Tru about this vote
+* SIG needs to define primary point of contact/coordinator
+
+
+
+
+Action Items, by person
+-----------------------
+* **UNASSIGNED**
+  * need to consider best way to handle questions from IRC, Twitter,
+    etc. for live Board hangouts.
+  * make sure new SIG work gets exposure of ~first 3 months on main
+    centos-devel list
+  * KB to follow up with Jim and Tru
+  * KB to send call-to-action to -devel list
+  * KB to follow-up with Jim and Tru about this vote
+  * SIG needs to define primary point of contact/coordinator
+
+
+
+
+People Present (lines said)
+---------------------------
+* quaid (51)
+* kbsingh (9)
+* Evolution (7)
+* scuttlemonkey (7)
+* alphacc (6)
+* centbot (3)
+* TrevorH (3)
+* range (1)
+* mikem23 (1)
+* hughesjr (0)
+* Arrfab (0)
+* tru_tru (0)
+
+
+
+
+Generated by `MeetBot`_ 0.1.4
+
+.. _`MeetBot`: http://wiki.debian.org/MeetBot

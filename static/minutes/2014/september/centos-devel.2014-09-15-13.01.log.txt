@@ -1,0 +1,253 @@
+13:01:06 <bstinson> #startmeeting
+13:01:06 <centbot> Meeting started Mon Sep 15 13:01:06 2014 UTC.  The chair is bstinson. Information about MeetBot at http://wiki.debian.org/MeetBot.
+13:01:06 <centbot> Useful Commands: #action #agreed #help #info #idea #link #topic.
+13:01:27 <bstinson> #meetingname CBS-Infra-2014-09-15
+13:01:27 <centbot> The meeting name has been set to 'cbs-infra-2014-09-15'
+13:01:52 <bstinson> #chair alphacc Arrfab kbsingh bstinson MerlinTHP_
+13:01:52 <centbot> Current chairs: Arrfab MerlinTHP_ alphacc bstinson kbsingh
+13:02:45 <bstinson> #topic Is this a good time to meet?
+13:02:54 <MerlinTHP_> Well, it works for me :)
+13:03:51 <alphacc> Me too if we keep it under 30 min
+13:04:01 <bstinson> Good, I think we should make this a regular thing (weekly, or every-other-week) for a while until we run out of things to talk about
+13:04:09 * MerlinTHP_ nods.
+13:04:11 <bstinson> short meetings are good
+13:04:17 <alphacc> I think weekly is good for now.
+13:04:39 <MerlinTHP_> Agreed, i imagine we can find things to talk about
+13:04:57 <wolfy> works for me too. although I am just a lurker
+13:05:18 <bstinson> #agreed Weekly meetings on Monday at 13:00 UTC
+13:06:36 * lalatenduM is here too
+13:06:54 <bstinson> #topic SIG/Developer authentication
+13:07:39 <alphacc> so far cbs has his own CA, I don't know the status of git.c.o auth
+13:07:53 * MerlinTHP_ assumes it's ssh key auth
+13:07:59 <MerlinTHP_> Can anyone confirm?
+13:08:08 * kbsingh is here
+13:08:14 * gwd is here
+13:08:17 <bstinson> we also need to worry about the lookaside cache
+13:08:42 <MerlinTHP_> I'd be tempted to start from a default position of "what does fedora infra do?"
+13:09:01 <MerlinTHP_> If only that they've solved a lot of this stuff, and have existing tooling
+13:09:10 <bstinson> I think FAS is on the radar
+13:09:24 <kbsingh> i am not sure if FAS is indeed on the store for CentOS though - is it ?
+13:09:38 <MerlinTHP_> I've heard it mentioned, but nothing conclusive.
+13:09:49 <kbsingh> there certainly hasent been any movement on that front - FAS was brought up a few times, but only in line with other potential solutions as well
+13:09:49 <gwd> What's FAS?
+13:09:57 <Arrfab> alphacc: atm git.c.o uses his internal auth DB
+13:09:58 <kbsingh> gwd: the Fedora Accounting System
+13:09:59 <MerlinTHP_> Fedora Account System
+13:10:24 <MerlinTHP_> I'm not sure we really want to build something from scratch.
+13:10:33 <alphacc> Arrfab: but gitblit does support ssl cert ?
+13:10:45 <kbsingh> git.centos.org can more or less do anything, includiung ldap, krb, shared certs, shared ca, pub certs, internal pipe backend for auth or even static files
+13:10:51 <kbsingh> alphacc: yes
+13:10:57 <MerlinTHP_> What does g.c.o do now?
+13:11:13 <kbsingh> MerlinTHP_: flat file, internal auth
+13:11:24 <MerlinTHP_> I suppose we're at the point of not having a huge userbase to reeducate
+13:12:24 <kbsingh> are we talking purely in the context of git.centos.org + cbs.centos.org ? I guess having FAS like system would help if were to come up system wide for all of .centos.org - and we can move wiki + bugs + forums + other things to it as well
+13:12:41 <MerlinTHP_> I'd suggest that ideally the latter
+13:13:15 <MerlinTHP_> In addition to FAS, I'd be tempted to throw IPA into the ring as an option too.
+13:13:48 <MerlinTHP_> I spend a fair amount of time in $dayjob getting stuff to auth against our IPA instace.
+13:14:04 <Arrfab> MerlinTHP_: such discussion started too, but the scope is wider than just cbs+git which is supposed to be the "to be discussed points" today
+13:14:06 <alphacc> kbsingh: yes. In term of interaction between cbs/git we just need people to be able to create branches at the git level
+13:14:26 <MerlinTHP_> Arrfab: agreed.
+13:14:38 <MerlinTHP_> Seems silly to build something just for cbs & git, though
+13:15:34 <kbsingh> how would branches in git.c.o work - at the moment, the distro brach is locked - noone can commit to those. and I've been working to have branch name be the sig name for someone
+13:15:37 <alphacc> MerlinTHP_: I think it's better to test the workflow for building and defer auth for later.
+13:15:54 <kbsingh> eg. VirtSig people will need to work with their own branch - but wont be able to create and push to other ones, unless they had acl's for other sig's as well
+13:16:21 <MerlinTHP_> alphacc: I'm just a bit worried about getting people too familiar with something that we might well change later
+13:16:21 <Arrfab> MerlinTHP_: agreed too, but it would be good to know what are the blockers now on the git/cbs status. and if common auth is the real issue, then another meeting around centralized auth can be foreseen :-)
+13:17:19 <alphacc> MerlinTHP_: the koji part won't change, and educate user to access git with pass or ssh key doesn't seems an issue for our audience
+13:17:27 <MerlinTHP_> alphacc: fair enough
+13:17:40 <gwd> kbsingh: So I think we need to be able to have dev branches from which we can issue a pull request.
+13:17:50 <alphacc> MerlinTHP_: I would agree if it was for everybody.
+13:18:29 <MerlinTHP_> alphacc: I'm a bit worried that you don't scale, though ;)
+13:18:37 <MerlinTHP_> alphacc: you're doing all the account creation by hand atm?
+13:19:04 <alphacc> MerlinTHP_: correct. this is part of this week documentation effort.
+13:19:05 <Arrfab> MerlinTHP_: yes, but afaik less than 10 people have access through approved SIGs
+13:19:17 <kbsingh> in terms of forward-looking-planning, my estimate on user accounts to end of the year 2014 is 50
+13:19:27 <MerlinTHP_> OK
+13:19:27 <kbsingh> and in the next 18 momths, is to grow that to 150
+13:19:44 <bstinson> which is not so bad
+13:20:10 <kbsingh> most SIG's are only going to have a few people commiting into git.centos.org right ? I'm counting on the biggest ones having 10
+13:20:18 <Evolution> I still think long-term it should be automated, rather than blocking on a specific person
+13:20:27 <Evolution> or group of people.
+13:20:31 <MerlinTHP_> Mm
+13:20:48 <MerlinTHP_> This is one of those "FAS has already solved this issue" things, tbh
+13:21:04 <kbsingh> gwd: would'nt that be local though ? eg. if come of people want to do local branches ? or are you saying that people will need commit access to git.centos.org where from a 'privileged' account can merge into the production branch and issue a build req ?
+13:21:06 <Evolution> yeah. fas or a bit of scripting around ipa.
+13:21:11 <MerlinTHP_> Evolution: exactly
+13:21:27 <alphacc> Evolution: yes agreed
+13:21:36 <MerlinTHP_> TBH I personally like IPA a lot, but I'm trying not to be too biased ;)
+13:22:01 <kbsingh> gwd: if we want the push coming to git.centos.org - we might need to workout some sort of a convention for personal branches.
+13:22:18 <kbsingh> automate everything
+13:22:49 <gwd> kbsingh: Well it doesn't need to be on git.c.o, if that's what you mean; it could be on gitorious/github/some other public repo.  But wherever it is, we want to be able to build from it.  At least, I assume the burden of testing to make sure it builds properly should be on the person sending the pull request, not on the person potentially doing the pulling. :-)
+13:23:04 <kbsingh> specially, since automation is the only way to really make sure there is a 'user-exiting' cleanup process as well
+13:23:15 <MerlinTHP_> Just bear in mind that koji needs config for each git server you want to pull from
+13:23:26 <kbsingh> MerlinTHP_: it will only pull from git.centos.org
+13:23:27 <MerlinTHP_> I'd recommend only having koji pull from g.c.o
+13:23:33 <MerlinTHP_> Right.
+13:23:39 <alphacc> yes
+13:24:02 <MerlinTHP_> So anything you want to build has to end up in g.c.o, even if people are pushing to github or whatever
+13:24:34 <Arrfab> MerlinTHP_: yes
+13:24:43 <kbsingh> yeah, its a good problem domain to fix, its the classic who CI's and how does the CI queue work
+13:24:46 <alphacc> MerlinTHP_: There is SRPM use case, but I really didn't find any good reason.
+13:24:47 <gwd> MerlinTHP: Then that would imply either 1) sending pull requests from trees that haven't been tested on koji or 2) having development trees on git.c.o so that things could be tested on koji before sending a pull request
+13:25:06 <kbsingh> i wonder if we can have people do scratch builds, and the results be a consideation for people doing the pulls
+13:25:16 <alphacc> gwd: koji should not become a CI.
+13:25:28 <MerlinTHP_> Yeah, koji isn't great for CI
+13:25:37 <kbsingh> i dont think gwd is talking CI though
+13:25:51 <MerlinTHP_> Right.
+13:25:53 <kbsingh> were not testing the code, per se - its just to make sure the branch is buildable
+13:26:04 <kbsingh> maybe --scratch builds might be a middle ground there ?
+13:26:05 <alphacc> Yes just a warning, casue I have koji users :)
+13:26:21 <gwd> Just because it build via an SRPM doesn't mean it will build from a git tree. :-)
+13:26:44 <MerlinTHP_> There's not that much difference between koji building a package and mock on a user box, as long as mock is using the koji repos.
+13:26:54 <kbsingh> gwd: right, but koji only ever builds from a srpm - the git is just where the srpm is stored, were never building from git
+13:27:15 <kbsingh> when koji gets a build-this, it git checksout, make it into an srpm - then does the mock run to build rpms out of it
+13:27:17 <MerlinTHP_> Well, koji pulls the source from git and builds a srpm
+13:27:24 <alphacc> kbsingh: yes
+13:27:24 <MerlinTHP_> Yeah, tha
+13:27:25 <MerlinTHP_> t
+13:28:13 <bstinson> (bringing it back in a little bit) it sounds to me like we aren't quite ready to talk about long-term auth
+13:28:21 <kbsingh> nutshell: gwd's point is that people need to be able to propose changes, without running their own buildsystems. right ?
+13:28:24 * MerlinTHP_ is getting that ;)
+13:28:28 <MerlinTHP_> +feeling
+13:29:30 <bstinson> what can we do in the short term to get people access to the lookaside caches? i know that's come up a couple of times
+13:29:45 <MerlinTHP_> Auth with the same SSL cert they use for koji?
+13:30:10 <alphacc> bstinson: I think we need at least docs on the process will be handled.
+13:30:27 <MerlinTHP_> The upload script for fedora's lookaside is public, and can be easily adapted to our cache
+13:31:07 <MerlinTHP_> I can hunt that out if there's interest
+13:31:07 <alphacc> MerlinTHP_: can it be part of centpkg ?
+13:31:11 <kbsingh> are we talking about https://git.centos.org/sources/ ?
+13:31:26 <bstinson> kbsingh: yes
+13:31:27 <MerlinTHP_> Yeah
+13:31:35 <kbsingh> the privileged path to that store is via ssh or rsync over ssh at the moment
+13:31:42 <Evolution> 868963
+13:31:43 <MerlinTHP_> Hmm
+13:31:58 <kbsingh> but its a flat filesystem, so a cgi script ( like what fedora use ) might be easy to adapt, and we can protect branches at the unix level
+13:32:09 <Evolution> 195082
+13:32:16 <kbsingh> ( ie. I can make sure the buildsystem and distro branches are owned by someone else )
+13:32:27 <kbsingh> Evolution: move your yubi key to a different usb port
+13:32:32 <MerlinTHP_> Heh
+13:32:36 <alphacc> ah ah
+13:32:39 <Evolution> bah, was dialing phone.
+13:32:47 <kbsingh> alternatively, folks - anyone needing to break into Evolution's 2FA accounts, you ahve about 180 seconds to use those two codes
+13:32:48 * Evolution moves laptop
+13:32:50 <MerlinTHP_> No, you weren't ;)
+13:32:55 <bstinson> heh
+13:33:18 <kbsingh> i need a better keyboard, way too many typos
+13:33:31 <bstinson> alphacc: to answer your question, it's already built into rpkg we just need to figure out how to say if a user has upload privs or not
+13:33:32 <kbsingh> so, what / how would centpkg integrate with the sources / lookaside push ?
+13:33:47 <MerlinTHP_> centpkg has upload support
+13:33:57 <MerlinTHP_> It needs tweaking for centos' cache layout
+13:34:11 <MerlinTHP_> It does an HTTPS request with the client cert for auth
+13:34:42 <MerlinTHP_> sorry, rpkg has that, centpkg can override that code
+13:35:02 <alphacc> ok
+13:35:14 <kbsingh> what do we need on the server to support that push ?
+13:35:31 <MerlinTHP_> A CGI script on an HTTPS server with some client auth config
+13:35:41 <MerlinTHP_> So cgi + httpd config
+13:35:47 <kbsingh> what sort of auth backend can that support ?
+13:36:05 <kbsingh> also, upload via https.... is going to need some multipart fluffery
+13:36:40 <MerlinTHP_> That bit is a solved problem, afaik.  rpkg already does it
+13:36:57 <MerlinTHP_> The server validates the client cert against our CA
+13:37:14 <MerlinTHP_> Needs a CRL to be able to revoke certs.
+13:38:14 <kbsingh> right, so this would then share the ca with koji ?
+13:38:19 <MerlinTHP_> Yeah
+13:38:39 <kbsingh> and we'd need to have git.centos.org also then use the same CA
+13:38:47 <MerlinTHP_> Mm
+13:38:55 <MerlinTHP_> IPA getting more attractive by the second...
+13:38:56 <MerlinTHP_> ;)
+13:39:31 <alphacc> if we keep the koji CA (and use it for soemthing else) we may want to move easy_rsa + git-crypt (for scaling issue)
+13:39:37 <alphacc> or FreeIPA ;)
+13:40:36 <gwd> I'm more of a stout man myself...
+13:40:40 <kbsingh> gitblit can maknss calls as well if that makes life easier
+13:40:53 <kbsingh> can make nss
+13:41:22 <kbsingh> from the git.centos.org perspective, we can use pretty much anything and it will consume it .
+13:41:27 * MerlinTHP_ nods.
+13:41:49 <kbsingh> there are 2 things that we need to protect though - (1) there is always going to be a privileged path for rhel sources and buildsystem feedback - both of those can never fail
+13:42:09 <kbsingh> and (2) we need a way to gurantee branch names and commit access to branch names is locked down
+13:42:33 <bstinson> does gitblit currently give you that control?
+13:42:34 <kbsingh> so if the auth setup is going to happen at koji CA - that needs to provide a user:sig name mapping which can be used to map users:branch
+13:42:34 <MerlinTHP_> Can gitblit do that per-branch stuff?
+13:42:38 <kbsingh> bstinson: yes.
+13:42:52 <MerlinTHP_> Hrm
+13:43:20 <MerlinTHP_> We need more than just a CA for this
+13:43:30 <MerlinTHP_> CA + something with groups and things like that.
+13:43:33 <kbsingh> I worked with the author of gitblit ( james moger ) to work that in, and I've made some more tweaks at this end that make it work quite nicely
+13:43:49 <MerlinTHP_> That's cool.
+13:44:10 <kbsingh> for the git code itself, and the lookaside cache - the privleged path is via ssh
+13:44:28 <kbsingh> and gitblit does not mind that, it will happy refresh local git content cache if it finds the underlaying storage changee
+13:44:53 <MerlinTHP_> I'd have assumed that git+ssh was the default push method anyway
+13:45:06 <kbsingh> fwiw, gitolite can also consume and implement a user:branch mapping
+13:45:37 <kbsingh> push mode for git is over https
+13:45:41 <MerlinTHP_> Oh, ok
+13:45:54 <kbsingh> thinking there is that if we need entity verification, an EV cert will give you that
+13:46:31 <MerlinTHP_> Do we have a cert revocation system for the current koji CA?
+13:46:48 <MerlinTHP_> If I lose my laptop with koji cert now, what happens?
+13:47:09 <alphacc> MerlinTHP_: we can revoke access to koji
+13:47:23 <alphacc> MerlinTHP_: no crl right now but agreed it's needed.
+13:47:55 <MerlinTHP_> Is that turn off the user, or turn off the cert?
+13:48:05 <MerlinTHP_> ( so to speak )
+13:48:16 <alphacc> MerlinTHP_: user
+13:48:21 * MerlinTHP_ nods.
+13:49:02 <bstinson> ok, let's start wrapping up
+13:49:07 <alphacc> MerlinTHP_: user-rsa when Arrfab show me it existed. I don't want to reinvent the wheel.
+13:49:16 <MerlinTHP_> alphacc: *nod*
+13:49:23 <alphacc> MerlinTHP_: easy_rsa
+13:49:26 <MerlinTHP_> Being a CA is a PITA.
+13:49:45 <MerlinTHP_> OK, so, do we have any sort of consensus? :)
+13:49:54 <MerlinTHP_> Or anything to have a consensus about
+13:50:34 <MerlinTHP_> koji requires either SSL or KRB auth, and we're using SSL.  Trying to use that for everything we can sounds appropriate?
+13:50:44 <MerlinTHP_> Sounds like g.c.o can use it
+13:51:07 <bstinson> so (if i'm understanding correctly), we want gitblit to talk to the koji CA but we need to work out some name:sig mappings, and we want to look at having the lookaside cache use the fedora-style cgi script
+13:51:08 <MerlinTHP_> We need a way to store cert / user / group / sig info
+13:52:00 <kbsingh> yeah, if we can get some groups info in there that would rock
+13:52:16 <MerlinTHP_> OK
+13:52:16 <kbsingh> if not, we can always store user:group mappings in gitblit itself, and just have it querry the CA for auth
+13:52:31 <MerlinTHP_> I reckon we probably want that centrally too
+13:52:41 <kbsingh> and i presume the upload script can do something with the same CA as well ... if so - then we should trial it - or start trialing it at git.dev.centos.org
+13:52:53 <kbsingh> yeah, ideally all the info would be in one place
+13:53:01 <MerlinTHP_> It's the httpd config rather than the script itself, but yeah
+13:53:40 <kbsingh> ah i see
+13:53:50 <kbsingh> but will that be able to map user's to dir names ?
+13:53:59 <bstinson> once all that's in place we can sculpt centpkg around our setup
+13:54:04 <kbsingh> eg. if someone is locked to branch 'virtsig' they can only upload into <packagename>/virtsig/
+13:54:17 <MerlinTHP_> kbsingh: ok, that bit would need script changes :)
+13:54:40 <MerlinTHP_> the httpd-level stuff is authn, the authz would need to be in the script, I think
+13:55:28 <bstinson> Is MerlinTHP_ volunteering to look at that for the next meeting?
+13:55:36 <MerlinTHP_> Sure
+13:56:30 <bstinson> ok, great!
+13:56:35 <MerlinTHP_> :)
+13:56:47 <MerlinTHP_> Running out of meeting
+13:56:48 <kbsingh> when are we meeting next ?
+13:56:54 <MerlinTHP_> Same time next week?
+13:57:09 <kbsingh> ok, weekly works, but longer term we should think about making it bi-weekly
+13:57:13 <MerlinTHP_> Sure
+13:57:18 <kbsingh> maybe do ~ 6 weekly ones ?
+13:57:21 <bstinson> #info Next meeting: Monday 22-Sept 2014 13:00 UTC
+13:57:36 <bstinson> kbsingh: that's reasonable
+13:57:40 * MerlinTHP_ nods.
+13:58:12 <bstinson> #info We will be doing 6 weekly meetings, then moving to a bi-weekly schedule
+13:58:14 <lalatenduM> works for /Me
+13:58:24 <MerlinTHP_> Is there a meetbot give-merlinthp-an-action command? ;)
+13:58:41 * MerlinTHP_ should read the manual
+13:59:20 <lalatenduM> does "#action" work
+13:59:21 <bstinson> #action MerlinTHP_ Research lookaside cache authentication and upload permissions
+13:59:35 <MerlinTHP_> Ah :)
+13:59:42 <bstinson> i think i said that right
+13:59:52 <MerlinTHP_> Works for me.
+13:59:54 <bstinson> anything else that needs to go in the minutes?
+14:00:07 <kbsingh> is someone going to look at storing user:groups in the koji auth layers
+14:00:18 <MerlinTHP_> I'll have a think about that too
+14:00:19 <kbsingh> there must be something like this already - since users are limited to some tag's and targets
+14:00:27 <kbsingh> cant those just be the groups and sig names as well
+14:01:32 <alphacc> kbsingh: user are limited to the tagging action not to some target. This policy stuff need investigation. I don't think there is a group directive.
+14:02:54 <MerlinTHP_> OK, so we done with the meeting? :)
+14:02:59 <bstinson> gwd: i think that was you who sent a message to -devel with other agenda items, sorry our discussion sort of trampled over yours
+14:03:00 <alphacc> #action alphacc investigate koji policy for cbs.
+14:03:08 <bstinson> hopefully there will be time for an open-flood next week
+14:03:53 <bstinson> #info send agenda items for next week to the centos-devel@centos.org
+14:04:01 <bstinson> 1 minute warning before I close the minutes
+14:04:16 <MerlinTHP_> I'm good.
+14:04:44 <kbsingh> same here
+14:05:02 <kbsingh> i think were going to need some of these sessions of just open chat before we start working on and only on agenda items.
+14:05:04 <alphacc> ok with me.
+14:05:28 <bstinson> sure thing
+14:05:31 <bstinson> #endmeeting
