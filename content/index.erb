@@ -30,24 +30,6 @@ $(document).ready(function () {
   </div>
   <div class="col-sm-4">
     <h2 class="text-center">News & Events</h2>
-    <div class="media">
-      <a class="pull-left" href="#">
-        <img class="media-object img-rounded" src="/images/centoslogo-32.png" width="32" alt="..."></a>
-      <div class="media-body">
-        <h4 class="media-heading"><a href="http://wiki.centos.org/Events/Dojo/Timisoara2014">CentOS Dojo in Timisoara, Romania</a> <small><em>9 27 2014</em></small></h4>
-        <p>Presentations include Container Orchestration, Docker, foreman and more. <a href="http://centosdojotimisoara2014.eventbrite.co.uk/">Register here</a> </p>
-        <p> <a href="http://wiki.centos.org/Events/Dojo/">More about Dojos and other Events</a></p>
-      </div>
-    </div>
-
-    <div class="media">
-      <a class="pull-left" href="#">
-        <img class="media-object img-rounded" src="/images/centoslogo-32.png" width="32" alt="..."></a>
-      <div class="media-body">
-        <h4 class="media-heading"><a href="http://conference14.cpanel.net/">cPanel Conference - Houston, Texas</a> <small><em>29 Sept - 1 Oct 2014</em></small></h4>
-        <p>Come join the CentOS team at Hands On Houston, by cPanel!</p>
-      </div>
-    </div>
 
     <div class="media">
       <a class="pull-left" href="#">
@@ -56,6 +38,17 @@ $(document).ready(function () {
         <h4 class="media-heading"><a href="http://wiki.centos.org/Events/Dojo/Barcelona2014">CentOS Dojo - Barcelona, Spain</a> <small><em>29 Oct 2014</em></small></h4>
         <p>Come join the CentOS team in Barcelona</p>
         <p>Sponsored by <a href="http://www.csuc.cat/">CSUC</a></p>
+        <p> <a href="http://wiki.centos.org/Events/Dojo/">More about Dojos and other Events</a></p>
+      </div>
+    </div>
+
+    <div class="media">
+      <a class="pull-left" href="#">
+        <img class="media-object img-rounded" src="/images/centoslogo-32.png" width="32" alt="..."></a>
+      <div class="media-body">
+        <h4 class="media-heading"><a href="http://wiki.centos.org/Events/Dojo/LISA14">CentOS Dojo - Seattle, Washington</a> <small><em>10 Nov 2014</em></small></h4>
+        <p>Talks covering CI autoscaling, EPEL's history, Docker, and controlling DevOps cultural changes</p>
+        <p>Sponsored by <a href="https://www.usenix.org/conference/lisa14/attend">USENIX LISA14</a></p>
         <p> <a href="http://wiki.centos.org/Events/Dojo/">More about Dojos and other Events</a></p>
       </div>
     </div>
@@ -75,7 +68,7 @@ $(document).ready(function () {
       data-cycle-slides="> a"
       data-cycle-pause-on-hover="true" >
       <% @site.items.select { |i| i[:sponsor] }.each do|i| %>
-        <a href="<%= i[:url] %>"><img class="img-rounded" src="<%= i[:img] %>" /></a> <% end %>
+        <a href="<%= i[:url] %>" rel="nofollow"><img class="img-rounded" src="<%= i[:img] %>" /></a> <% end %>
     </div>
     <br /> 
     <p><a href="/sponsors/">If you value our work, please consider becoming a sponsor!</a></p>
