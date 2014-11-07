@@ -16,7 +16,7 @@ is_hidden: false
 
 <div class="row">
   <% @site.items.select { |i| i[:sponsor] }.shuffle.each do|i| %>
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4" >
       <div class="thumbnail">
         <img class="rounded" src="<%= i[:img] %>"> 
         <div class="caption">
