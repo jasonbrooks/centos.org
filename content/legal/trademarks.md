@@ -7,8 +7,8 @@ is_dynamic: true
 {:toc}
 
 #Introduction
-
-This document (the "Guidelines") contains guidelines for use of the CentOS word mark (the "Word Mark"), as well as the CentOS logotype, the CentOS graphical symbol, the &#39;Powered by CentOS&#39; logo and all other CentOS logos (the "Logos") (collectively, the "CentOS Marks").
+	
+This document (the "Guidelines") contains guidelines for use of the CentOS word mark (the "Word Mark"), as well as the CentOS logotype, the CentOS graphical symbol, the &#39;Powered by CentOS&#39; logo, and all other CentOS logos (the "Logos") (collectively, the "CentOS Marks").
 
 The CentOS Marks are trademarks of Red Hat, Inc. ("Red Hat"). Trademarks provide assurance about the quality of the goods or services with which the trademarks are associated. Confusion can arise if the same or similar names are used on identical or similar offerings.  Red Hat&#39;s protection of the CentOS Marks thus benefits the CentOS Project and the CentOS community.
 
@@ -19,17 +19,17 @@ The CentOS Project is by its nature a noncommercial community project that provi
 
 #Role of the CentOS Community
 
-Red Hat welcomes the assistance of the entire CentOS community in reporting non-compliant uses of the CentOS Marks and in encouraging those engaged in non compliant uses to take corrective measures.
+Red Hat welcomes the assistance of the entire CentOS community in reporting non-compliant uses of the CentOS Marks and in encouraging those engaged in non-compliant uses to take corrective measures.
 
 #General Principles
 
 Whenever you use the CentOS Marks, you must do so in a way that does not mislead others, either directly or by omission, concerning what they are obtaining and from whom. The law reflects this requirement in two principal ways: it prohibits creation of a "likelihood of confusion" but allows for "nominative use". 
 
-For example, you are not allowed to say you are distributing CentOS software when you are actually distributing some downstream modification of an official CentOS release (“Official” packages, builds and releases are those which have been approved for the CentOS Project&#39;s release by the CentOS Project) . Otherwise, your recipients would be confused if they do not receive the same features and functionality they would have obtained had they received software officially released by the CentOS Project. As another example, you are not allowed to use the Logos on your website in a way that suggests that your website is an official website of the CentOS Project, or that the CentOS Project endorses your website. On the other hand, you may of course say, for example, that you like the CentOS software distribution or that you participate in the CentOS Project.
+For example, you are not allowed to say you are distributing CentOS software when you are actually distributing some downstream modification of an official CentOS release (“Official” packages, builds, and releases are those that have been approved for the CentOS Project&#39;s release by the CentOS Project) . Otherwise, your recipients would be confused if they do not receive the same features and functionality they would have obtained had they received software officially released by the CentOS Project. As another example, you are not allowed to use the Logos on your website in a way that suggests that your website is an official website of the CentOS Project, or that the CentOS Project endorses your website. On the other hand, you may of course say, for example, that you like the CentOS software distribution or that you participate in the CentOS Project.
 
-You may not use or register, in whole or in part, the CentOS Marks as part of your own trademark, service mark, domain name, company name, trade name, product name or service name.
+You may not use or register, in whole or in part, the CentOS Marks as part of your own trademark, service mark, domain name, company name, trade name, product name, or service name.
 
-Trademark law does not allow your use of names or trademarks that are confusingly similar to the CentOS Marks. This means, among other things, that you may not use a variation of any of the CentOS Marks or any phonetic equivalent, takeoff, or abbreviation for a similar or related project, product or service.
+Trademark law does not allow your use of names or trademarks that are confusingly similar to the CentOS Marks. This means, among other things, that you may not use a variation of any of the CentOS Marks or any phonetic equivalent, takeoff, or abbreviation for a similar or related project, product, or service.
 
 #Software-related uses
 
