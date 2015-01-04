@@ -37,6 +37,7 @@ To file a notice of infringement with us, please provide the following informati
  * The following statement: "I swear, under penalty of perjury, that the information in the notification is accurate and that I am the copyright owner or am authorized to act on behalf of the owner of an exclusive right that is allegedly infringed."
  * Your electronic or physical signature.
  *
+
 To file a counter notification with us, please provide the following information to the Red Hat-designated copyright agent listed below:
 
  * A description of the material that Red Hat has removed or to which Red Hat has disabled access.
