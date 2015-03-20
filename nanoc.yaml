@@ -92,5 +92,5 @@ deploy:
     options: [ '-aP', '--delete-after', '--exclude="*.csv"', '--exclude="*.rss"' ]
   test:
     kind: rsync
-    dst: "webcontent@testweb:/var/www/html/websitev2"
+    dst: "webcontent@webtest:/var/www/html/websitev2"
     options: [ '-aP', '--delete-after', '--exclude="*.csv"', '--exclude="*.rss"' ]
