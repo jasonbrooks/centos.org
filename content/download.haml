@@ -5,51 +5,54 @@ title: Download CentOS
 .jumbotron
   %h1 Download CentOS
   %p 
-    Before downloading, the CentOS team would like to remind you that the primary means of sustaining the development of CentOS is via contributions by users such as yourself. CentOS is now and will continue to be totally free; however, it takes money and resources to make CentOS available. 
-    %a( href="http://wiki.centos.org/Donate" ) If you are able, please consider donating to the CentOS Project.
+    As you download and use CentOS Linux, the CentOS Project invites you to 
+    %a( href="http://wiki.centos.org/Contribute" ) be a part of the community as a contributor.
+    There are many ways to contribute to the project, from documentation, QA, and testing to coding changes for
+    %a( href="http://wiki.centos.org/SpecialInterestGroup" ) SIGs,
+    providing mirroring or hosting, and helping other users.
   .row
-    .col-sm-6
+    .col-sm-12
       %p
         .downloadbutton 
-          %a( href="http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7.0-1406-x86_64-DVD.iso" ) DVD ISO
-          %a( href="http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7.0-1406-x86_64-Everything.iso" ) Everything&nbsp;ISO
-      %p 
-        Both isos are also available
+          %a( href="http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1503.iso" ) DVD ISO
+          %a( href="http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Everything-1503.iso" ) Everything&nbsp;ISO
+          %a( href="http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1503.iso" ) Minimal ISO
+      %p
+        ISOs are also available
         %a( href="http://isoredirect.centos.org/centos/7/isos/x86_64/" ) via Torrent.
       %p
         If the above is not for you,        
         %a( href="http://wiki.centos.org/Download" ) alternative downloads
         might be.
-
-    .col-sm-6
-      %h2 Need a Cloud Image?
       %p
-        Looking to run CentOS in the Cloud? We have a number of official CentOS Linux images for Amazon Web Services, OpenNebula and more. 
-        %a( href="http://wiki.centos.org/Cloud" ) Check out our Clouds
+        The
+        %a(href="http://wiki.centos.org/Manuals/ReleaseNotes/CentOS7") release notes
+        are continuously updated to include issues and incorporate feedback from users.
+      %hr
+      %h2 Need a Cloud or Container Image?
+      %p
+        %a( href="https://aws.amazon.com/marketplace/seller-profile?id=16cb8b03-256e-4dde-8f34-1b0f377efe89" ) Amazon Web Services
+      %p
+        %a( href="https://registry.hub.docker.com/_/centos/" ) Docker registery
   .row
     .col-sm-12
       %hr
       %p
+        %a(href="http://wiki.centos.org/Download" ) More download choices
+      %p
         If you're looking for a specific (or geographically local) mirror, please check out our 
-        %a(href="/download/mirrors/") List of Current Mirrors
+        %a(href="/download/mirrors/") list of current mirrors
       %p 
         To check the status of a mirror, please visit
         %a(href="http://mirror-status.centos.org/") mirror-status.centos.org
       %hr
-
-
 .row
-  .col-sm-4
-    %h2.text-center Minimal Install Images
-    %p 
-      The absolute bare minimum no-frills install media for CentOS. For experienced users who don't need or want anything extra for their install. 
-      %a( href="http://isoredirect.centos.org/centos/7/isos/x86_64/" ) Download the Minimal ISO &raquo;
-  .col-sm-4
+  .col-sm-6
     %h2.text-center Older Versions
     %p  
-      Legacy versions of CentOS are no longer supported. For historical purposes, CentOS keeps an archive of older versions. If you're absolutely sure you need an older version:
+      Legacy versions of CentOS are no longer supported. For historical purposes, CentOS keeps an archive of older versions. If you're absolutely sure you need an older version
       %a( href="http://wiki.centos.org/Download" ) then click here &raquo;
-  .col-sm-4
+  .col-sm-6
     %h2.text-center Need the Source? 
     %p 
       In order to help ease the workload for our primary mirror network, the source rpms are not kept in the same tree as the binary packages. If you need the source packages used to build CentOS, you can find them in our vault 
