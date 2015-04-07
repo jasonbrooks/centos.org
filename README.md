@@ -34,7 +34,7 @@ May be in RPM:
   * asciidoc
   * nokogiri
 
-Installing on Fedora 19/20:
+Installing on CentOS 7 as well as F19/20/21:
 
 <pre>
 sudo yum install ruby asciidoc rubygem-bundler
