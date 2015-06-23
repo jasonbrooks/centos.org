@@ -24,7 +24,7 @@ A SIG with a higher barrier to entry is the CentOS Core SIG, which has the ultim
 A SIG that consistently has a significant number of -1 votes, especially from a single person, indicates an issue that should be brought to the attention of the Board , as it may be an indicator of a dis-functional SIG and may adversely impact the meritocracy.
 
 ##Board Members
-Each Board member appointed or reconfirmed by the Board will be selected based on merit. Merit criteria have been defined to recognize, among other things, active participation in the  CentOS Project, an understanding of the Project, and an understanding and ability to balance the objectives derived from the relationship with it’s Red Hat-based upstream. In this regard, Candidate Board members must:
+Each Board member appointed or reconfirmed by the Board will be selected based on merit. Merit criteria have been defined to recognize, among other things, active participation in the  CentOS Project, an understanding of the Project, and an understanding and ability to balance the objectives derived from the relationship with it's Red Hat-based upstream. In this regard, Candidate Board members must:
 
 * Have demonstrated, including through active participation and contribution to the broader aspects of running the CentOS Project for an extended period of time, a solid understanding of and motivation to foster a healthy relationship to it's upstream, the factors that influence and guide that ecosystem, and the need to maintain the health and vitality of that ecosystem.
 * Promote CentOS and the needs of the community projects in CentOS to achieve active and vibrant adoption in the community for CentOS.

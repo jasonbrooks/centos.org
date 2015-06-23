@@ -55,6 +55,6 @@ The CentOS Governing Board shall include two named roles: a Chair and a Liaison,
 
 The Liaison is required to be a Red Hat employee, which will enable this person to be an effective bi-directional conduit between Red Hat and the CentOS Project. The Chair, however, can be anyone selected by the Board from among its members. The Liaison may be rotated at any time to an alternate Red Hat employee who is a  Board member. Newly appointed Board members may also hold the Liaison seat. The Chair and the Liaison cannot be the same person. 
 
-The Board will operate under the principles of [meritocracy](/about/governance/appendix-glossary/#meritocracy), having the Board be driven by a [consensus-based decision model](/about/governance/appendix-glossary/#consensus-decision-making). This model fosters an active healthy debate that furthers the Project while recognising its relationship to Red Hat’s product source, the new formal relationship with Red Hat, and preserving the viability of the key upstream that feeds it.
+The Board will operate under the principles of [meritocracy](/about/governance/appendix-glossary/#meritocracy), having the Board be driven by a [consensus-based decision model](/about/governance/appendix-glossary/#consensus-decision-making). This model fosters an active healthy debate that furthers the Project while recognising its relationship to Red Hat's product source, the new formal relationship with Red Hat, and preserving the viability of the key upstream that feeds it.
 
 [&laquo; Back to Governance](/about/governance)
