@@ -29,6 +29,6 @@ A. If a decision/solution cannot be found on an issue that is deemed time and/or
 
 B.  The Liaison may, in exceptional circumstances, make a decision on behalf of the Board if a consensus has not been reached on an issue that is deemed time or business critical by Red Hat if:  (1) a board quorum (i.e., a majority) is present or a quorum of Board members has cast their votes; or (2) after 3 working days if a Board quorum is not present at a meeting or a quorum has not cast their votes (list votes); provided that the Chair may (or at the request of the Liaison, will) call a meeting and demand that a quorum be present.  
 
-Unless the Liaison specifically indicates on a specific issue that he/she is acting in his/her official capacity as Liaison, either prior to a vote or later (e.g., after an issue has been deemed time or business critical), the Liaison’s voice and vote is treated the same as any other member of the Board. Decisions indicated as Liaison decisions made on behalf of the Board by the Liaison may not be overturned. 
+Unless the Liaison specifically indicates on a specific issue that he/she is acting in his/her official capacity as Liaison, either prior to a vote or later (e.g., after an issue has been deemed time or business critical), the Liaison's voice and vote is treated the same as any other member of the Board. Decisions indicated as Liaison decisions made on behalf of the Board by the Liaison may not be overturned. 
 
 [&laquo; Back to Governance](/about/governance)

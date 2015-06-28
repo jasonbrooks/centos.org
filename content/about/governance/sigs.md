@@ -17,7 +17,7 @@ SIGs are usually self-forming around a technology by a small community of enthus
 
 Each group will be responsible for its own variant in CentOS that is specifically targeted towards its community (e.g., The CentOS FooBar SIG creates a CentOS variant targeted to FooBar users and developers, the CentOS Hosting SIG builds a variant for web hosters, included in the CentOS distribution). The SIG is the deciding authority on what is required in their variant to satisfy the needs of their community, with the understanding that the Board has ultimate oversight as explained elsewhere. If required, the CentOS Board will help the individual SIGs to reach consensus on any issues or problems.
 
-SIGs are the only way for an entity to use and associate the CentOS brand with a variant. You can always use Git and the repo to fork and try-out ideas, but only those packages in git.centos.org and released and signed by CentOS can be called ‘CentOS’.
+SIGs are the only way for an entity to use and associate the CentOS brand with a variant. You can always use Git and the repo to fork and try-out ideas, but only those packages in git.centos.org and released and signed by CentOS can be called 'CentOS'.
 
 Another type of SIG is functional, focused on maintaining parts of the Project itself, such as infrastructure, documentation, and design. A unique SIG is the Core SIG that builds and maintains the core CentOS derivative of Red Hat Enterprise Linux. It is unique because it is the central, orchestrating platform that all other variants are built from.
 
@@ -52,7 +52,7 @@ Another type of SIG is functional, focused on maintaining parts of the Project i
   </div>
 </div>
 
-The SIGs themselves also have a merit path toward autonomy and accountability for Project aspects. The determination of merit level is reflected in the amount of oversight required by the Board and the SIGs ability to self-sign and release software builds. As merit increases, Board oversight goes down, with a transition spot in the middle where the SIG naturally obtains more autonomy, usually toward the end of the “Early” phase.
+The SIGs themselves also have a merit path toward autonomy and accountability for Project aspects. The determination of merit level is reflected in the amount of oversight required by the Board and the SIGs ability to self-sign and release software builds. As merit increases, Board oversight goes down, with a transition spot in the middle where the SIG naturally obtains more autonomy, usually toward the end of the "Early" phase.
 
 
 __Sandboxes__ are the entry point for all proposed SIGs. To enter, there must be a Champion from or approved by the Board and a proposal (which indicates the reason for the SIG, the expected audience, initial team, risks, etc.) For a SIG to be created, there must be at least 3 +1 votes from the Board (NOT including the Champion) and zero (nil) -1 votes. When approved, the Champion becomes the formal Mentor of the Sandbox SIG.
@@ -68,7 +68,7 @@ In both the Sandbox and Early SIGs, the role of the Board is primarily to facili
 Note that in all cases, maturity is a measure of the community itself, and not the codebase or the actual SIG variant release. A mature SIG could create a non-mature (e.g., Alpha or Beta release) distribution and, conversely, a Sandbox SIG could produce a very mature (robust and reliable) distro.
 
 ##Community and SIGs
-SIGs represent the true power and value of the CentOS Project. As seen in the current CentOS Dojos, and in the CentOS community itself, the builds provide a safe, neutral, and communal central meeting place for major technology areas. This is the reason why SIGs should not be program/project specific (e.g., a MariaDB rebuild), but rather technology-area focused (e.g., the “Hoster's” rebuild). By creating a central point where all projects and communities can interact, using the OS as the common foundation, upstream projects will be able to reach and interface with a much larger audience.
+SIGs represent the true power and value of the CentOS Project. As seen in the current CentOS Dojos, and in the CentOS community itself, the builds provide a safe, neutral, and communal central meeting place for major technology areas. This is the reason why SIGs should not be program/project specific (e.g., a MariaDB rebuild), but rather technology-area focused (e.g., the "Hoster's" rebuild). By creating a central point where all projects and communities can interact, using the OS as the common foundation, upstream projects will be able to reach and interface with a much larger audience.
 
 It is expected that SIGs may propose significant forking of the base CentOS core, such as introducing a new Python version or Linux kernel. It is the job of the Board and CentOS Core SIG to oversee and approve any forks that are pulled back into Git, including to ensure that these forks are supportable. This support is best done by an active and engaged variant SIG. The Board or CentOS Core SIG can pull a variant from release if they reasonably believe the variant SIG is unable to support the variant. Another option is reassigning an active variant from a dead SIG to a willing living SIG. The Board is specifically not limited in what it can do to protect the quality of the CentOS mark where it comes to the content and quality of a variant.
 
