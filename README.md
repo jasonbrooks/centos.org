@@ -1,6 +1,3 @@
-This is a repository for a yet-to-be-announced project. Consider
-everything here company confidential until the announcement.
-
 
 The site is built with *nanoc* and *Bootstrap 3*.
 
