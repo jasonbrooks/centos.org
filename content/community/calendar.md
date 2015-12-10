@@ -43,7 +43,7 @@ The CCS intends to take ownership of existing CentOS Project relationships with 
 
 ### <a name="Community_Buildsystem_&_Infrastructure_Meeting">Community Buildsystem & Infrastructure Meeting</a>
 
-* Every two weeks (on even weeks) on Monday at [1400 UTC](http://www.timeanddate.com/worldclock/fixedtime.html?hour=14&amp;min=00&amp;sec=0) in #centos-devel
+* Weekly on Monday at [1400 UTC](http://www.timeanddate.com/worldclock/fixedtime.html?hour=14&amp;min=00&amp;sec=0) in #centos-devel
 * Chair (to contact for more information): Brian Stinson (bstinson), Fabian Arrotin (Arrfab), Karanbir Singh (kbsingh), Thomas Oulevey (alphacc)
 * [Link to Project Site](http://wiki.centos.org/HowTos/CommunityBuildSystem)
 * The CBS/Infra meeting is for discussing and coordinating operations in the Community Buildsystem. Anyone are welcome to attend and discuss client tools, jobs in the buildsystem, feature requests, and anything related.
@@ -64,7 +64,7 @@ at +44 207 009 4455.
 
 ### <a name="Software_Collections_SIG_Sync-up">Software Collections SIG Sync-up</a>
 
-* Every two weeks (on even weeks) on Wednesday at [1500 UTC](http://www.timeanddate.com/worldclock/fixedtime.html?hour=15&amp;min=00&amp;sec=0) in #centos-devel
+* Every two weeks (on even weeks) on Wednesday at [1600 UTC](http://www.timeanddate.com/worldclock/fixedtime.html?hour=16&amp;min=00&amp;sec=0) in #centos-devel
 * Chair (to contact for more information): Honza Horak (hhorak)
 * [Link to Project Site](http://wiki.centos.org/SpecialInterestGroup/SCLo)
 * The Software Collections SIG will provide an upstream development area for various software collections and related tools. Developers can build on and extend existing SCLs, so they don&#39;t need to re-invent the wheel or take responsibility for packaging unnecessary dependencies. 
@@ -79,4 +79,4 @@ at +44 207 009 4455.
 
 
 
-Page generated on 2015-11-19 19:41:40.946223 UTC
+Page generated on 2015-12-10 12:35:56.762125 UTC
