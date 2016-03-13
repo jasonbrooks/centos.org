@@ -22,10 +22,10 @@ If you want to verify that the keys installed on your system match the keys list
       Key fingerprint = 6341 AB27 53D7 8A78 A7C2  7BB1 24C6 A8A7 F4A8 0EB5
 
 
-#Project Keys
+# Project Keys
 The following keys are currently in use by the CentOS Project for the specified release versions. Please note that each CentOS Linux release may have several GPG keys assigned.
 
-##CentOS-7 Keys
+## CentOS-7 Keys
 
 ### CentOS 7 Signing Key
     pub  4096R/F4A80EB5 2014-06-23 CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>
@@ -76,3 +76,44 @@ The following keys are currently in use by the CentOS Project for the specified 
     sub  1024g/DA743639 2007-01-06 [expires: 2017-01-03]
 
 
+# Community Driven Project keys
+
+The following keys are used to sign community led efforts within the CentOS Project ecosystem.
+
+## SIG Keys
+
+### Atomic SIG
+    pub  2048R/91BA8335 2015-06-10 CentOS Atomic SIG (http://wiki.centos.org/SpecialInterestGroup/Atomic) <security@centos.org>
+    Key fingerprint = 64E3 E755 8572 B59A 3194  52AA F17E 7456 91BA 8335
+
+### Cloud SIG
+    pub  2048R/764429E6 2015-05-15 CentOS Cloud SIG (http://wiki.centos.org/SpecialInterestGroup/Cloud) <security@centos.org>
+    Key fingerprint = 736A F511 6D9C 40E2 AF6B  074B F9B9 FEE7 7644 29E6
+
+### Software Collections SIG
+    pub  2048R/F2EE9D55 2015-10-01 CentOS SoftwareCollections SIG (https://wiki.centos.org/SpecialInterestGroup/SCLo) <security@centos.org>
+    Key fingerprint = C4DB D535 B1FB BA14 F8BA  64A8 4EB8 4E71 F2EE 9D55
+
+### Storage SIG
+    pub  2048R/E451E5B5 2015-01-23 CentOS Storage SIG (http://wiki.centos.org/SpecialInterestGroup/Storage) <security@centos.org>
+    Key fingerprint = 7412 9C0B 173B 071A 3775  951A D4A2 E50B E451 E5B5
+
+### Virtualization SIG
+    pub  2048R/61E8806C 2015-06-17 CentOS Virtualization SIG (http://wiki.centos.org/SpecialInterestGroup/Virtualization) <security@centos.org>
+    Key fingerprint = A7C8 E761 309D 2F1C 92C5  0B62 7AEB BE82 61E8 806C
+
+## AltArch keys
+
+Community driven ports of CentOS to other platforms.
+
+### AArch64 Key
+    pub  2048R/305D49D6 2015-07-28 CentOS AltArch SIG - AArch64 (http://wiki.centos.org/SpecialInterestGroup/AltArch/AArch64) <security@centos.org>
+    Key fingerprint = EF8F 3CA6 6EFD F32B 36CD  ADF7 6C7C B6EF 305D 49D6
+
+### Arm32 Key
+    pub  2048R/62505FE6 2015-11-27 CentOS AltArch SIG - Arm32 (https://wiki.centos.org/SpecialInterestGroup/AltArch/Arm32) <security@centos.org>
+    Key fingerprint = 4D9E 39F1 499C A21D D289  77F8 CAFE F11B 6250 5FE6
+
+### PowerPC Key
+    pub  2048R/F533F4FA 2015-11-27 CentOS AltArch SIG - PowerPC (https://wiki.centos.org/SpecialInterestGroup/AltArch) <security@centos.org>
+    Key fingerprint = BAFA 3436 FC50 768E 3C3C  2E4E A963 BBDB F533 F4FA
