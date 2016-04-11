@@ -82,11 +82,11 @@ watcher:
 
 #Deployment
 deploy:
-  dev:
-    kind: rsync
-    dst: "webcontent@c6pn1.centos.in:/var/www/html/websitev2"
-    options: [ '-aP', '--delete-after', '--exclude="*.csv"', '--exclude="*.rss"' ]
   prod:
+    kind: rsync
+    dst: "webcontent@web.p5.centos.org:/var/www/html/websitev2"
+    options: [ '-aP', '--delete-after', '--exclude="*.csv"', '--exclude="*.rss"' ]
+  legacy:
     kind: rsync
     dst: "webcontent@newweb.centos.org:/var/www/html/websitev2"
     options: [ '-aP', '--delete-after', '--exclude="*.csv"', '--exclude="*.rss"' ]

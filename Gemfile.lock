@@ -3,7 +3,7 @@ GEM
   specs:
     adsf (1.2.0)
       rack (>= 1.0.0)
-    asciidoctor (1.5.3)
+    asciidoctor (1.5.4)
     bootstrap-sass (3.0.0.0)
       sass (~> 3.2)
     builder (3.2.2)
