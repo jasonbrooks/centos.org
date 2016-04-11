@@ -34,7 +34,7 @@ May be in RPM:
 Installing on CentOS 7 as well as F19/20/21:
 
 <pre>
-sudo yum install ruby asciidoc rubygem-bundler
+sudo yum install ruby asciidoc rubygem-bundler make gcc ruby-devel zlib-devel zlib gcc-c++
 bundle install
 </pre>
 
