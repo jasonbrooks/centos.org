@@ -28,15 +28,21 @@ The following keys are currently in use by the CentOS Project for the specified 
 ## CentOS-7 Keys
 
 ### CentOS 7 Signing Key
+[download key](/keys/RPM-GPG-KEY-CentOS-7)
+
     pub  4096R/F4A80EB5 2014-06-23 CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>
       Key fingerprint = 6341 AB27 53D7 8A78 A7C2  7BB1 24C6 A8A7 F4A8 0EB5
 
 ### CentOS 7 Debug Key
+[download key](/keys/RPM-GPG-KEY-CentOS-Debug-7)
+
     pub  2048R/B6792C39 2014-07-15 CentOS-7 Debug (CentOS-7 Debuginfo RPMS) <security@centos.org>
       Key fingerprint = 759D 690F 6099 2D52 6A35  8CBD D0F2 5A3C B679 2C39
 
 
 ### CentOS 7 Testing Key
+[download key](/keys/RPM-GPG-KEY-CentOS-Testing-7)
+
     pub  4096R/8FAE34BD 2014-06-04 CentOS-7 Testing (CentOS 7 Testing content) <security@centos.org>
       Key fingerprint = BA02 A5E6 AFF9 70F7 269D  D972 C788 93AC 8FAE 34BD
 
@@ -44,21 +50,29 @@ The following keys are currently in use by the CentOS Project for the specified 
 ## CentOS 6 Keys
 
 ###CentOS-6 Signing Key
+[download key](/keys/RPM-GPG-KEY-CentOS-6)
+
     pub  4096R/C105B9DE 2011-07-03 CentOS-6 Key (CentOS 6 Official Signing Key) <centos-6-key@centos.org>
       Key fingerprint = C1DA C52D 1664 E8A4 386D  BA43 0946 FCA2 C105 B9DE
 
 
 ### CentOS-6 Debug Key
+[download key](/keys/RPM-GPG-KEY-CentOS-Debug-6)
+
     pub  4096R/D0FF3D16 2011-07-03 CentOS-6 Debuginfo Key (CentOS-6 Debuginfo Signing Key) <centos-6-debug-key@centos.org>
       Key fingerprint = 69B3 0F26 BA2B 3AA4 C27C  E4F5 3B75 CF79 D0FF 3D16
 
 
 ### CentOS-6 Testing Key
+[download key](/keys/RPM-GPG-KEY-CentOS-Testing-6)
+
     pub  4096R/EF1D6DB8 2011-07-03 CentOS-6 Testing Key (CentOS-6 Test and Beta Signing Key) <centos-6-testing-key@centos.org>
       Key fingerprint = 4233 9C29 8BC4 352C A4F9  7504 119C 1A87 EF1D 6DB8
 
 
 ### CentOS-6 Security Key
+[download key](/keys/RPM-GPG-KEY-CentOS-Security-6)
+
     pub  4096R/FE837F6F 2011-07-03 CentOS-6 Security Key (CentOS-6 Official Security Key) <centos-6-security-key@centos.org>
       Key fingerprint = 0830 F43C 928A A5A8 A6F1  AF97 0B13 2C3F FE83 7F6F
 
@@ -66,6 +80,8 @@ The following keys are currently in use by the CentOS Project for the specified 
 ## CentOS 5 Keys
 
 ### CentOS-5 Signing Key
+[download key](/keys/RPM-GPG-KEY-CentOS-5)
+
     pub  1024D/E8562897 2007-01-06 CentOS-5 Key (CentOS 5 Official Signing Key) <centos-5-key@centos.org>
       Key fingerprint = 473D 66D5 2122 71FD 51CC  17B1 A8A4 47DC E856 2897
     sub  1024g/1E9EA3B6 2007-01-06 [expires: 2017-01-03]
@@ -107,13 +123,19 @@ The following keys are used to sign community led efforts within the CentOS Proj
 Community driven ports of CentOS to other platforms.
 
 ### AArch64 Key
+[download key](/keys/RPM-GPG-KEY-CentOS-7-aarch64)
+
     pub  2048R/305D49D6 2015-07-28 CentOS AltArch SIG - AArch64 (http://wiki.centos.org/SpecialInterestGroup/AltArch/AArch64) <security@centos.org>
     Key fingerprint = EF8F 3CA6 6EFD F32B 36CD  ADF7 6C7C B6EF 305D 49D6
 
 ### Arm32 Key
+[download key](/keys/RPM-GPG-KEY-CentOS-SIG-AltArch-Arm32)
+
     pub  2048R/62505FE6 2015-11-27 CentOS AltArch SIG - Arm32 (https://wiki.centos.org/SpecialInterestGroup/AltArch/Arm32) <security@centos.org>
     Key fingerprint = 4D9E 39F1 499C A21D D289  77F8 CAFE F11B 6250 5FE6
 
 ### PowerPC Key
+[download key](/keys/RPM-GPG-KEY-CentOS-SIG-AltArch-7-ppc64)
+
     pub  2048R/F533F4FA 2015-11-27 CentOS AltArch SIG - PowerPC (https://wiki.centos.org/SpecialInterestGroup/AltArch) <security@centos.org>
     Key fingerprint = BAFA 3436 FC50 768E 3C3C  2E4E A963 BBDB F533 F4FA
