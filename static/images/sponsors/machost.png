@@ -1,0 +1,11 @@
+--2017-03-27 14:31:34--  http://machost.co/images/logo.png
+Resolving machost.co (machost.co)... 2400:cb00:2048:1::6812:36ae, 2400:cb00:2048:1::6812:37ae, 104.18.54.174, ...
+Connecting to machost.co (machost.co)|2400:cb00:2048:1::6812:36ae|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 26088 (25K) [image/png]
+Saving to: ‘logo.png’
+
+     0K .......... .......... .....                           100% 3.07M=0.008s
+
+2017-03-27 14:31:34 (3.07 MB/s) - ‘logo.png’ saved [26088/26088]
+
