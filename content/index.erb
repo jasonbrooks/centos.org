@@ -5,8 +5,9 @@ is_hidden: true
 <script type="text/javascript" >
 $(document).ready(function () {
         $('#divRss').FeedEk({
-            FeedUrl: document.location.protocol + '//www.centos.org/assets/planet.rss',
+            FeedUrl: 'https://www.centos.org/assets/planet.rss',
             DescCharacterLimit:100,
+            ShowPubDate: false,
             MaxCount: 4
         });
 });
