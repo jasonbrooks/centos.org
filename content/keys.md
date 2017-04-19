@@ -107,6 +107,8 @@ The following keys are used to sign community led efforts within the CentOS Proj
     Key fingerprint = 736A F511 6D9C 40E2 AF6B  074B F9B9 FEE7 7644 29E6
 
 ### Software Collections SIG
+[download key](/keys/RPM-GPG-KEY-CentOS-SIG-SCLo)
+
     pub  2048R/F2EE9D55 2015-10-01 CentOS SoftwareCollections SIG (https://wiki.centos.org/SpecialInterestGroup/SCLo) <security@centos.org>
     Key fingerprint = C4DB D535 B1FB BA14 F8BA  64A8 4EB8 4E71 F2EE 9D55
 
