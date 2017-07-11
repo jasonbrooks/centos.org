@@ -86,9 +86,9 @@ deploy:
     kind: rsync
     dst: "webcontent@web.p5.centos.org:/var/www/html/websitev2"
     options: [ '-aP', '--delete-after', '--exclude="*.csv"', '--exclude="*.rss"' ]
-  legacy:
+  backup:
     kind: rsync
-    dst: "webcontent@newweb.centos.org:/var/www/html/websitev2"
+    dst: "webcontent@www.lon0.centos.org:/var/www/html/websitev2"
     options: [ '-aP', '--delete-after', '--exclude="*.csv"', '--exclude="*.rss"' ]
   test:
     kind: rsync
