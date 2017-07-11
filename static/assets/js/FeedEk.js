@@ -4,4 +4,69 @@
 * Author : Engin KIZIL http://www.enginkizil.com   
 */
 
-!function (a) { a.fn.FeedEk = function (b) { var g, c = a.extend({ MaxCount: 5, ShowDesc: !0, ShowPubDate: !0, DescCharacterLimit: 0, TitleLinkTarget: "_blank", DateFormat: "", DateFormatLang: "en" }, b), d = a(this).attr("id"), f = ""; if (a("#" + d).empty(), void 0 != c.FeedUrl) { a("#" + d).append('<img src="loader.gif" />'); var h = 'SELECT channel.item FROM feednormalizer WHERE output="rss_2.0" AND url ="' + c.FeedUrl + '" LIMIT ' + c.MaxCount; a.ajax({ url: "https://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(h) + "&format=json&diagnostics=false&callback=?", dataType: "json", success: function (b) { a("#" + d).empty(), b.query.results.rss instanceof Array || (b.query.results.rss = [b.query.results.rss]), a.each(b.query.results.rss, function (b, d) { if (f += '<li><div class="itemTitle"><a href="' + d.channel.item.link + '" target="' + c.TitleLinkTarget + '" >' + d.channel.item.title + "</a></div>", c.ShowPubDate) { if (g = new Date(d.channel.item.pubDate), f += '<div class="itemDate">', a.trim(c.DateFormat).length > 0) try { moment.lang(c.DateFormatLang), f += moment(g).format(c.DateFormat) } catch (b) { f += g.toLocaleDateString() } else f += g.toLocaleDateString(); f += "</div>" } c.ShowDesc && (f += '<div class="itemContent">', f += c.DescCharacterLimit > 0 && d.channel.item.description.length > c.DescCharacterLimit ? d.channel.item.description.substring(0, c.DescCharacterLimit) + "..." : d.channel.item.description, f += "</div>") }), a("#" + d).append('<ul class="feedEkList">' + f + "</ul>") } }) } } }(jQuery);
+(function ($) {
+    $.fn.FeedEk = function (opt) {
+        var def = $.extend({
+            MaxCount: 5,
+            ShowDesc: true,
+            ShowPubDate: true,
+            DescCharacterLimit: 0,
+            TitleLinkTarget: "_blank",
+            DateFormat: "",
+            DateFormatLang:"en"
+        }, opt);
+        
+        var id = $(this).attr("id"), i, s = "", dt;
+        $("#" + id).empty();
+        if (def.FeedUrl == undefined) return;       
+        $("#" + id).append('<img src="loader.gif" />');
+
+        var YQLstr = 'SELECT channel.item FROM feednormalizer WHERE output="rss_2.0" AND url ="' + def.FeedUrl + '" LIMIT ' + def.MaxCount;
+
+        $.ajax({
+            url: "https://query.yahooapis.com/v1/public/yql?q=" + encodeURIComponent(YQLstr) + "&format=json&diagnostics=false&callback=?",
+            dataType: "json",
+            success: function (data) {
+                $("#" + id).empty();
+                if (!(data.query.results.rss instanceof Array)) {
+                    data.query.results.rss = [data.query.results.rss];
+                }
+                $.each(data.query.results.rss, function (e, itm) {
+                    s += '<li><div class="itemTitle"><a href="' + itm.channel.item.link + '" target="' + def.TitleLinkTarget + '" >' + itm.channel.item.title + '</a></div>';
+                    
+                    if (def.ShowPubDate){
+                        dt = new Date(itm.channel.item.pubDate);
+                        s += '<div class="itemDate">';
+                        if ($.trim(def.DateFormat).length > 0) {
+                            try {
+                                moment.lang(def.DateFormatLang);
+                                s += moment(dt).format(def.DateFormat);
+                            }
+                            catch (e){s += dt.toLocaleDateString();}                            
+                        }
+                        else {
+                            s += dt.toLocaleDateString();
+                        }
+                        s += '</div>';
+                    }
+                    if (def.ShowDesc) {
+                        s += '<div class="itemContent">';
+                         if (def.DescCharacterLimit > 0 && itm.channel.item.description.length > def.DescCharacterLimit) {
+                             // Patches upstream FeedEK to correctly
+                             // handle HTML tags embedded in the
+                             // description text. 
+                            var d = $(itm.channel.item.description).text();
+                            s += d.substring(0, def.DescCharacterLimit) + '...';
+                        }
+                        else {
+                            s += itm.channel.item.description;
+                         }
+                         s += '</div>';
+                    }
+                });
+                $("#" + id).append('<ul class="feedEkList">' + s + '</ul>');
+            }
+        });
+    };
+})(jQuery);
+
