@@ -31,12 +31,20 @@ May be in RPM:
   * asciidoc
   * nokogiri
 
-Installing on CentOS 7 as well as F19/20/21:
+## Installing on CentOS 7 as well as F19/20/21:
 
 <pre>
 sudo yum install ruby asciidoc rubygem-bundler make gcc ruby-devel zlib-devel zlib gcc-c++
 bundle install
 </pre>
+
+
+## Using a built container (all platforms):
+Assuming that you have this git repository cloned under /opt/data/git/centos.org : 
+```
+docker pull registry.centos.org/arrfab/nanoc:latest # Download the container
+docker run --rm -v /opt/data/git/centos.org/:/nanoc/:Z registry.centos.org/arrfab/nanoc:latest
+```
 
 #Site Layout
   * Template and menu files live in /layouts
