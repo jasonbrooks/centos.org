@@ -107,6 +107,8 @@ The following keys are used to sign community led efforts within the CentOS Proj
     Key fingerprint = 736A F511 6D9C 40E2 AF6B  074B F9B9 FEE7 7644 29E6
 
 ### OpsTools SIG
+[download key](/keys/RPM-GPG-KEY-CentOS-SIG-OpsTools)
+
     pub  2048R/51BC2A13 2017-02-20 CentOS OpsTools SIG (https://wiki.centos.org/SpecialInterestGroup/OpsTools) <security@centos.org>
     Key fingerprint = 7872 8176 9AD7 3878 85EE  A649 4FD9 5327 51BC 2A13
 
@@ -121,6 +123,8 @@ The following keys are used to sign community led efforts within the CentOS Proj
     Key fingerprint = 7412 9C0B 173B 071A 3775  951A D4A2 E50B E451 E5B5
 
 ### Virtualization SIG
+[download key](/keys/RPM-GPG-KEY-CentOS-SIG-Virtualization)
+
     pub  2048R/61E8806C 2015-06-17 CentOS Virtualization SIG (http://wiki.centos.org/SpecialInterestGroup/Virtualization) <security@centos.org>
     Key fingerprint = A7C8 E761 309D 2F1C 92C5  0B62 7AEB BE82 61E8 806C
 
