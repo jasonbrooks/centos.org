@@ -106,6 +106,10 @@ The following keys are used to sign community led efforts within the CentOS Proj
     pub  2048R/764429E6 2015-05-15 CentOS Cloud SIG (http://wiki.centos.org/SpecialInterestGroup/Cloud) <security@centos.org>
     Key fingerprint = 736A F511 6D9C 40E2 AF6B  074B F9B9 FEE7 7644 29E6
 
+### OpsTools SIG
+    pub  2048R/51BC2A13 2017-02-20 CentOS OpsTools SIG (https://wiki.centos.org/SpecialInterestGroup/OpsTools) <security@centos.org>
+    Key fingerprint = 7872 8176 9AD7 3878 85EE  A649 4FD9 5327 51BC 2A13
+
 ### Software Collections SIG
 [download key](/keys/RPM-GPG-KEY-CentOS-SIG-SCLo)
 
