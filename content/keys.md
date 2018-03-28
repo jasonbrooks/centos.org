@@ -102,8 +102,16 @@ The following keys are used to sign community led efforts within the CentOS Proj
     pub  2048R/91BA8335 2015-06-10 CentOS Atomic SIG (http://wiki.centos.org/SpecialInterestGroup/Atomic) <security@centos.org>
     Key fingerprint = 64E3 E755 8572 B59A 3194  52AA F17E 7456 91BA 8335
 
+### ConfigManagement SIG
+    pub   2048R/6E8B7E8A 2018-03-21 CentOS Config Management SIG (https://wiki.centos.org/SpecialInterestGroup/ConfigManagementSIG) <security@centos.org>
+    Key fingerprint = C75A FB57 D5C0 F238 CB15  BEC8 1AE1 10FA 6E8B 7E8A
+
 ### Cloud SIG
     pub  2048R/764429E6 2015-05-15 CentOS Cloud SIG (http://wiki.centos.org/SpecialInterestGroup/Cloud) <security@centos.org>
+    Key fingerprint = 736A F511 6D9C 40E2 AF6B  074B F9B9 FEE7 7644 29E6
+
+### NFV SIG
+    pub   2048R/9D2A76A7 2018-02-20 CentOS NFV SIG (https://wiki.centos.org/SpecialInterestGroup/NFV) <security@centos.org>
     Key fingerprint = 736A F511 6D9C 40E2 AF6B  074B F9B9 FEE7 7644 29E6
 
 ### OpsTools SIG
