@@ -21,9 +21,9 @@ At CentOS, your privacy is important to us. To better protect your privacy, we h
 
 #The Information We Collect
 
-This Privacy Statement applies to all information collected by or submitted to CentOS, including personal information. "Personal information" is data that reasonably can be used to identify or describe an individual.
+This Privacy Statement applies to all information collected by or submitted to CentOS, including personal data. "Personal data" is data that can be used to identify an individual.
 
-CentOS collects personal information when:
+CentOS collects personal data when:
 
 * you create an online account with CentOS. Examples include but are not
    limited to:
@@ -35,9 +35,9 @@ CentOS collects personal information when:
 * you participate in promotions, contests or giveaways
 * you submit questions or comments to us.
 
-CentOS may also collect personal information from individuals (with their
+CentOS may also collect personal data from individuals (with their
 consent) at conventions, trade shows and expositions.  The types of personal
-information collected may include (but is not limited to):
+data collected may include (but is not limited to):
 
 * your first and last name
 * your title and your company's name
@@ -55,10 +55,10 @@ information collected may include (but is not limited to):
 * your geographic coordinates
 * your affiliation(s).
 
-#Publicly Available Personal Information
+#Publicly Available Personal Data
 
 In keeping with the open nature and spirit of CentOS, some personal
-information attached to CentOS accounts is made public by default.
+data attached to CentOS accounts is made public by default.
 Specifically:
 
 * your first and last name
@@ -78,39 +78,49 @@ will not be displayed to others, and will be considered private. The only
 exceptions to this are for your name and email address, as these may still be
 visible in some services such as our bug tracking system.
 
-#Using your Personal Information
+#Using your Personal Data
 
-CentOS users the personal information you provide to:
+CentOS uses the personal data you provide to:
 
 * create and maintain your accounts
+* identify and authenticate you
+* attribute data and content you produce directly and indirectly in our
+  public-facing services
+* for research activities, including the production of statistical reports
+  (such aggregated information is not used to contact users)
 * answer your questions
 * send you information
 
-We also use this personal information to provide you with information related
+We also use this personal data to provide you with information related
 to your account and the projects or services you acquire from us, to improve
-our service, and to personalize communications.
+our service, and to personalize communications, and to comply with or fulfill
+any contractual obligations to you. It is in CentOS's legitimate business
+interests to provide you with the information, communications, and services
+you request; to create a public record of the data and content produced by
+CentOS's services, and to maintain the integrity of that data and content for
+historical, scientific, and research purposes.
 
 
 #Sharing your Personal Information
 
-Unless you assent, CentOS will never share the personal information you
+Unless you assent, CentOS will never share the personal data you
 provide us except as described below:
 
-CentOS may disclose your information to third parties under any of the
+CentOS may share your data to third parties under any of the
 following circumstances:
 
-* Publicly Available Personal Information is openly available unless the CentOS account holder opts-out (as already described in this Privacy Statement).
-* As may be required to provide service, and for e-mail housing (as a consequence of uses already described in this Privacy Statement).
+* Your publicly available personal data is openly available unless you as the CentOS account holder opt-out (as already described in this Privacy Statement).
+* As may be required to provide service, and for e-mail housing (as a consequence of uses already described in this Privacy Statement).  It is in CentOS’s legitimate business interest to provide all users an accurate record of data and content provided by CentOS’s services, and to maintain the integrity of that data and content for historical, scientific, and research purposes. This data and content may include but is not limited to email, code changes, comments, and artifacts.
 * As required by law (such as responding to a valid subpoena, warrant, audit, or agency action, or to prevent fraud)
 * For research activities, including the production of statistical reports (such aggregated information is used to describe our services and is not used to contact the subjects of the report).
 
-#Your Choices about Receiving E-mail
+#Receiving E-mail
 
-CentOS may send you e-mail about your account, to inform you of important upcoming CentOS events (e.g. Dojo event changes), or in response to your questions. For your protection, CentOS may contact you in the event that we find an issue that requires your immediate attention.
+CentOS may send you e-mail about your account, to inform you of important upcoming CentOS events (e.g. Dojo event changes), or in response to your questions. For your protection, CentOS may contact you in the event that we find an issue that requires your immediate attention. CentOS processes your personal data in these cases to fulfill and comply with its contractual obligations to you, to provide the services you have requested, and to ensure the security of your account.
 
 #Cookies and other Browser Information
 
-CentOS's online services automatically capture IP addresses. We use IP addresses to help diagnose problems with our servers, to administer our website, and to help ensure the security of your interaction with our services. Your IP address is used to help identify you and your location.
+CentOS's online services automatically capture IP addresses. We use IP addresses to help diagnose problems with our servers, to administer our website, and to help ensure the security of your interaction with our services. Your IP address is used to help identify you and your location.  in order to provide you data and content from our services as quickly as possible. It is in CentOS’s legitimate business interest to maximize the efficiency and effectiveness of its services for all users.
 
 As part of offering and providing customizable and personalized services, CentOS uses cookies to store and sometimes track information about you. A cookie is a small amount of data that is sent to your browser from a Web server and stored on your computer's hard drive. All sections of centos.org where you are prompted to log in or that are customizable require your browser to accept cookies.
 
@@ -119,15 +129,15 @@ Generally, we use cookies to:
 * Remind us of who you are and to access your account information (stored on our computers) in order to provide a better and more personalized service. This cookie is set when you register or "sign in" and is modified when you "sign out" of our services.
 * Measure certain traffic patterns, which areas of CentOS's network of websites you have visited, and your visiting patterns in the aggregate. We use this research to understand how our user's habits are similar or different from one another so that we can make each new experience on centos.org a better one. We may use this information to better personalize the content, banners, and promotions you and other users will see on our sites.
 
-If you do not want your personal information to be stored by cookies, you can configure your browser so that it always rejects these cookies or asks you each time if you accept them or not. However, you must understand that the use of cookies may be necessary to provide certain services, and choosing to reject cookies will reduce the performance and functionality of the site. Your browser documentation includes precise instructions explaining how to define the acceptance of cookies.
+If you do not want your personal information to be stored by cookies, you can configure your browser so that it always rejects these cookies or asks you each time if you accept them or not. However, you must understand that the use of cookies may be necessary to provide certain services, and choosing to reject cookies will reduce the performance and functionality of the site. Your browser documentation includes instructions explaining how to enable, disable, or delete cookies at the browser level(usually located in the "Help", "Tools", or "Edit" facility).
 
 #Our Commitment to Data Security
 
-CentOS trains its administrators on our privacy policy guidelines and makes our privacy policy available to our partners. Our website uses Secure Socket Layer (SSL) technology, which encrypts your personal information when you send your personal information on our website. In addition, CentOS and its partners enter into confidentiality agreements which require that care and precautions be taken to prevent loss, misuse, or disclosure of your personal information.
+CentOS trains its administrators on our privacy policy guidelines and makes our privacy policy available to our partners. Our website uses Secure Socket Layer (SSL) technology, which encrypts your personal data when you send your personal information on our website. In addition, CentOS and its partners enter into confidentiality agreements which require that care and precautions be taken to prevent loss, misuse, or disclosure of your personal data.
 
 #Public Forums Reminder
 
-CentOS often makes chat rooms, forums, mailing lists, message boards, and/or news groups available to its users. Please remember that any information that is disclosed in these areas becomes public information. Exercise caution when deciding to disclose your personal information. Although we value individual ideas and encourage free expression, CentOS reserves the right to take necessary action to preserve the integrity of these areas, such as removing any posting that is vulgar or inappropriate.
+CentOS often makes chat rooms, forums, mailing lists, message boards, and/or news groups available to its users. Please remember that any information that is disclosed in these areas becomes public information. Exercise caution when deciding to disclose your personal data. Although we value individual ideas and encourage free expression, CentOS reserves the right to take necessary action to preserve the integrity of these areas, such as removing any posting that is vulgar or inappropriate.  It is in CentOS’s legitimate business interests to provide all users an accurate record of data and content provided in the public forums it maintains and uses; to maintain the integrity of that data and content for historical, scientific, and research purposes; and to provide an environment for the free exchange of ideas relevant and constructive to the development and propagation of open source software.
 
 #Our commitment to Children's Online Privacy
 
@@ -138,6 +148,31 @@ In the event that CentOS ever decides to expand its intended site audience to in
 #About Links to other sites
 
 This site contains links to other sites. CentOS does not control the information collection of sites that can be reached through links from the various CentOS websites. If you have questions about the data collection procedures of linked sites, please contact those sites directly.
+
+
+#Your Rights and Choices in the EEA
+Where the EU General Data Protection Regulation 2016/679 (“GDPR”) applies to
+the processing of your personal data, especially when you access the website
+from a country in the European Economic Area (“EEA”), you have the following
+rights, subject to some limitations, against CentOS:
+
+* The right to access your personal data;
+* The right to rectify the personal data we hold about you;
+* The right to erase your personal data;
+* The right to restrict our use of your personal data;
+* The right to object to our use of your personal data;
+* The right to receive your personal data in a usable electronic format and transmit it to a third party (also known as the right of data portability); and
+* The right to lodge a complaint with your local data protection authority.
+
+If you would like to exercise any of these rights, you may do so via our Personal Data Request Form. Please understand, however, the rights enumerated above are not absolute in all cases.
+
+Where the GDPR applies, you also have the right to withdraw any consent you have given to uses of your personal data. If you wish to withdraw consent that you have previously provided to CentOS, you may do so via our Personal Data Request Form. However, the withdrawal of consent will not affect the lawfulness of processing based on consent before its withdrawal.
+
+#How to Access, Modify, or Update your Information
+
+CentOS gives you the ability to access, modify or update your personal data at any time. You may log in and make changes to your login information (change your password), your contact information, your general preferences and your personalization settings. If necessary, you may also contact us and describe the changes you want made to the personal data you have previously provided using the Personal Data Request Form.
+
+If you wish to remove your personal data from CentOS, you may contact us using the Personal Data Requests Form and request that we remove this information from the CentOS Account System. Other locations where you may have used your personal data as an identifier (e.g. Bugzilla comments, list postings in the archives, wiki change history, and spec changelogs) will not be altered.
 
 # How to Contact Us
 
