@@ -164,15 +164,15 @@ rights, subject to some limitations, against CentOS:
 * The right to receive your personal data in a usable electronic format and transmit it to a third party (also known as the right of data portability); and
 * The right to lodge a complaint with your local data protection authority.
 
-If you would like to exercise any of these rights, you may do so via our Personal Data Request Form. Please understand, however, the rights enumerated above are not absolute in all cases.
+If you would like to exercise any of these rights, you may do so via email at [centos-pdr@centos.org](mailto:centos-pdr@centos.org). Please understand, however, the rights enumerated above are not absolute in all cases.
 
-Where the GDPR applies, you also have the right to withdraw any consent you have given to uses of your personal data. If you wish to withdraw consent that you have previously provided to CentOS, you may do so via our Personal Data Request Form. However, the withdrawal of consent will not affect the lawfulness of processing based on consent before its withdrawal.
+Where the GDPR applies, you also have the right to withdraw any consent you have given to uses of your personal data. If you wish to withdraw consent that you have previously provided to CentOS, you may do so via email at [centos-pdr@centos.org](mailto:centos-pdr@centos.org). However, the withdrawal of consent will not affect the lawfulness of processing based on consent before its withdrawal.
 
 #How to Access, Modify, or Update your Information
 
-CentOS gives you the ability to access, modify or update your personal data at any time. You may log in and make changes to your login information (change your password), your contact information, your general preferences and your personalization settings. If necessary, you may also contact us and describe the changes you want made to the personal data you have previously provided using the Personal Data Request Form.
+CentOS gives you the ability to access, modify or update your personal data at any time. You may log in and make changes to your login information (change your password), your contact information, your general preferences and your personalization settings. If necessary, you may also contact us and describe the changes you want made to the personal data you have previously provided by emailing us at [centos-pdr@centos.org](mailto:centos-pdr@centos.org).
 
-If you wish to remove your personal data from CentOS, you may contact us using the Personal Data Requests Form and request that we remove this information from the CentOS Account System. Other locations where you may have used your personal data as an identifier (e.g. Bugzilla comments, list postings in the archives, wiki change history, and spec changelogs) will not be altered.
+If you wish to remove your personal data from CentOS, you may contact us via email at [centos-pdr@centos.org](mailto:centos-pdr@centos.org) and request that we remove this information from the CentOS Account System. Other locations where you may have used your personal data as an identifier (e.g. Bug submissions or comments, list postings in the archives, wiki change history, and spec changelogs) will not be altered.
 
 # How to Contact Us
 
