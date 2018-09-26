@@ -127,6 +127,8 @@ The following keys are used to sign community led efforts within the CentOS Proj
     Key fingerprint = C4DB D535 B1FB BA14 F8BA  64A8 4EB8 4E71 F2EE 9D55
 
 ### Storage SIG
+[download key](/keys/RPM-GPG-KEY-CentOS-SIG-Storage)
+
     pub  2048R/E451E5B5 2015-01-23 CentOS Storage SIG (http://wiki.centos.org/SpecialInterestGroup/Storage) <security@centos.org>
     Key fingerprint = 7412 9C0B 173B 071A 3775  951A D4A2 E50B E451 E5B5
 
