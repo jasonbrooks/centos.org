@@ -42,9 +42,16 @@ bundle install
 ## Using a built container (all platforms):
 Assuming that you have this git repository cloned under /opt/data/git/centos.org : 
 ```
-docker pull registry.centos.org/arrfab/nanoc:latest # Download the container
-docker run --rm -v /opt/data/git/centos.org/:/nanoc/:Z registry.centos.org/arrfab/nanoc:latest
+sudo docker pull registry.centos.org/arrfab/nanoc:latest # Download the container
+sudo docker run --rm -v /opt/data/git/centos.org/:/nanoc/:Z registry.centos.org/arrfab/nanoc:latest
 ```
+Please note that it also works with Podman, so no need to install Docker anymore ! :
+
+```
+sudo yum install -y podman
+sudo podman run --rm -v /opt/data/git/centos.org/:/nanoc/:Z registry.centos.org/arrfab/nanoc:latest
+```
+
 
 #Site Layout
   * Template and menu files live in /layouts
