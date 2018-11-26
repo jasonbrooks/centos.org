@@ -103,14 +103,20 @@ The following keys are used to sign community led efforts within the CentOS Proj
     Key fingerprint = 64E3 E755 8572 B59A 3194  52AA F17E 7456 91BA 8335
 
 ### ConfigManagement SIG
+[download key](/keys/RPM-GPG-KEY-CentOS-SIG-ConfigManagement)
+
     pub   2048R/6E8B7E8A 2018-03-21 CentOS Config Management SIG (https://wiki.centos.org/SpecialInterestGroup/ConfigManagementSIG) <security@centos.org>
     Key fingerprint = C75A FB57 D5C0 F238 CB15  BEC8 1AE1 10FA 6E8B 7E8A
 
 ### Cloud SIG
+[download key](/keys/RPM-GPG-KEY-CentOS-SIG-Cloud)
+
     pub  2048R/764429E6 2015-05-15 CentOS Cloud SIG (http://wiki.centos.org/SpecialInterestGroup/Cloud) <security@centos.org>
     Key fingerprint = 736A F511 6D9C 40E2 AF6B  074B F9B9 FEE7 7644 29E6
 
 ### NFV SIG
+[download key](/keys/RPM-GPG-KEY-CentOS-SIG-NFV)
+
     pub   2048R/9D2A76A7 2018-02-20 CentOS NFV SIG (https://wiki.centos.org/SpecialInterestGroup/NFV) <security@centos.org>
     Key fingerprint = 736A F511 6D9C 40E2 AF6B  074B F9B9 FEE7 7644 29E6
 
@@ -137,6 +143,14 @@ The following keys are used to sign community led efforts within the CentOS Proj
 
     pub  2048R/61E8806C 2015-06-17 CentOS Virtualization SIG (http://wiki.centos.org/SpecialInterestGroup/Virtualization) <security@centos.org>
     Key fingerprint = A7C8 E761 309D 2F1C 92C5  0B62 7AEB BE82 61E8 806C
+
+### PaaS SIG
+[download key](/keys/RPM-GPG-KEY-CentOS-SIG-PaaS)
+
+    pub  2048R/2F297ECC 2016-05-18 CentOS PaaS SIG (https://wiki.centos.org/SpecialInterestGroup/PaaS) <security@centos.org>
+    Key fingerprint = C5E8 AB44 6FA7 893D 7490  51F1 C34C 5BD4 2F29 7ECC
+
+
 
 ## AltArch keys
 
