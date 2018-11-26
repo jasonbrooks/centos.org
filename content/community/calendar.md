@@ -22,6 +22,7 @@ Here is a list of current meetings with their descriptions:
 * [Config Management SIG](#Config_Management_SIG)
 * [Karanbir Singh Office Hours - Thursdays](#Karanbir_Singh_Office_Hours_-_Thursdays)
 * [Karanbir Singh Office Hours - Wednesdays](#Karanbir_Singh_Office_Hours_-_Wednesdays)
+* [NFV SIG](#NFV_SIG)
 * [OpsTools SIG](#OpsTools_SIG)
 * [PaaS SIG](#PaaS_SIG)
 * [Software Collections SIG Sync-up](#Software_Collections_SIG_Sync-up)
@@ -85,6 +86,13 @@ is related to these.  During this time, you can find me on #centos-devel @
 <a href="http://irc.freenode.net" rel="noopener">irc.freenode.net</a> as kbsingh, and you can also call me on the phone
 at +44 207 009 4455.
 
+### <a name="NFV_SIG">NFV SIG</a>
+
+* Weekly Wednesdays at 1600 UTC on #centos-devel
+* Chair (to contact for more information:) Thomas Herbert (tfherbert)
+* [Link to Project Site](https://wiki.centos.org/SpecialInterestGroup/NFV)
+* Meetings not necessarily held every single week but will meet most weeks. However, they can always be held upon request.
+* The CentOS NFV (Network Function Virtualization) SIG will provide a CentOS-based stack that will serve as a platform for the deployment and testing of virtual network functions (VNFs) and NFV component packages on compliant CentOS platform.
 
 ### <a name="OpsTools_SIG">OpsTools SIG</a>
 
