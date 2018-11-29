@@ -1,0 +1,4 @@
+name: centos-jekyll
+
+plugins:
+  - jekyll-sitemap

@@ -1,5 +1,0 @@
----
-is_hidden: false
-path:      "/sitemap.xml"
----
-<%= xml_sitemap :items => @items.reject{ |i| i[:is_hidden] || i.binary? } %>

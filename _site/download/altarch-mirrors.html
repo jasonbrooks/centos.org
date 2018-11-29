@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="//fonts.googleapis.com/css?family=Oxygen+Mono%7CSource+Sans+Pro:400,300,300italic,400italic,600,600italic%7CExo:400,100,100italic,200,200italic,300,300italic,400italic,500italic,500,600,600italic" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <meta content="max-age=0" http-equiv="cache-control">
+    <meta content="no-cache" http-equiv="pragma">
+    <link href="/images/favicon.ico" rel="shortcut icon">
+    <title>About CentOS</title>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.cycle2.min.js"></script>
+    <script src="/assets/js/jquery.cycle2.center.min.js"></script>
+    <script src="/assets/js/jquery.backstretch.min.js"></script>
+    <script src="/assets/js/sass-bootstrap.js"></script>
+    <script src="/assets/js/jquery.tidy.table.min.js"></script>
+    <script src="/assets/js/FeedEk.js"></script>
+    <script src="/assets/js/google.js"></script>
+    <link href="/styles/site.css" rel="stylesheet" type="text/css">
+    <link href="/assets/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="/assets/jquery.tidy.table.css" rel="stylesheet" type="text/css">
+    <link href="/favicon.ico" rel="shortcut icon">
+    <!--[if lt IE 9]>
+      <script src='/assets/js/html5.js' type='text/javascript'></script>
+    <![endif]-->
+  </head>
+  <body>
+    <script>
+      $.backstretch("/images/background.jpeg");
+    </script>
+    <div id="wrap">
+      <div id="header">
+        <div class="container text-center"></div>
+      </div>
+      <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" title="Home">
+              <img src="/images/logo_small.png">
+            </a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="/download/">Get CentOS</a>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#learn" title="About CentOS">
+                  About
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="/about/">About CentOS</a>
+                  </li>
+                  <li>
+                    <a href="http://wiki.centos.org/FAQ">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="http://wiki.centos.org/SpecialInterestGroup">About SIGs</a>
+                  </li>
+                  <li>
+                    <a href="/variants/">CentOS Variants</a>
+                  </li>
+                  <li>
+                    <a href="/about/governance/">Governance</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#learn" title="The CentOS Community">
+                  Community
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="http://wiki.centos.org/Contribute">Contribute</a>
+                  </li>
+                  <li>
+                    <a href="http://www.centos.org/forums/">Forums</a>
+                  </li>
+                  <li>
+                    <a href="http://wiki.centos.org/GettingHelp/ListInfo">Mailing Lists</a>
+                  </li>
+                  <li>
+                    <a href="http://wiki.centos.org/irc">IRC</a>
+                  </li>
+                  <li>
+                    <a href="/community/calendar/">Calendar &amp; IRC Meeting List</a>
+                  </li>
+                  <li>
+                    <a href="http://planet.centos.org">Planet</a>
+                  </li>
+                  <li>
+                    <a href="http://bugs.centos.org">Submit a Bug</a>
+                  </li>
+                  <li>
+                    <a href="/community/stories/">Stories</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#learn" title="CentOS Documentation">
+                  Documentation
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="http://wiki.centos.org">Wiki</a>
+                  </li>
+                  <li>
+                    <a href="/docs/">Manuals</a>
+                  </li>
+                  <li>
+                    <a href="/keys">GPG Key Info</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="http://wiki.centos.org/Documentation?action=show&amp;redirect=GettingHelp">Help</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="main">
+      <h1>List of CentOS Mirrors providing AltArch</h1>
+<p class="lead"> 
+CentOS welcomes new mirror sites. If you are considering setting up a
+public mirror site for CentOS, <a href="http://wiki.centos.org/HowTos/CreatePublicMirrors">please follow the mirror guidelines</a> to make
+sure that your mirror is consistent with the other mirror sites.
+</p>
+
+<div id="CSVTable"></div>
+<script type="text/javascript" src="/assets/js/jquery.csvToTable2.js"></script>
+
+<script type="text/javascript" src="/assets/js/jquery.tablesorter.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/assets/csvtable-look.css" />
+
+<script>
+$('#CSVTable').CSVToTable('/download/full-altarchlist.csv', 
+    { 
+       startLine: 1,
+       //['Location', 'Region', 'Sponsor', 'HomePage', 'HTTP location', 'FTP Location', 'Rsync Location']
+       headers: [
+       'Location', 
+       'Region', 
+       {label:'Sponsor' , items:[2 , 3]}, 
+       {label:'HomePage' , hidden:true}, 
+       'HTTP location', 
+       'FTP Location', 
+       'Rsync Location'
+       ],
+       itemMerger: function(header , items) {
+          var outItem = [];
+          console.log(items);
+          for(var i in header.items){
+            var item = header.items[i];
+            outItem.push(items[item]);
+          }
+          if(header.label = 'Sponsor'){
+             console.log(outItem);
+             return '<a href="' + outItem[1] + '" target="_blank">' + outItem[0] + '</a>';
+          }else return outItem.join(' ');
+      },
+      preRenderItem: function(headerLabel , item) {
+        if(item == '') return '';
+        switch (headerLabel) {
+          case 'HTTP location':
+          case 'FTP Location':
+          case 'Rsync Location':
+              item = item.replace(/"/gi , '');
+              return '<a href="' + item + '" target="_blank">' + item + '</a>'; 
+          default:
+              return item;
+        }
+      }
+    }
+).bind("loadComplete",function() { 
+  $('#CSVTable').find('TABLE').tablesorter({
+    widgets: ['zebra', 'filter'],
+    widgetOptions: {
+      uitheme: "bootstrap"
+    },
+    textExtraction: function(node) {  
+        // extract data from markup and return it  
+        return $(node).text();
+    } 
+  });
+
+});;
+</script>
+
+<noscript>
+  &lt;div id
+</noscript>
+
+      </div>
+      <div id="footer">
+        <div class="container text-center">
+          <p class="text-muted credit">© 2018 The CentOS Project | <a href="/legal/">Legal</a> | <a href="/legal/privacy/">Privacy</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

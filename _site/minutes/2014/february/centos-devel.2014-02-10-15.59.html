@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<title>#centos-devel Meeting</title>
+<style type="text/css">
+/* This is for the .html in the HTML2 writer */
+body {
+    font-family: Helvetica, sans-serif;
+    font-size:14px;
+}
+h1 {
+    text-align: center;
+}
+a {
+    color:navy;
+    text-decoration: none;
+    border-bottom:1px dotted navy;
+}
+a:hover {
+    text-decoration:none;
+    border-bottom: 0;
+    color:#0000B9;
+}
+hr {
+    border: 1px solid #ccc;
+}
+/* The (nick, time) item pairs, and other body text things. */
+.details {
+    font-size: 12px;
+    font-weight:bold;
+}
+/* The 'AGREED:', 'IDEA', etc, prefix to lines. */
+.itemtype {
+    font-style: normal;    /* un-italics it */
+    font-weight: bold;
+}
+/* Example: change single item types.  Capitalized command name.
+/* .TOPIC  {  color:navy;  } */
+/* .AGREED {  color:lime;  } */
+
+</style>
+</head>
+
+<body>
+<h1>#centos-devel Meeting</h1>
+<span class="details">
+Meeting started by quaid at 15:59:35 UTC
+(<a href="centos-devel.2014-02-10-15.59.log.html">full logs</a>).</span>
+
+<br><br>
+
+
+
+<h3>Meeting summary</h3>
+<ol>
+<li><b class="TOPIC">Agenda</b> <span class="details">(<a href='centos-devel.2014-02-10-15.59.log.html#l-8'>quaid</a>, 16:00:20)</span>
+<br></li>
+<li><b class="TOPIC">Quick summary</b> <span class="details">(<a href='centos-devel.2014-02-10-15.59.log.html#l-16'>quaid</a>, 16:01:08)</span>
+<ol type="a">
+  <li><a
+    href="http://wiki.centos.org/GSoC/2014/Application">http://wiki.centos.org/GSoC/2014/Application</a>
+    <span class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-25'>quaid</a>,
+    16:07:36)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">time based tasks
+    are not always the best idea</span> <span class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-27'>quaid</a>,
+    16:13:51)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">don't put a
+    student on a blocking component</span> <span class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-28'>quaid</a>,
+    16:14:03)</span></li>
+  <li><i class="itemtype">AGREED</i>: <span class="AGREED">must fit in
+    to a discrete task</span> <span class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-29'>quaid</a>,
+    16:14:35)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">the more we leave
+    open for students to find something that is interesting to them, the
+    more successful they more</span> <span class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-30'>quaid</a>,
+    16:15:10)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">mentoring is also
+    working on application process with students</span> <span
+    class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-31'>quaid</a>,
+    16:17:16)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">deliver a
+    xen/centos6/image installer delivered</span> <span
+    class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-32'>kbsingh</a>,
+    16:17:54)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">openstack livecd,
+    pre-setup to run and scale in a diskless environ</span> <span
+    class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-35'>kbsingh</a>,
+    16:18:27)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">docker
+    deps/images/projects</span> <span class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-41'>Evolution</a>,
+    16:19:11)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">docker
+    deps/images/projects</span> <span class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-45'>Evolution</a>,
+    16:19:49)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">different levels
+    of tasks out there</span> <span class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-47'>quaid</a>,
+    16:21:12)</span></li>
+  <li><i class="itemtype">AGREED</i>: <span class="AGREED">students may
+    not have a good concept of what they can do -- push or reign them
+    in</span> <span class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-49'>quaid</a>,
+    16:21:41)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">build and
+    automate the in-cloud update/managent infra</span> <span
+    class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-50'>kbsingh</a>,
+    16:21:41)</span></li>
+  <li><a
+    href="http://www.google-melange.com/gsoc/events/google/gsoc2014">http://www.google-melange.com/gsoc/events/google/gsoc2014</a>
+    <span class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-54'>quaid</a>,
+    16:24:10)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">explore bootstrap
+    for diff arch</span> <span class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-55'>kbsingh</a>,
+    16:25:49)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">those with time
+    to help the SIGs already can assist mentors</span> <span
+    class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-56'>quaid</a>,
+    16:25:50)</span></li>
+  <li><i class="itemtype">IDEA</i>: <span class="IDEA">open project
+    ideas around ARM to interest hardware hackers</span> <span
+    class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-57'>quaid</a>,
+    16:30:59)</span></li>
+  <li><i class="itemtype">ACTION</i>: <span class="ACTION">need to write
+    a marketing plan</span> <span class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-58'>quaid</a>,
+    16:31:14)</span></li>
+  <li><i class="itemtype">ACTION</i>: <span class="ACTION">interested
+    mentors to hang out on existing GSoC channel</span> <span
+    class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-59'>quaid</a>,
+    16:31:48)</span></li>
+  <li><span class="INFO">expectations need to be set up front with
+    students</span> <span class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-62'>quaid</a>,
+    16:35:22)</span></li>
+  <li><a
+    href="http://en.flossmanuals.net/melange/org-application-period/">http://en.flossmanuals.net/melange/org-application-period/</a>
+    <span class="details">(<a
+    href='centos-devel.2014-02-10-15.59.log.html#l-63'>quaid</a>,
+    16:35:47)</span></li>
+</ol>
+</li>
+</ol>
+<br><br>
+
+
+
+<span class="details">
+Meeting ended at 16:37:29 UTC
+(<a href="centos-devel.2014-02-10-15.59.log.html">full logs</a>).</span>
+
+<br><br>
+
+
+
+<h3>Action items</h3>
+<ol>
+  <li>need to write a marketing plan</li>
+  <li>interested mentors to hang out on existing GSoC channel</li>
+</ol>
+<br><br>
+
+
+
+<h3>People present (lines said)</h3>
+<ol>
+  <li>quaid (28)</li>
+  <li>kbsingh (14)</li>
+  <li>Evolution (10)</li>
+  <li>Jeff_S (8)</li>
+  <li>centbot (3)</li>
+  <li>tigalch (1)</li>
+</ol>
+<br><br>
+
+
+
+<span class="details">Generated by <a href="http://wiki.debian.org/MeetBot">MeetBot</a> 0.1.4.</span>
+</body></html>

@@ -1,0 +1,64 @@
+15:59:35 <quaid> #startmeeting
+15:59:35 <centbot> Meeting started Mon Feb 10 15:59:35 2014 UTC.  The chair is quaid. Information about MeetBot at http://wiki.debian.org/MeetBot.
+15:59:35 <centbot> Useful Commands: #action #agreed #help #info #idea #link #topic.
+15:59:42 <Jeff_S> kbsingh: just sat down in a coffee shop
+15:59:48 <quaid> hey Jeff_S
+16:00:07 <Jeff_S> stealing wifi from the bar next door =/
+16:00:10 <kbsingh> jeff pm
+16:00:20 <quaid> #topic Agenda
+16:00:26 <quaid> Quick summary of what Google Summer of Code (GSoC) is.
+16:00:27 <quaid> Overview of what is possible to do with GSoC for CentOS.
+16:00:27 <quaid> What we have so far.
+16:00:27 <quaid> What we need to work on now (this week), next (following few weeks), and for the summer (full program length.)
+16:00:30 <quaid> How to be successful & work within this community
+16:00:40 <kbsingh> going live
+16:01:01 <Jeff_S> kbsingh: thanks
+16:01:08 <quaid> #topic Quick summary
+16:01:14 <Jeff_S> had to tether from my phone, back now
+16:02:11 <kbsingh> who has the player going as well ?
+16:02:40 <Evolution> not me.
+16:02:52 <kbsingh> there is a massive echo thing going on
+16:03:12 <Jeff_S> sound is fine for me
+16:03:22 <Jeff_S> (I'm on mute too cause it's kinda loud here)
+16:03:37 <tigalch> as a listener - sound is fine
+16:03:44 <kbsingh> ok
+16:07:36 <quaid> http://wiki.centos.org/GSoC/2014/Application
+16:13:11 <kbsingh> Jeff_S: good video link.. is that off your phone /
+16:13:51 <quaid> #idea time based tasks are not always the best idea
+16:14:03 <quaid> #idea don't put a student on a blocking component
+16:14:35 <quaid> #agreed must fit in to a discrete task
+16:15:10 <quaid> #idea the more we leave open for students to find something that is interesting to them, the more successful they more
+16:17:16 <quaid> #idea mentoring is also working on application process with students
+16:17:54 <kbsingh> #idea deliver a xen/centos6/image installer delivered
+16:18:02 <Jeff_S> kbsingh: yeah, I'm tethering over LTE (but not many bars)
+16:18:16 <Jeff_S> but I'm sitting at my laptop
+16:18:27 <kbsingh> #idea openstack livecd, pre-setup to run and scale in a diskless environ
+16:18:33 <Evolution> should we consider docker as something separate here?
+16:18:43 <kbsingh> Evolution: it could be included
+16:18:48 <Evolution> docker isn't exactly core to what we're doing, but it does tick many current boxes.
+16:18:51 <kbsingh> delivering docker dependancies would be awesome
+16:18:54 <Evolution> and it's not critical to what we're doing.
+16:19:11 <Evolution> #idea docker deps/images/projects
+16:19:36 <quaid> #chair Evolution kbsingh Jeff_S
+16:19:36 <centbot> Current chairs: Evolution Jeff_S kbsingh quaid
+16:19:47 <Evolution> doh
+16:19:49 <Evolution> #idea docker deps/images/projects
+16:19:57 <Evolution> that should be in there now then.
+16:21:12 <quaid> #idea different levels of tasks out there
+16:21:23 <quaid> right, have flexibility in the ideas
+16:21:41 <quaid> #agreed students may not have a good concept of what they can do -- push or reign them in
+16:21:41 <kbsingh> #idea build and automate the in-cloud update/managent infra
+16:21:44 <Evolution> does that email address on the wiki work? centos-gsoc-mentors ?
+16:22:00 <quaid> one engineering manager I worked with said, "Developers always say it will take 2 weeks."
+16:22:09 <kbsingh> quaid: 17 days
+16:24:10 <quaid> http://www.google-melange.com/gsoc/events/google/gsoc2014
+16:25:49 <kbsingh> #idea explore bootstrap for diff arch
+16:25:50 <quaid> #idea those with time to help the SIGs already can assist mentors
+16:30:59 <quaid> #idea open project ideas around ARM to interest hardware hackers
+16:31:14 <quaid> #action need to write a marketing plan
+16:31:48 <quaid> #action interested mentors to hang out on existing GSoC channel
+16:33:44 <kbsingh> cool, so are we all about getting done ?
+16:34:19 <Evolution> I think so.
+16:35:22 <quaid> #info expectations need to be set up front with students
+16:35:47 <quaid> http://en.flossmanuals.net/melange/org-application-period/
+16:37:29 <quaid> #endmeeting

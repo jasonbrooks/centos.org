@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<title>#centos-devel log</title>
+<style type="text/css">
+/* For the .log.html */
+pre { /*line-height: 125%;*/
+      white-space: pre-wrap; }
+body { background: #f0f0f0; }
+
+body .tm  { color: #007020 }                      /* time */
+body .nk  { color: #062873; font-weight: bold }   /* nick, regular */
+body .nka { color: #007020; font-weight: bold }  /* action nick */
+body .ac  { color: #00A000 }                      /* action line */
+body .hi  { color: #4070a0 }                 /* hilights */
+/* Things to make particular MeetBot commands stick out */
+body .topic     { color: #007020; font-weight: bold }
+body .topicline { color: #000080; font-weight: bold }
+body .cmd       { color: #007020; font-weight: bold }
+body .cmdline  { font-weight: bold }
+
+</style>
+</head>
+
+<body>
+<pre><a name="l-1"></a><span class="tm">20:58:13</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#startmeeting </span><span class="cmdline">Board meeting live http://centos.org/media - agenda for today:  Storage and Cloud-related SIG proposals</span>
+<a name="l-2"></a><span class="tm">20:58:13</span><span class="nk"> &lt;centbot&gt;</span> Meeting started Wed Mar 19 20:58:13 2014 UTC.  The chair is quaid. Information about MeetBot at http://wiki.debian.org/MeetBot.
+<a name="l-3"></a><span class="tm">20:58:13</span><span class="nk"> &lt;centbot&gt;</span> Useful Commands: #action #agreed #help #info #idea #link #topic.
+<a name="l-4"></a><span class="tm">20:58:40</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#chair </span><span class="cmdline">Evolution hughesjr range tru_tru kbsingh mikem23 Arrfab</span>
+<a name="l-5"></a><span class="tm">20:58:40</span><span class="nk"> &lt;centbot&gt;</span> Current chairs: Arrfab Evolution hughesjr kbsingh mikem23 quaid range tru_tru
+<a name="l-6"></a><span class="tm">21:01:26</span><span class="nk"> &lt;kbsingh&gt;</span> <span class="hi">scuttlemonkey:</span> around ?
+<a name="l-7"></a><span class="tm">21:01:38</span><span class="nk"> &lt;scuttlemonkey&gt;</span> <span class="hi">kbsingh:</span> yep, watching the stream now
+<a name="l-8"></a><span class="tm">21:01:45</span><span class="nk"> &lt;alphacc&gt;</span> hi guys, is there a hangout link ?
+<a name="l-9"></a><span class="tm">21:03:19</span><span class="nk"> &lt;TrevorH&gt;</span> the audio is barely functional :(
+<a name="l-10"></a><span class="tm">21:03:23</span><span class="nk"> &lt;quaid&gt;</span> just getting ready
+<a name="l-11"></a><span class="tm">21:03:45</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">alphacc:</span> for watching, you should be able to find it at http://centos.org/media
+<a name="l-12"></a><span class="tm">21:03:53</span><span class="nk"> &lt;quaid&gt;</span> or on the YouTube channel?
+<a name="l-13"></a><span class="tm">21:04:01</span><span class="nk"> &lt;Evolution&gt;</span> <span class="hi">quaid:</span> not until I get the updated youtube url he can't :-P
+<a name="l-14"></a><span class="tm">21:04:06</span><span class="nk"> &lt;kbsingh&gt;</span> <span class="hi">quaid:</span> that url needs to be updated i think
+<a name="l-15"></a><span class="tm">21:04:06</span><span class="nk"> &lt;quaid&gt;</span> erps
+<a name="l-16"></a><span class="tm">21:04:08</span><span class="nk"> &lt;Evolution&gt;</span> I need the url to put on media
+<a name="l-17"></a><span class="tm">21:04:12</span><span class="nk"> &lt;quaid&gt;</span> you still can't get that in advance?
+<a name="l-18"></a><span class="tm">21:04:13</span><span class="nk"> &lt;Evolution&gt;</span> er, /media
+<a name="l-19"></a><span class="tm">21:04:26</span><span class="nk"> &lt;kbsingh&gt;</span> http://www.youtube.com/watch?v=muUOhg12FKs
+<a name="l-20"></a><span class="tm">21:04:28</span><span class="nk"> &lt;Evolution&gt;</span> the person who starts them sees it
+<a name="l-21"></a><span class="tm">21:04:31</span><span class="nk"> &lt;Evolution&gt;</span> ah, there we go
+<a name="l-22"></a><span class="tm">21:04:33</span><span class="nk"> &lt;Evolution&gt;</span> one sec
+<a name="l-23"></a><span class="tm">21:05:25</span><span class="nk"> &lt;Evolution&gt;</span> okay, pushing now
+<a name="l-24"></a><span class="tm">21:06:57</span><span class="nk"> &lt;alphacc&gt;</span> youtube link is ok, nothing on media yet. thx !
+<a name="l-25"></a><span class="tm">21:07:26</span><span class="nk"> &lt;quaid&gt;</span> <span class="topic">#topic </span><span class="topicline">Storage SIG proposal</span>
+<a name="l-26"></a><span class="tm">21:07:28</span><span class="nk"> &lt;quaid&gt;</span> http://wiki.centos.org/SpecialInterestGroup/Storage/Proposal
+<a name="l-27"></a><span class="tm">21:08:31</span><span class="nk"> &lt;quaid&gt;</span> scuttlemonkey == Patrick?
+<a name="l-28"></a><span class="tm">21:08:39</span><span class="nk"> &lt;scuttlemonkey&gt;</span> yep, that's me
+<a name="l-29"></a><span class="tm">21:09:25</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#agreed </span><span class="cmdline">we have a quorum</span>
+<a name="l-30"></a><span class="tm">21:10:45</span><span class="nk"> &lt;TrevorH&gt;</span> <span class="hi">kbsingh:</span> yes, your audio is much better now, less Herbie Hancock
+<a name="l-31"></a><span class="tm">21:11:51</span><span class="nk"> &lt;kbsingh&gt;</span> woo!
+<a name="l-32"></a><span class="tm">21:12:20</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">SIG members currently include Ceph and Gluster</span>
+<a name="l-33"></a><span class="tm">21:13:28</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">SIG members include Patrick Mcgarry (Ceph) and Lalatendu Mohanty (GlusterFS) and KBSingh (Board mentor/liaison)</span>
+<a name="l-34"></a><span class="tm">21:16:14</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">scuttlemonkey:</span> yeah, it's "building bridges" not "burning" them ;-D
+<a name="l-35"></a><span class="tm">21:16:20</span><span class="nk"> &lt;scuttlemonkey&gt;</span> hehe
+<a name="l-36"></a><span class="tm">21:16:26 </span><span class="nka">* quaid</span> <span class="ac">is Karsten btw</span>
+<a name="l-37"></a><span class="tm">21:16:37</span><span class="nk"> &lt;scuttlemonkey&gt;</span> sorry, that's my own turn of phrase
+<a name="l-38"></a><span class="tm">21:16:43</span><span class="nk"> &lt;scuttlemonkey&gt;</span> I shouldn't use that in mixed company
+<a name="l-39"></a><span class="tm">21:17:20</span><span class="nk"> &lt;scuttlemonkey&gt;</span> I tend to eschew your typical calloquialisms
+<a name="l-40"></a><span class="tm">21:17:44</span><span class="nk"> &lt;quaid&gt;</span> heh
+<a name="l-41"></a><span class="tm">21:18:00</span><span class="nk"> &lt;quaid&gt;</span> oh, no, it made sense to me, from the way you phrased it in context :)
+<a name="l-42"></a><span class="tm">21:18:16</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">Need to work on repository structure</span>
+<a name="l-43"></a><span class="tm">21:18:56</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">qemu dependencies mean work with the Cloud * SIG who adopts qemu to figure out if it can be worked together, hierarchical setup, with maintain-your-own the last possible answer :)</span>
+<a name="l-44"></a><span class="tm">21:22:16</span><span class="nk"> &lt;alphacc&gt;</span> I don't know if I can ask question but can't we consider rhev rebuild for a qemu-kvm that works out of the box(accross sigs). It may not fit gluster team as it ship with some specific gluster version. (it's what we do in prod at CERN)
+<a name="l-45"></a><span class="tm">21:22:45</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">a storage SIG repository could be cleaner and keep things out of CentOS Extras and CentOS Plus</span>
+<a name="l-46"></a><span class="tm">21:22:52 </span><span class="nka">* quaid</span> <span class="ac">hoped he simplified that well</span>
+<a name="l-47"></a><span class="tm">21:23:54</span><span class="nk"> &lt;scuttlemonkey&gt;</span> yeah, Ceph is already in centos-extras...we were hoping to make it easier to deploy storage options through this effort
+<a name="l-48"></a><span class="tm">21:24:40</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">alphacc:</span> I think it's relevant, sure; the point around the SIG is a gathering of people around a technology who are willing to maintain and grow community around the technology
+<a name="l-49"></a><span class="tm">21:25:30</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">alphacc:</span> so my initial thought is, who is offering to maintain that rebuild? and does it fit in one or more existing SIGs? if yes, then those SIGs need to weigh in on how it could work; if not, then is it a standalone SIG?
+<a name="l-50"></a><span class="tm">21:26:37</span><span class="nk"> &lt;kbsingh&gt;</span> <span class="hi">quaid:</span> alphacc: i think the virtsig might be a good place to curate that
+<a name="l-51"></a><span class="tm">21:26:47</span><span class="nk"> &lt;kbsingh&gt;</span> but can do we discussion
+<a name="l-52"></a><span class="tm">21:26:59</span><span class="nk"> &lt;alphacc&gt;</span> yes my idea was to solve the qemu-kvm issues this way. HAve an effort to rebuild a cloud oriented qemu-kvm.
+<a name="l-53"></a><span class="tm">21:27:12</span><span class="nk"> &lt;kbsingh&gt;</span> <span class="hi">alphacc:</span> the trick is going to be finding where to host it
+<a name="l-54"></a><span class="tm">21:27:27</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#action </span><span class="cmdline">need to consider best way to handle questions from IRC, Twitter, etc. for live Board hangouts.</span>
+<a name="l-55"></a><span class="tm">21:27:52</span><span class="nk"> &lt;kbsingh&gt;</span> woo! xen qemu could use ceph
+<a name="l-56"></a><span class="tm">21:36:01</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#agreed </span><span class="cmdline">start new SIG work on main -devel and users lists, then branch as needed</span>
+<a name="l-57"></a><span class="tm">21:36:24</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">having an all-SIGs-overview mailing list for cross-SIG coordination (esp. if things move from -devel)</span>
+<a name="l-58"></a><span class="tm">21:37:18</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#action </span><span class="cmdline">make sure new SIG work gets exposure of ~first 3 months on main centos-devel list</span>
+<a name="l-59"></a><span class="tm">21:37:45</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">have a SIG coordinators (or all maintainers) should have a chat every few weeks, such as a public Hangout or IRC</span>
+<a name="l-60"></a><span class="tm">21:39:48</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#agreed </span><span class="cmdline">quorum voted yes to Storage SIG propsals</span>
+<a name="l-61"></a><span class="tm">21:40:00</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#action </span><span class="cmdline">KB to follow up with Jim and Tru</span>
+<a name="l-62"></a><span class="tm">21:40:11</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#action </span><span class="cmdline">KB to send call-to-action to -devel list</span>
+<a name="l-63"></a><span class="tm">21:40:16</span><span class="nk"> &lt;range&gt;</span> I think the "sig coordinator mailing list" isn't a bad idea. We have the same for the people running the foreign language mailing lists. Not that that list has any traffic at all ...
+<a name="l-64"></a><span class="tm">21:40:41</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">include CentOS package/build expert, Ceph will bring their maintainer</span>
+<a name="l-65"></a><span class="tm">21:42:06</span><span class="nk"> &lt;kbsingh&gt;</span> http://wiki.centos.org/SpecialInterestGroup/CloudInstance/Proposal
+<a name="l-66"></a><span class="tm">21:42:08</span><span class="nk"> &lt;mikem23&gt;</span> http://wiki.centos.org/SpecialInterestGroup/CloudInstance/Proposal
+<a name="l-67"></a><span class="tm">21:42:22</span><span class="nk"> &lt;quaid&gt;</span> <span class="topic">#topic </span><span class="topicline">Cloud Instance SIG</span>
+<a name="l-68"></a><span class="tm">21:42:27</span><span class="nk"> &lt;quaid&gt;</span> http://wiki.centos.org/SpecialInterestGroup/CloudInstance/Proposal
+<a name="l-69"></a><span class="tm">21:43:24</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">the intention of this SIG is to have folks who know what they are doing and represent mindshare, come together and help us build images that work across cloud providers, meet best practices, development environments, tuned up for environments.</span>
+<a name="l-70"></a><span class="tm">21:43:36</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">primary charter is to bring in existing experts to help us build images</span>
+<a name="l-71"></a><span class="tm">21:49:53</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">SIG will deliver a basic image that others can bundle with their RPMs to do their own image</span>
+<a name="l-72"></a><span class="tm">21:50:13</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">cloud-init, minimizing for certain instances, perf tuning for certain hypervisors</span>
+<a name="l-73"></a><span class="tm">21:50:37</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">most of the work will be kickstart files v. RPMs</span>
+<a name="l-74"></a><span class="tm">21:51:47</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">SIG is focused on tuning and curating the image, but there is room in the scope to provide multiple images tuned for various environments</span>
+<a name="l-75"></a><span class="tm">21:53:00</span><span class="nk"> &lt;TrevorH&gt;</span> you need an authentication SIG ;)
+<a name="l-76"></a><span class="tm">21:53:40</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">Primary interface will be with the Core SIG</span>
+<a name="l-77"></a><span class="tm">21:54:30</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">SIG is requesting cloud.centos.org as a source (with an API?) for distributing images, cf. mirror.centos.org for packages</span>
+<a name="l-78"></a><span class="tm">22:00:10</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#info </span><span class="cmdline">QA for images are basic/essential, may look to spread out toward different hypervisors</span>
+<a name="l-79"></a><span class="tm">22:00:24</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#idea </span><span class="cmdline">having 2 physical machines ready for a few hours every day for QA</span>
+<a name="l-80"></a><span class="tm">22:01:29</span><span class="nk"> &lt;alphacc&gt;</span> it would be nice to have a process to promote image when they get enough testing/traction to official installation media.
+<a name="l-81"></a><span class="tm">22:03:54</span><span class="nk"> &lt;quaid&gt;</span> <span class="hi">alphacc:</span> can you repeat that with '#idea' in front? that helps it get in the discussion/minutes from here
+<a name="l-82"></a><span class="tm">22:04:42</span><span class="nk"> &lt;alphacc&gt;</span> <span class="cmd">#idea </span><span class="cmdline">it would be nice to have a process to promote image when they get enough testing/traction to official installation media.</span>
+<a name="l-83"></a><span class="tm">22:06:37</span><span class="nk"> &lt;quaid&gt;</span> thanks :)
+<a name="l-84"></a><span class="tm">22:07:45</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#agreed </span><span class="cmdline">Vote agrees to the Cloud Instance SIG proposal; follow-up to happen with Jim and Tru to confirm their votes</span>
+<a name="l-85"></a><span class="tm">22:08:03</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#action </span><span class="cmdline">KB to follow-up with Jim and Tru about this vote</span>
+<a name="l-86"></a><span class="tm">22:08:18</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#action </span><span class="cmdline">SIG needs to define primary point of contact/coordinator</span>
+<a name="l-87"></a><span class="tm">22:09:09</span><span class="nk"> &lt;quaid&gt;</span> finishing ...
+<a name="l-88"></a><span class="tm">22:09:20</span><span class="nk"> &lt;quaid&gt;</span> <span class="cmd">#endmeeting</span><span class="cmdline"></span></pre>
+</body></html>

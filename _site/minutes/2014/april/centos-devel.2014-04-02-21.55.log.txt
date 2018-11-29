@@ -1,0 +1,213 @@
+21:55:53 <quaid> #startmeeting CentOS Board meeting - SIG proposals & other business
+21:55:53 <centbot> Meeting started Wed Apr  2 21:55:53 2014 UTC.  The chair is quaid. Information about MeetBot at http://wiki.debian.org/MeetBot.
+21:55:53 <centbot> Useful Commands: #action #agreed #help #info #idea #link #topic.
+21:56:16 <quaid> #chair Evolution tru_tru range kbsingh hughesjr cctrieloff Arrfab
+21:56:16 <centbot> Current chairs: Arrfab Evolution cctrieloff hughesjr kbsingh quaid range tru_tru
+21:56:31 <quaid> all users can use most of the actions, such as #info and #idea
+21:56:43 <quaid> chairs can do the #agreed, not sure if #action is restricted
+21:56:52 <quaid> anything before we jump in to the first topic?
+21:57:04 <kbsingh> show of hands ?
+21:57:22 * tru_tru raises hand
+21:57:34 * hughesjr shows his hand :D
+21:57:53 <smooge> here
+21:58:05 <Arrfab> same here
+21:58:06 <kbsingh> me too
+21:58:16 <Evolution> yep
+21:58:58 <quaid> #info We have a quorum of Board members, safe to proceed :)
+21:59:08 <quaid> first topic is Desktop SIG?
+21:59:19 <Evolution> sure.
+21:59:20 <quaid> #topic Desktop SIG proposal
+21:59:38 <quaid> (channel title hasn't changed because centbot doesn't have ops, but it's changed in the log)
+21:59:51 <quaid> also, you don't  need to use #link, just post the URL in the channel and it's the same thing
+22:01:11 <Arrfab> Evolution: you already started a discussion with smooge about a desktop SIG, right ? what's the status and so the "proposal" ?
+22:01:20 <Evolution> smooge: you proposed the desktop sig. want to lay out your ideas?
+22:01:24 <smooge> I would like to propose a Desktop Special Interest Group that would cater towards alternative desktops to the main CentOS one.
+22:02:16 <Evolution> smooge: is the thought just to provide alternative desktops such as mate, or would you add additional 'desktop' style packages as well?
+22:02:24 <smooge> Its main goal would be to make sure that working desktops that cater to other users needs are made available, tested, working and periodically updated
+22:02:57 <smooge> my first goal would be to provide just alternate desktops and then from that gauge growth inot additional desktop style packages.
+22:03:06 <smooge> s/inot/into/
+22:03:29 <smooge> I would like to have an initial goal we can reach and build momentum from
+22:03:52 <hughesjr> smooge: is the inital focus of this desktop for all active versions of CentOS or only for a specific CentOS
+22:04:43 <smooge> My initial focus would be 7. The ability to build desktops to older releases will require extra effort and testing
+22:05:15 <smooge> as the solutions may require some things like SCL's or other "we aren't replacing core stuff.. but we are." type solutions
+22:05:43 <Evolution> most desktop users seem to migrate to newer versions reasonably quickly
+22:05:44 <quaid> are there other desktop-like activities you might include in the SIG other than alternative DEs and styling? for example, UX testing.
+22:05:56 <hughesjr> smooge: and you have some kind of plan to make sure we are not running afowl of patent issues (like mp3)
+22:06:01 <smooge> I apologize for the wishy washy ness of this. I want to get some questions answered so that I can better focus a finished proposal to you.
+22:06:01 <Arrfab> smooge: do you see that as a "coordination" effort between existing desktop environments ? (for example EPEL providing already alternatives)
+22:06:41 <Evolution> Arrfab: I think part of it certainly should be.
+22:06:46 <smooge> hughesjr, I do not plan to put anything in that could not be shipped in Fedora. Things like VLC etc will have to be done by an associated group which would not be troubled like I personally would be
+22:07:14 <Evolution> mate and cinnamon are already in epel. we should certainly appropriate that effort and help where we can.
+22:08:22 <smooge> the items that will be a further focus is how to package these items for older releases. I would like to have it that people who need to develop/run EL5 could have a better experience but not replacing certain core items like glibc/gcc/kernel :)
+22:09:01 <smooge> Arrfab, I see it as partially coordination. I am worried that EPEL may not be the best place for itmes which change every 6-12 months.
+22:09:57 <quaid> smooge: are there other desktop-like activities you might include in the SIG other than alternative DEs and styling? for example, UX testing. -- alternately, I'm not asking if you'll do that work per se but if you are receptive to that work happening within the SIG? Is there a boundary where it's not SIG-relevant?
+22:10:05 <smooge> If it turns out that EPEL is not the best place then it is on building the group which will be a better ground.
+22:11:10 <smooge> quaid, to answer that I needed to reverse it. How strong a boundary is the board looking for SIGs to have.
+22:12:01 <hughesjr> smooge: SIGs already have the ability to go higher in version for things that are part of even the "Core" OS .. so it would be fine for newer things that in EPEL they choose not to maintain a version that we need
+22:12:30 <smooge> Well the EPEL issue is that it can't replace stuff that is in Core.
+22:12:39 <hughesjr> right
+22:12:51 <hughesjr> but the SIG can, if requried
+22:13:56 <Evolution> so epel for some things, and then possibly a 'desktop' repository or whatever for things not suited for epel, but maitained by the sig
+22:14:01 <smooge> so my question was "Is the board looking for well defined boundaries that a SIG has in place from the beginning" or is it wanting a lose rule of thumb
+22:14:04 <quaid> smooge: it's a fair question you reversed to -- we're interested in it being a wider focus, so "Mate SIG" isn't right, but "Desktop SIG that includes Mate" is ... at that point, the boundary should be what the SIG wants to support and thinks their community needs
+22:14:30 <quaid> I think loose rule of thumb is better, let it grow organically
+22:14:39 <hughesjr> WRT the board question about SIGs, we will have at least one board member in the SIG ... so we will give SIGs as much lattitude as possible
+22:14:43 <quaid> I was mainly curious if you saw that in the future (cf. styling) or thought it was out of scope
+22:14:50 <smooge> also is the board wanting me to do a PRD or similar tools to have ready as a full fleshed proposal
+22:15:09 <quaid> you can use the existing proposals as a template, but yes, we do want something concrete to vote on
+22:15:48 <smooge> quaid, I haven't been presented with any examples of items yet for desktop tools that weren't redlines (VLC, mp3 plugins, etc)
+22:15:55 <smooge> so I can't answer clearly yet
+22:17:26 <cctrieloff> I'm here but distracted.
+22:17:27 <smooge> can someone send me a link for an existing SIG? I will work from that and have something for you asap
+22:18:00 <Evolution> smooge: http://wiki.centos.org/SpecialInterestGroup/CloudInstance
+22:18:06 <Evolution> unless kbsingh has a better one.
+22:18:16 <smooge> okie dokie
+22:18:18 <Evolution> strip CloudInstance off for a list of others.
+22:18:46 <quaid> #info current boundaries for the SIG are to include alternate desktop environments (DEs) with the future expansion in to styling
+22:18:58 <Evolution> smooge: based on your email to the list, I roughed out http://wiki.centos.org/SpecialInterestGroup/AlternativeDesktop but it needs some work.
+22:19:21 <quaid> #info a SIG boundary is to not include non-open source nor software with potential or real legal issues
+22:19:52 <kbsingh> thats it
+22:19:56 <smooge> Evolution, thank you.
+22:20:05 <quaid> #info SIG may carry packages that are later than what is in EPEL if it feels the need
+22:21:44 <smooge> I would like to be able to let interested people work on unified theming etc.. but there will be no 'forced' theming (eg people who want alternative desktops usually do their desktops there way thank you very much.)
+22:22:21 <kbsingh> i missed if this is going to only target el7 or el6 as well ?
+22:22:42 <Evolution> kbsingh: 7 to start. 6 if interest/time permists.
+22:22:52 <Evolution> iirc
+22:23:00 <smooge> kbsingh, I am initially going to focus on el7. The el6 may require me to use software collections or similar tools which I need to study more before I give a I will do that.
+22:23:11 <smooge> If others are willing I am up with doing 6 and 5.
+22:23:27 <smooge> does that make sense?
+22:23:34 <kbsingh> sure
+22:25:00 <smooge> My main rules on 'desktops' and such being supported is that they will be shipped as long as people are willing to work on them. I don't want abandon ware (eg tvtwm compiles.. good enough)
+22:25:00 <quaid> #info target for CentOS 7* to start, back to CentOS 6* as time and interest permits
+22:26:12 <smooge> When is the next board meeting?
+22:26:36 <Evolution> week after next.
+22:27:28 <smooge> OK I will make sure I have a finished document with you guys by next wednessday and will work with Evolution and dan408 on it
+22:27:47 <smooge> are there any other questions?
+22:27:56 <Evolution> smooge: leigh expressed a passing interest as well (as the cinnamon maintainer)
+22:28:26 <kbsingh> how is this going to layer on top of EPEL ?
+22:28:37 <kbsingh> i mean, a chunk of the work might actually be possible to get done there right ?
+22:28:49 <Evolution> kbsingh: some is done there, yes.
+22:28:57 <Evolution> mate/cinnamon exist there already
+22:28:58 <kbsingh> ( apart from when $person wants something newer, they can fork it - but will that code then be forked in git.fedora or git.centos )
+22:30:38 <smooge> kbsingh, I believe the initial work can be done in EPEL. However if the changes to later versions are invasive etc then it will need changes in either how EPEL is structured or a different build infrastructure.
+22:30:55 <smooge> kbsingh, in that case I would be working on making that happen.
+22:31:02 <dan408> Evolution: hey
+22:31:08 <dan408> sorry i got dragged out
+22:31:23 * dan408 reads scrollback
+22:31:48 <smooge> kbsingh, in the case where it wouldn't work for EPEL (say Mate in EL5) but could be done via a different packaging system then we would work on solving that problem
+22:32:01 <kbsingh> ok
+22:32:24 <kbsingh> so essentially : fix problems as we see them - there is flexibility from packager and buildsystem side. epel to bootstrap into
+22:33:52 <smooge> correct. I expect we will need to change over time, but to meet a can we have a solution in 3-6 months the proven existing method to start from.
+22:35:10 <dan408> so the biggest roadblock I'm personally seeing is getting Anaconda to read directly from EPEL for yum groups
+22:35:11 <kbsingh> is there any drive to also maintain some part of the docs aronud this on say wiki.centos.org/blah/howto/desktops
+22:35:12 <Arrfab> smooge: that sounds good to me .. but indeed some choices will have to be made, like for example if CentOS 7 32bits becomes real
+22:35:25 <kbsingh> or is the focus purely on delivering rpms, let the community at large do that
+22:35:25 <dan408> I just finished building the MATE stack of packages on EPEL
+22:35:54 <kbsingh> dan408: anaconda... should be fairly simple, with an add-repo at install time right ?
+22:36:28 <dan408> kbsingh: well ideally EPEL would just be there out of the box, and you would see MATE as a choice of available desktops
+22:37:12 <dan408> so for example you choose "desktop" and then you can pick Gnome, KDE, or Cinnamon, etc
+22:37:27 <kbsingh> that shouldnt be hard to do - but how many groups does EPEL host ? we'd have a minor flood
+22:37:27 <dan408> otherwise you end up having to install Gnome or KDE and then MATE or cinnamon
+22:37:47 <dan408> I'm pretty sure Anaconda can handle it
+22:37:50 <smooge> kbsingh, I would like to make sure that we have guides and howtos as part of any 'desktop' solution added. If only on how one logs out, finds certain apps etc.
+22:38:07 <Evolution> honestly I think we might consider just stealing the groups we want from epel, and then adding epel-release as a mandatory package for the desktop spin
+22:38:14 <Evolution> that would limit the groups visible in anaconda.
+22:39:03 <hughesjr> Evolution: as long as they are responsive to updates
+22:39:09 <dan408> wait what do you mean spin?
+22:39:24 <smooge> I had not thought about spins per se at the moment. For me it is a "if I have the time"... unless that is a required SIG deliverable.
+22:39:46 <dan408> I was thinking netinstall/DVD not spin
+22:40:18 <dan408> or just DVD I don't think you guys do a netinstall do you
+22:40:25 <quaid> so no ISO compose?
+22:40:38 <dan408> wll
+22:40:39 <Evolution> well, the core provided by the core sig won't change.
+22:40:39 <dan408> well
+22:40:40 <quaid> minimal install is the most popular download iirc, it's basically a netinstall isn't it?
+22:40:51 <dan408> no
+22:41:12 <dan408> so i'm coming from the Fedora side so I may be a little bit confused
+22:41:22 <dan408> but on Fedora side you can install anything with a 200mb iso image
+22:41:23 <Evolution> dan408: we do netinstalls, as well as minimals and something similar to boot.fedora
+22:41:28 * quaid a bit lost in terminology too
+22:41:28 <dan408> right
+22:41:49 <dan408> okay
+22:42:06 <wolfy> quaid: the minimal.iso bypasses the package selection step and installs @base . all the needed packages are included in the iso
+22:42:06 <Evolution> however for a desktop side, I would think some folks would want a usb/iso based install for a desktop
+22:42:07 <tru_tru> why just not a desktop-SIG.repo or repo --name=desktop-SIG --baseurl=http:// --cost=XXX ?
+22:42:07 <dan408> for the DVD it wouldnt work if you didnt have a network connection
+22:42:23 <kbsingh> if the work is done in a contained repo, regardless of how the install starts, its all just a case of adding the repo line, comps will get parsed and options show up in the gui
+22:42:26 <Evolution> tru_tru: entirely doable as well.
+22:42:34 <Evolution> dan408: right. which is why I was thinking spin.
+22:42:53 <Evolution> kbsingh: true
+22:42:59 <hughesjr> in the past, when we have had alternative desktops (ie xfce on 5 and 4 :D) we did yum groups in a repo ... that will also work
+22:43:02 <kbsingh> we can also ship an additional repo on the DVD ( if it fits! ) with the repo line disabled and a media:/// url
+22:43:21 <dan408> Evolution: well I guess that would be easier and accomplish the goal of a) not having to change base and b) being able to install the desktop you want without having to install a desktop you dont want
+22:43:46 <kbsingh> it does not need to end up in the os/ directory, and it need not be enabled by force, but just a checkbox to enable it from DVD might be a great option
+22:43:51 <quaid> wolfy: thanks
+22:43:52 <kbsingh> the trick is going to be making it fit
+22:43:57 <hughesjr> dan408: minimal install and yum grops cando that too :)
+22:43:57 <dan408> hughesjr: what if you wanted to install xfce on a fresh install?
+22:44:06 <dan408> hughesjr: no
+22:44:30 <dan408> hughesjr: Say I want to put media in choose xfce, and install once and be done
+22:45:09 <dan408> your process is a 2 step process
+22:45:18 <hughesjr> dan408: you can create a specific DVD for that too in the SIG
+22:45:33 <dan408> hughesjr: Right that's what we're discussing with spins
+22:46:00 <dan408> alright
+22:46:15 <dan408> this is gunna require some hacking but
+22:46:48 <hughesjr> I was just pointing out that an ISO is not the only alternative .. but the SIGs can do that too
+22:47:22 <quaid> ultimately the SIG needs to chose delivery methods that make sense for it's community, these questions are somewhat about what the rest of us think makes sense ...
+22:48:02 <dan408> i guess if it worked like this: 1) User downloads CentOS 7 MATE spin which can be burnt to CD or written to USB 2) User boots spin, starts Anaconda installer 3) Anaconda functiosn in the exact same way as the DVD or netinstall and can install the same things .. so user chooses say base, standard and "web server", chooses partitioning and hits "install". What they should end up with is a MATE desktop with the options they picked
+22:48:45 <Evolution> right.
+22:48:52 <dan408> Again, I don't know if this is possible with the current anaconda
+22:49:25 <kbsingh> right guys, i need to rebase over. thanks
+22:49:28 <Evolution> I don't see why it wouldn't be. it's similar to whate fedora's done with it in the last couple releases.
+22:49:46 <Arrfab> dan408: I haven't looked at anaconda from 7 (yet) but I guess using the updates.img still works for that
+22:49:47 <Evolution> I've got to bail in about 5 minutes as well
+22:50:03 <dan408> Evolution: Not necessarily. On a spin you just hit "install" and it installs whatever was included with the spin. You don't get to pick any additional options
+22:50:31 <Evolution> ah, fair enough.
+22:50:45 <dan408> Arrfab: Sure. I'm no anaconda expert here but I'm just throwing this stuff out there
+22:50:46 <quaid> #action smooge to work up a formal proposal
+22:51:57 <quaid> #action SIG needs to consider what release formats to use (ISO, netinstall, all-in-one-spins, etc.)
+22:51:57 <dan408> Evolution: That's why I'm thinking there might be some hacking needed because these packages are already in Fedora base.
+22:52:12 <Arrfab> dan408: we'll have to have a deep look into anaconda to also combine all the groups/variants into one (like we did for centos 6) so I'm sure that once it will be mastered, it will be easy to modify it again for each SIG respin
+22:52:25 <dan408> Arrfab: +1
+22:52:27 <Evolution> dan408: yeah. I'm starting to see what you mean.
+22:52:36 <dan408> Evolution: cool
+22:52:45 <quaid> fwiw, I'm comfortable with usinage latest bits in Fedora as upstream that we pull in to git.centos.org (if I'm thinking correctly here); Fedora (and EPEL) are trustworthy upstreams
+22:52:59 <dan408> Evolution: The easiest thing is just to import the packages to base, but I completely understand that you don't want to change base.
+22:53:26 <dan408> Evolution: And that's fine, but workarounds are needed. :D
+22:53:33 <quaid> #idea project wide work on Anaconda to fold in all groups/variants will help the Desktop SIG needs for respins, etc.
+22:53:40 <Evolution> yeah. we'll have to figure that out. base won't change.
+22:54:37 <dan408> Right. Well I'm glad I was able to help put everyone on the same page on how it should be presented to the end user for installation
+22:55:16 <dan408> I mean that's how I'd want it personally
+22:55:19 <Arrfab> Evolution: yeah but the desktop sig proposal we have here is quite different from the cloud/storage ones in a sense that we'd build packages with the same key (or alternate key but still from our side) while the idea seems to be here to just consume packages built/signed by EPEL
+22:55:47 <Evolution> Arrfab: that's the initial starting point, but by no means the end goal.
+22:55:56 <dan408> Arrfab: it's a little bit more than that
+22:56:04 <Evolution> anyway, off for family. bbiab
+22:56:11 <dan408> cya Evolution
+22:56:34 <quaid> ok, I'm ready to close out as we are runnning out of Board members and the sponsor just left :)
+22:56:38 <quaid> anything else for the record?
+22:56:41 <tru_tru> Evolution: ciao
+22:56:45 * quaid will close in 60 seconds otherwise
+22:56:56 <Arrfab> #idea discuss about respins using packages not built on centos infra and so not signed by us
+22:57:00 <quaid> btw, dan408, good to see ya
+22:57:04 <dan408> For the record: The entire MATE stack is finished building and I'm going to add a group in to EPEL7 for comps
+22:57:09 <dan408> quaid: good to see you too
+22:57:19 <quaid> Arrfab: yeah, we need to really consider that around EPEL in general, right?
+22:57:48 <Arrfab> quaid: yeah, EPEL or other repositories too I guess.
+22:59:14 <smooge> I am ok with closing.
+22:59:16 <dan408> If anyone has any questions feel free to contact me here (I prefer IRC over email)
+22:59:27 <Arrfab> dan408, smooge : what about starting as a documentation on how to install those packages from epel on a running c7. then we'd have to see how to respin specific medias and in the meantime we'll have discussed the "do we rebuild/sign those packages or do we just import those" question
+22:59:35 <cctrieloff> thx
+23:00:07 <smooge> okie dokie.
+23:00:14 <dan408> sure thing I'll work with smooge on that.
+23:00:16 <Arrfab> thanks everyone for the meeting
+23:00:22 <dan408> thanks for hosting!
+23:07:18 <smooge> quaid, remember to #endmeeting
+23:08:03 * quaid was distracted, thanks
+23:08:10 <smooge> np
+23:08:10 <quaid> typical!
+23:08:18 <quaid> going in 5
+23:08:20 <quaid> 4
+23:08:21 <quaid> 3
+23:08:24 <quaid> 2
+23:08:24 <quaid> 1
+23:08:36 <quaid> #endmeeting

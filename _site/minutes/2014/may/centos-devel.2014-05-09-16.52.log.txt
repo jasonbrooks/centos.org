@@ -1,0 +1,163 @@
+16:52:43 <filippoc> #startmeeting
+16:52:43 <centbot> Meeting started Fri May  9 16:52:43 2014 UTC.  The chair is filippoc. Information about MeetBot at http://wiki.debian.org/MeetBot.
+16:52:43 <centbot> Useful Commands: #action #agreed #help #info #idea #link #topic.
+16:53:07 <omarel> Are you trying to expand it to Small Business oriented as well?
+16:53:11 <filippoc> #meetingname SLS-SIG
+16:53:11 <centbot> The meeting name has been set to 'sls-sig'
+16:53:22 <JPP_kimsufi> filippoc: if you need log of this conversation I would be able to provide
+16:54:12 <filippoc> omarel, we are small business oriented
+16:54:14 <JPP_kimsufi> filippoc: but other than that no experience with meetbot
+16:55:04 <omarel> I'm still a bit confused, though. My "branding" issue is still there.  How would someone wanting a small business server find you?
+16:55:35 <daveloper> I don’t think that we need to, of necessity, be business oriented at all. Personally, I think the name presently reflects the nature of what we are trying to do. If simplified is used for business or for home or for hobby, it wouldn’t matter to me.
+16:56:18 <omarel> It may be 2 different gruops with some obvious overlap.  Perhaps dealing with th overlap is the issue.
+16:56:43 <filippoc> daveloper: next steps would involve mandatory collaboration from centos, i.e. importing packages in git, setting up the buildsys, etc
+16:57:24 <gsanchietti> omarel: the SLS SIG is a group of people with common interest. Probably more CentOS variant will born from the SIG. Each variant will have its own brand.
+16:57:27 <filippoc> I'm not sure that more than one group would be beneficial
+16:57:40 <filippoc> more variants are welcome to fill every niche
+16:57:44 <pcbaldwin> I think that a SIG can have a broad scope that covers both home and business.  The potential variants that come out of the SIG can be more focused.
+16:57:49 <JPP_kimsufi> small business oriented is an aspect, but it also adress to home users who wants an easily configurable home server. Thus the reference to what it provides, and not to whom it addresses. But good point to reference it to the public two IMOHA
+16:57:51 <daveloper> agreed, I think we’ve done what they’ve asked for as far as defining the scope of what this SIG is about. I’d hope that they would now follow through and make aspects of their buildsys available to us now.
+16:58:30 <gsanchietti> pcbaldwin: I agree
+16:58:53 <filippoc> I'm not up to date with recent centos decisions about repositories and such
+16:59:11 * Arrfab sees activity and jumps in ...
+16:59:14 <daveloper> Filippoc said, “more variants are welcome to fill every niche”… I totally agree. The point of the SIG is collaboration and standards, not necessarily unification.
+16:59:17 <omarel> I think if there are people with special interests, it amounts to SIG.  It's a demographic issue.  If there's interest, and it's specialized, then the group of people decide.
+16:59:59 <kbsingh> omarel: in the CentOS ecosystem a SIG is a group of people looking to either curate or deliver something based on and around a technology
+17:00:03 <omarel> I think from my point of view, I'm not so much interesting in a broad target.  I'd rather narrowly target it to businesses and institutions.
+17:00:29 <daveloper> demographics can be a SIG, sure, but this SIG is about “[providing] a common platform for delivering turnkey CentOS-based solutions that are managed via a web and/or REST-based interface.”
+17:00:33 <kbsingh> key being tech and code and deliver
+17:00:48 <omarel> I think personally I need to find other people with similar interests.  If the interest is there, we have another sig.
+17:00:49 <kbsingh> ( this isnt orthogonal to what you were saying omarel, but i wanted to quantify that )
+17:02:01 <omarel> Remember, this is just me, and people have different points of view, but the issues I deal with on a daily basis are different than I think SLS is dealing with.
+17:02:07 <davidep> hi all
+17:02:28 <kbsingh> omarel: a SIG can deliver more than one end result :D
+17:02:39 * alefattorini jumps in too
+17:02:42 <filippoc> omarel, your idea is totally different from the SLS SIG proposal? Or similar and could be addressed with minor modifications to SLS?
+17:02:45 <kbsingh> there is no reason why the Small business SIG cant be doing more than SLS - actually, every SIG would
+17:03:04 <kbsingh> also, i dont think its going to be called SLS SIG, is it ?
+17:03:24 <filippoc> :-)
+17:03:27 <daveloper> http://wiki.centos.org/SpecialInterestGroup/SLS
+17:03:55 <omarel> Yes it can.  You know I need to sit down and write out what I have in mind and my motivation for it.  It's more than can be elaborated her in this chat format.
+17:03:55 <kbsingh> ok, pretty sure its going to get rejected by the board
+17:04:09 <kbsingh> also, you need to make sure it clearly states that this is a proposed SIG, not accepted as yet
+17:04:21 <Arrfab> kbsingh: also worth noting that it's still a proposal, indeed
+17:04:36 <daveloper> What criteria are we missing Karanbir?
+17:04:49 <kbsingh> SIG's are interest and tech driven, not a specific deliverable
+17:04:54 <kbsingh> eg. its not the XEN SIG - its the Virt SIG
+17:05:04 <kbsingh> and its not the GLUSTER SIG- its the Storage SIG
+17:05:19 <kbsingh> the virt-sig is already working with a upstream qemu onramp and openvz is making efforts in
+17:05:27 <kbsingh> similarly the storage sig already includes ceph and gluster
+17:06:00 <pcbaldwin> The "tech" is moving from CLI and X-Windows based systems to API/REST-based interfaces.
+17:06:03 <daveloper> What specific technology are we advocating. I’m pretty sure the individual members all use different technologies to deliver a wide array of deliverables.
+17:06:22 <daveloper> For example, Filippo’s project doesn’t do what my project does and vice, versa.
+17:06:27 <kbsingh> so in that mindsetup Simplified Linux Server does not fit into the larger model at all - a Small Office SIG can however work to deliver a simplified SOHO server install set ( as an example )
+17:07:35 <kbsingh> things like this are far too ambigious "The SIG members are involved in the development and maintenance of turnkey solutions based on CentOS. "
+17:07:40 <filippoc> #action modify sls wiki page -> Status: proposal
+17:07:59 <kbsingh> what does that mean ? are you guys also working on the MIPS vlsi poc using centos in an embedded role for industrial automation ?
+17:08:03 <daveloper> SOHO seems to be more of a deliverable than Simplified Linux Server. For example, I can simplify the process for provisioning large directory services based on an array of different backends and that would not be a SOHO application. But it would still be ‘Simplified’ through a web UI.
+17:09:06 <daveloper> I don’t know about Filippo but we’ve discussed applying what we are doing to other architectures including MIPS.
+17:09:36 <filippoc> we'd like to have arm support, but we'll follow upstream
+17:09:59 <kbsingh> my understanding of this sig is that the aim is to deliver a set of solutions for small business , new linux users doing entry level admin work in small offices / soho environs
+17:11:08 <kbsingh> seondly, who is proposing the SIG to the board ? I dont see any of the CentOS Board guys on the who's involved list
+17:11:44 <daveloper> But the reason for bringing this together is to come up with common build needs and processes that are common among our technologies. For example, Filippo’s team and our team benefit from an accelarated path to getting newer PHP code. Others involved don’t need that but there are crossover needs at multiple levels.
+17:11:48 <kbsingh> what i would recommend is actually working the proposal to include specific deliverables
+17:11:53 <kbsingh> and remove stuff like "Software Maintenance - This SIG will co-ordinate maintenance of common upstream packages in order to avoid duplication and provide a better experience for all CentOS users. "
+17:12:16 <kbsingh> and "Quality Assurance - This SIG provides solutions with tight integration amongst the various applications in CentOS. This provides a unique opportunity to provide additional QA testing (e.g. Samba + OpenLDAP). "
+17:12:26 <kbsingh> basically, that deliverables section - someone needs to write one
+17:12:56 <filippoc> #action expand Deliverables section
+17:13:11 <daveloper> Are we required to have board sponsorship in order to get a SIG approved. Who can we contact then to have an advocate?
+17:13:55 <kbsingh> daveloper: the list of board members is listed on the centos website - you should be ok to contact any / all of them if you want
+17:13:56 <filippoc> I hope that Evolution could help us
+17:14:06 <kbsingh> i think he's i brazil at the moment
+17:14:07 <Arrfab> daveloper: well, the board needs to approve a SIG proposal during a board meeting, so if you don't ask, nothing will be discussed :-)
+17:14:53 <daveloper> correct, but karanbir seems to indicate that we need to have a board member on our SIG team in order for this to be a reality. I did not know that this was a requirement.
+17:15:03 <kbsingh> daveloper: it is
+17:15:24 <pcbaldwin> I thought it was a member of the dev team.  That's what's on the Wiki page.
+17:15:40 <kbsingh> a completely mature SIG, is able to do their own  process work - but we esitmate a 2 yr span from going onboard to maturity for a highly organised sig
+17:15:42 <Arrfab> daveloper: http://wiki.centos.org/SpecialInterestGroup/ but all Devteam members are on the board
+17:15:48 <filippoc> we probably need to "polish" the proposal before asking for approval
+17:16:22 <kbsingh> stuff like Clam from EPEL - but does this sig have access to influence that build in EPEL ? if not, you are already creating deadends
+17:16:30 <kbsingh> filippoc: yes please
+17:16:36 <pcbaldwin> No matter.  At this stage, we're still trying to figure out the whole role/scope of a SIG.  Even looking through the wiki and centos-devel list, there seems to be a lot of unknowns.  That's expected given that it's the early days!
+17:16:45 <Bahhumbug> Arrfab: The web page probably needs to be cleared up in that regard.
+17:17:26 <filippoc> https://bugzilla.redhat.com/show_bug.cgi?id=1018312
+17:18:30 <kbsingh> filippoc: so you need rsc to join the SIG
+17:18:48 <kbsingh> pcbaldwin: Bahhumbug: please submit patch
+17:18:56 <kbsingh> or an issue report at bugs.centos.org
+17:19:06 <filippoc> kbsingh: probably a good idea
+17:19:45 <pcbaldwin> kbsingh: patch for the wiki page??
+17:20:02 <rsc> kbsingh: hm?
+17:20:07 <Bahhumbug> It's a wiki page.  It's a 30 second edit.
+17:21:56 <kbsingh> submit patch, a community notion of saying 'come help fix that which needs attention, and since you have the attention..'
+17:21:56 <filippoc> omarel: could you write your ideas on a mail to centos-devel?
+17:22:20 <kbsingh> filippoc: daveloper: its also important to highlight what exactly is going to get done
+17:23:10 <kbsingh> eg. the QA stuff might be : develop as a part of the SIG, a test suite that can be run on a nightly basis from ci.dev.centos.org to validate a spec ( also to be developed as a part of the SIG ) - QA test harness being a precursor to code development in the SIG
+17:23:19 <filippoc> we will release rpms
+17:23:22 <daveloper> Looking at the requirements: We don’t have overlap with other SIGs so far as I can tell. We’ve opened a discussion topic and have solicited comments. Have we requested a new mailing list? We do have a wiki section. We will need version control setup. We are listed as a SIG on the SIG page. We need one Devteam member to join the team. Is there anything I missed?
+17:23:52 <filippoc> we will write a testsuite
+17:24:09 <rsc> kbsingh, filippoc: How can I help regarding RHBZ#1018312? Or what is with which SIG?
+17:24:10 <filippoc> davidep is already working on it
+17:24:11 <kbsingh> filippoc: quantifying that on the proposal will help
+17:24:44 <davidep> Arrfab, kbsingh: what about the CI platform for SIGs? any progress on it?
+17:24:45 <filippoc> rsc: sorry, it was an bad example to show that we work with epel
+17:24:52 <kbsingh> also, who is going to run the SIG, what or how are you going to bring more members in, what licenses are you guys going to use - what is the downstream going to be etc.
+17:24:59 <reetp> Filippo, you may have seen that we have been got some basic testing working....
+17:25:13 <kbsingh> get as much of this pre-done, better chances to get in through the board review
+17:25:29 <filippoc> rretp, I meant t_functional on ci.centos
+17:25:41 <filippoc> reetp sorry
+17:25:50 <kbsingh> filippoc: it does not need to be in t_functional. it can be a completely different suite
+17:26:03 <daveloper> Which SIGs have already been approved?
+17:26:11 <kbsingh> eg. the virt-sig is starting the t_xen.git suite
+17:26:21 <filippoc> I thought it was better trying to extend t_functional and improve ci.centos
+17:26:32 <filippoc> but ok
+17:26:34 * kbsingh off, call time, back in a few hours
+17:26:56 <reetp> Have a chat with Ian when you get a minute and see where they are at.
+17:26:59 <kbsingh> filippoc: thats ok as well - but ci.d.c.o can run more tests than just that
+17:28:28 <filippoc> daveloper, I'll try to exapnd the Deliverables section of our proposal
+17:28:59 <daveloper> Thanks Filippo, I’ll work with you on that in the shared doc if you like.
+17:29:26 <filippoc> maybe I could simply list rpm packages from your web page
+17:29:53 <daveloper> I’m curious as to who already has been approved so we can know what to follow or emulate.
+17:29:57 <reetp> Can you share the doc with other members of our Board ? I can give you addresses
+17:30:21 <filippoc> only virt sig I think
+17:30:44 <filippoc> reetp: sure
+17:31:02 <filippoc> I'll give you full control
+17:31:53 <daveloper> Are there any other objectives to cover here?
+17:32:02 <filippoc> mmh, we should probably start a new doc, that old one is already a wiki page
+17:32:03 <reetp> Thanks -I'm sure some of the others will chime in.
+17:32:11 <pcbaldwin> I have to head out.  At a fundamental level, it would be nice for all of us (NethServer, SME Server, ClearOS and potentially others) to have a working relationship with CentOS/RHEL.   We're part of the ecosystem and I personally have always felt like an outsider.  I'm certainly not getting the warm and fuzzies, but maybe that's just because it's IRC.  Or maybe there's a lot on the CentOS team's plate right now.  Oh well, I'll keep on
+17:32:16 <daveloper> agreed.
+17:32:36 <filippoc> agreed
+17:32:41 <pcbaldwin> keep on trucking = keep on trying to build the relationship
+17:32:50 <daveloper> Thanks Peter. I get that sense as well.
+17:33:07 <reetp> We're agreed on something then :-)
+17:33:34 <daveloper> Also a call would be good. I’ll try to set that up next week sometime.
+17:34:02 <reetp> An obvious note is that perhaps their documentation and expectation s are not really clear enough and they should address that. WE can only work to what they give us.
+17:34:06 <filippoc> I'll try to solicit comments to our sig proposal on the centos-devel ml
+17:34:39 <filippoc> #action ask for comments on centos-devel
+17:35:33 <reetp> I gotta go - only 45 mins late. Interesting and will look back through this later.
+17:35:48 <daveloper> Filippo, have we formally requested version control for our SIG?
+17:36:22 <filippoc> not sure if we did formally
+17:36:37 <daveloper> Also, we need to secure a mailing list for ourselves.
+17:36:43 <filippoc> we asked tough
+17:36:58 <daveloper> I’m not sure who we do that with on the centos team.
+17:38:21 <filippoc> keeping discussion on centos-devel for a while will probably be beneficial
+17:38:48 <filippoc> but I'm sure we need to have our ml sooner than later
+17:39:22 <kbsingh> filippoc: you need to get approved first
+17:39:33 <filippoc> #action talk to Jim for advice on a board member to sponsor the SLS SIG
+17:39:34 <kbsingh> then the resources become available immediately
+17:39:49 <filippoc> got it
+17:40:37 <daveloper> Getting a mailing list is listed as a requirement before approval.
+17:40:48 <daveloper> seemed backwards to me too
+17:41:14 <daveloper> so then the only thing we need is a devteam member on our group and then we can present, yeah?
+17:41:25 <daveloper> We’ll clean up our proposal though first.
+17:43:43 <davidep> quoting kbsingh: "key being tech and code and deliver"
+17:45:06 <filippoc> daveloper: I will ask for editing permission for you on centos wiki
+17:45:18 <daveloper> thanks
+17:45:23 <filippoc> register and send me your username
+17:46:20 <gsanchietti> daveloper, filippoc: I think we also need to extend the section about how to join the SIG and who is in charge to evaluate new members
+17:46:40 <filippoc> I'll ask for permissions for you too
+17:46:59 <filippoc> gsanchietti: register and so on...
+17:48:42 <filippoc> I'd end this meeting, but I'd like to schedule next week
+17:49:38 <alefattorini> we have a lot of stuff to do:-)
+17:50:22 <filippoc> have a nice weekend
+17:50:28 <filippoc> #endmeeting

@@ -1,0 +1,34 @@
+/* this is for the mirror list table */
+
+#CSVTable td, #CSVTable th {
+  padding: 0.5em;
+}
+
+#CSVTable th.header:first-child {
+  border-radius: 7px 0 0 0;
+}
+#CSVTable th.header:last-child {
+  border-radius: 0 7px 0 0;
+}
+
+#CSVTable th.header {
+  background: rgba(0,0,0,0.6);
+  color: #aaaaaa;
+}
+#CSVTable tr.even td {
+  background-color: rgba(0,0,0, 0.15);
+}
+
+#CSVTable th.header.headerSortUp, #CSVTable th.header.headerSortDown {
+  color: #ffffff;
+}
+
+/* this inline utf-8 might be a bit weird, but &#9662; notation doesnt work */
+th.headerSortUp:after {
+    content: " ▴";
+}
+th.headerSortDown:after {
+    content: " ▾";
+}
+
+

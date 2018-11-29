@@ -1,0 +1,511 @@
+- name: 45Drives
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/45drives.png
+  url: http://www.45drives.com/
+  
+- name: artmotion
+  sponsor: true
+  country: eu
+  is_hidden: true
+  img: /images/sponsors/am-logo.png
+  url: http://www.artmotion.eu
+  
+- name: BackupVault
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/BackupVault.png
+  url: https://www.backupvault.co.uk/
+  
+- name: baseip
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/baseip_240x60.jpg
+  url: http://www.baseip.com/
+  
+- name: castlegem
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/Banner_Castlegem_240x60.gif
+  url: http://www.castlegem.co.uk/
+  
+- name: cdn77
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/cdn77.png
+  url: http://www.cdn77.com/
+  
+- name: ch-center
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/ch-center-small.png
+  url: http://www.ch-center.com/
+  
+- name: Cloudbase Solutions
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/CentOS-CBSL-02.png
+  url: http://www.cloudbase.it
+  
+- name: codero
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/codero.png
+  url: http://www.codero.com
+  
+- name: Colocation America
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/coloamerica_small.gif
+  url: http://www.colocationamerica.com/dedicated_servers
+  
+- name: Colocation Australia Pty Ltd 
+  sponsor: true
+  country: Australia
+  is_hidden: true
+  img: /images/sponsors/coloau.png
+  url: http://coloau.com.au/
+  
+- name: Cologix
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/cologix.png
+  url: http://www.cologix.com/
+  
+- name: cologuard
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/cologuard.png
+  url: http://www.colocationguard.com/
+  
+- name: Colostore.com
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/colostore.jpeg
+  url: https://colostore.com/clients/link.php?id=1
+  
+- name: constant
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/constant.png
+  url: http://www.constant.com/
+  
+- name: Coreix
+  sponsor: true
+  country: uk
+  is_hidden: true
+  img: /images/sponsors/coreix.jpg
+  url: https://www.coreix.net/
+  
+- name: cPanel
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/cpanel.png
+  url: http://www.cpanel.com/
+  
+- name: Database By Design
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/dbd_240_60.jpg
+  url: http://www.databasebydesignllc.com
+  
+- name: Dedicatednow
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/dedicatednow.gif
+  url: http://www.dedicatednow.com/
+  
+- name: Dedicated Solutions
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/dedicatedsolutions.png
+  url: https://www.dedicatedsolutions.com/
+  
+- name: easyspace
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/iomart-240x60.gif
+  url: http://www.easyspace.com/dedserver_main.php
+  
+- name: eukhost
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/eukhost.png
+  url: http://www.eukhost.com/
+  
+- name: everex
+  sponsor: true
+  country: spain
+  is_hidden: true
+  img: /images/sponsors/everex.png
+  url: http://www.everex.es/
+  
+- name: Exabytes cloud
+  sponsor: true
+  country: malaysia
+  is_hidden: true
+  img: /images/sponsors/exabytes-my.png
+  url: http://www.exabytes.com.my/
+  
+- name: FastHosts
+  sponsor: true
+  country: uk
+  is_hidden: true
+  img: /images/sponsors/fasthosts.png
+  url: https://www.fasthosts.co.uk/
+  
+- name: Globo.Tech
+  sponsor: true
+  country: canada
+  is_hidden: true
+  img: /images/sponsors/globotech.png
+  url: http://www.globo.tech/
+  
+- name: GoDaddy
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/godaddy.jpg
+  url: http://www.godaddy.com
+  
+- name: Host1Plus
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/host1plus_logo.png
+  url: http://www.host1plus.com/
+  
+- name: hostasaurus
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/hostasaurus240x60banner.gif
+  url: http://www.hostasaurus.com/
+  
+- name: hostdime-br
+  sponsor: true
+  country: brazil
+  is_hidden: true
+  img: /images/sponsors/hostdime_br_small.jpg
+  url: http://www.hostdime.com.br
+  
+- name: hostdime
+  sponsor: true
+  country: USA
+  is_hidden: true
+  img: /images/sponsors/HostDime_Logo_Slogan_300_71.png
+  url: http://www.hostdime.com
+  
+- name: Host-Engine
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/host-engine.png
+  url: http://host-engine.com/
+  
+- name: hostiserver
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/hostiserver.png
+  url: https://www.hostiserver.com/
+  
+- name: hostkey
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/hostkey_small.gif
+  url: http://www.hostkey.com/
+  
+- name: HostStage
+  sponsor: true
+  country: france
+  is_hidden: true
+  img: /images/sponsors/host-stage.png
+  url: http://www.host-stage.net/
+  
+- name: InterNetX
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/internetx.gif
+  url: http://www.internetx.com
+  
+- name: ITsyndicate
+  sponsor: true
+  country: Ukraine
+  is_hidden: true
+  img: /images/sponsors/itsyndicate.png
+  url: https://itsyndicate.org/
+  
+- name: leaseweb
+  sponsor: true
+  country: netherlands
+  is_hidden: true
+  img: /images/sponsors/leaseweb.png
+  url: http://www.leaseweb.com/
+  
+- name: Liberty VPS
+  sponsor: true
+  country: israel
+  is_hidden: true
+  img: /images/sponsors/OffshoreVPS.png
+  url: https://libertyvps.net
+  
+- name: liquidweb
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/liquidweb.png
+  url: http://www.liquidweb.com/
+  
+- name: multacom
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/multacom-240x60.gif
+  url: http://www.multacom.com/
+  
+- name: NDCHost
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/ndc_host_240.gif
+  url: http://www.ndchost.com/
+  
+- name: netelligent
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/netelligent_small.png
+  url: http://www.netelligent.ca/centos/
+  
+- name: nexcess
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/nexcess.png
+  url: http://www.nexcess.net/
+  
+- name: Node4
+  sponsor: true
+  country: UK
+  is_hidden: true
+  img: /images/sponsors/N4_logo_colour-banner-small.jpg
+  url: http://www.node4.co.uk/managed-services/
+  
+- name: Pidgin Host 
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/pidginhost.png
+  url: http://www.pidginhost.com/
+  
+- name: Pirates Hosting
+  sponsor: true
+  country: israel
+  is_hidden: true
+  img: /images/sponsors/OffshoreServers.png
+  url: https://www.pirateshosting.net
+  
+- name: Profvds
+  sponsor: true
+  country: russia
+  is_hidden: true
+  img: /images/sponsors/profvds.png
+  url: http://www.profvds.com
+  
+   
+- name: psw group
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/PSW_Banner_240x60.jpg
+  url: http://www.psw.net/
+  
+   
+- name: Psychz Networks
+  sponsor: true
+  is_hidden: true
+  img: /images/sponsors/psychz-234x60.jpg
+  url: http://www.psychz.net/
+  
+- name: ptisp
+  sponsor: true
+  country: portugal
+  is_hidden: true
+  img: /images/sponsors/ptisp.png
+  url: http://www.ptisp.pt/
+  
+- name: redstation
+  sponsor: true
+  country: uk
+  is_hidden: true
+  img: /images/sponsors/redstation.png
+  url: http://www.redstation.com/
+  
+- name: Scaleway
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/scaleway_logo.png
+  url: http://www.scaleway.com
+  
+- name: Phoenix NAP
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/PNAP_Banner.gif
+  url: http://www.securedservers.com/landing/linux-hosting/
+  
+- name: seedvps
+  sponsor: true
+  country: netherlands
+  is_hidden: true
+  img: /images/sponsors/seedvps.png
+  url: https://www.seedvps.com/
+  
+- name: serverel
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/serverel.png
+  url: http://www.serverel.com/
+  
+- name: ServerHub
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/centos-serverhub.png
+  url: http://www.serverhub.com
+  
+- name: ServerMania
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/servermania.gif
+  url: http://servermania.com/
+  
+- name: serverpoint
+  sponsor: true
+  country: us
+  is_hidden: true
+  img: /images/sponsors/serverpoint.png
+  url: http://www.serverpoint.com
+  
+- name: serverpronto
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/serverpronto_small.gif
+  url: http://www.serverpronto.com/
+  
+- name: servint
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/srvint_small.gif
+  url: http://www.servint.com
+  
+- name: shinjiru
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/shinjirubanner260x60.gif
+  url: http://shinjiru.com/
+  
+- name: steadfast
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/steadfast.png
+  url: http://steadfast.net/
+  
+- name: Tailor Made Servers
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/tailoredservers.png
+  url: http://www.tailoredservers.com
+  
+- name: theplanet
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/theplanet.png
+  url: http://www.theplanet.com/dedicated-servers/
+  
+   
+- name: vHost
+  sponsor: true
+  is_hidden: true
+  img: /images/sponsors/vhostvn.gif
+  url: http://vhost.vn/
+  
+- name: Virtual Internet
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/2014-11-10-vi.gif
+  url: http://www.vi.net
+  
+- name: vitelity
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/vitelity.png
+  url: http://www.vitelity.net/
+  
+- name: webnx
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/webnx1.png
+  url: http://www.webnx.com
+  
+- name: Whitelabel ITSolutions
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/whitelabelitsolutions.gif
+  url: http://whitelabelitsolutions.com/
+  
+- name: wowrack
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/wow.234x60.gif
+  url: http://www.wowrack.com/
+  
+- name: Xen Project
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/ad_lfcpxen_240x60.png
+  url: http://www.xenproject.org/
+  
+- name: yourname
+  sponsor: true
+  country: usa
+  is_hidden: true
+  img: /images/sponsors/yourname_small.gif
+  url: http://www.yourname.nl/
