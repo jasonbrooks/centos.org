@@ -10,7 +10,6 @@ sudo podman run -d --name centos-jekyll -p 4000:4000 -v $(pwd):/srv/jekyll:Z jek
 ## todo
 
 * Need to figure out `media.erb`. 
-* Also, the layout is html, the jekyll-haml gem is handling haml conversion for a few haml-based pages, like the download page, but it wasn't working right for the layouts. I don't know if that's a problem.
 
 
 ***
