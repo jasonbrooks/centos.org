@@ -2,12 +2,13 @@
 title:      "CentOS Governance - Voting"
 markdown:   basic
 is_dynamic: true
+layout: default
 ---
 
 * Table of contents will replace this text.
 {:toc}
 
-#CentOS Governance - Voting
+# CentOS Governance - Voting
 {:.no_toc}
 [&laquo; Back to Governance](/about/governance)
 
@@ -17,12 +18,12 @@ Except where noted, decisions require 3 yes votes (+1) and no objections (-1's) 
 
 All -1s votes require reason/ explanation, -1's with no substantiation may be overturned. 
 
-##When do votes need to be called?
+## When do votes need to be called?
 Votes need to be called for all substantial business. Votes need to be left open for a reasonable period (not less than 72 hours) if members of the Board are not available to participate in the vote; provided that for votes/matters that have been deemed time or business critical by Red Hat, as noted below, voting must be held open until the Liaison has voted.
 
 _Lazy consensus_ may be used for non-substantial business. Lazy consensus is defined as asking for objections as opposed to calling for a vote. Any objection on lazy consensus is considered the same as a -1 on a vote. There is no minimum +1 vote requirement.
 
-##Role of the Liaison
+## Role of the Liaison
 The Liaison also has the role of dealing with issues such as security, export, or items that have a direct legal or other Red Hat business connection for the Project, and on issues of such business may have an additional role as defined by the following:
 
 A. If a decision/solution cannot be found on an issue that is deemed time and/or business critical by Red Hat then, after a reasonable time, the Liaison may be requested by the Chair to seek assistance from Red Hat in making the decision, obtaining additional input from Red Hat executives, engineers, and stakeholders.

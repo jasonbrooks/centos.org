@@ -1,5 +1,5 @@
 
-# a test converion of this site to jekyll
+# a test conversion of this site to jekyll
 
 ## test it in a container
 

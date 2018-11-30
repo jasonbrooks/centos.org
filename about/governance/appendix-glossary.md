@@ -2,12 +2,13 @@
 title:      "CentOS Governance - Appendix: Glossary"
 markdown:   basic
 is_dynamic: true
+layout: default
 ---
 
 * Table of contents will replace this text.
 {:toc}
 
-#CentOS Governance - Appendix: Glossary 
+# CentOS Governance - Appendix: Glossary 
 {:.no_toc}
 [&laquo; Back to Governance](/about/governance)
 
@@ -18,7 +19,7 @@ First and foremost, the basic tenet behind meritocracy is that people gain merit
 
 As the above shows, a meritocracy is not, therefore, a democracy proper but a pseudo-republic. The wants and desires of the community are weighed in the atmosphere of merit that enables access and control.
 
-##Consensus decision making
+## Consensus decision making
 One practice of meritocracy is the consensus-based decision model. From http://en.wikipedia.org/wiki/Consensus_decision-making, "Consensus decision-making is a group decision making process that seeks the consent of all participants." In practice, it is different from a majority-vote-wins approach. In the CentOS Project a discussion toward a decision follows this process:
 
 1. A proposal is put forth and a check for consensus is made.

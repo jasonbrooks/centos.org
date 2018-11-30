@@ -2,12 +2,13 @@
 title:      "CentOS Governance - Board Structure"
 markdown:   basic
 is_dynamic: true
+layout: default
 ---
 
 * Table of contents will replace this text.
 {:toc}
 
-#CentOS Governing Responsibilities
+# CentOS Governing Responsibilities
 {:.no_toc}
 [&laquo; Back to Governance](/about/governance)
 

@@ -2,6 +2,7 @@
 title:      "CentOS Governance - SIGs"
 markdown:   basic
 is_dynamic: true
+layout: default
 ---
 
 * Table of contents will replace this text.
@@ -21,7 +22,7 @@ SIGs are the only way for an entity to use and associate the CentOS brand with a
 
 Another type of SIG is functional, focused on maintaining parts of the Project itself, such as infrastructure, documentation, and design. A unique SIG is the Core SIG that builds and maintains the core CentOS derivative of Red Hat Enterprise Linux. It is unique because it is the central, orchestrating platform that all other variants are built from.
 
-##CentOS Core SIG Responsibilities
+## CentOS Core SIG Responsibilities
 * Build the CentOS release.
 * _Sign_ the CentOS release.
 * Push official CentOS releases to the initial mirror.
@@ -29,7 +30,7 @@ Another type of SIG is functional, focused on maintaining parts of the Project i
 * Accept changes into Git.
   * Manage Git licensing and contribution policies.
 
-##Variant SIG Responsibilities
+## Variant SIG Responsibilities
 * Create and maintain one or more variations with technology in CentOS on top of or modifications to the core base.
 * Foster a user community as a primary purpose of the variant.
   * Keep the Project artifacts (the variant) relevant and useful to the user community.
@@ -37,13 +38,13 @@ Another type of SIG is functional, focused on maintaining parts of the Project i
 * Oversee inclusions of code related to the variant in to git.centos.org.
 * Conduct the business of the SIG following accepted open source practices around meritocracy and consensus decision making.
 
-##Functional SIG Responsibilities
+## Functional SIG Responsibilities
 * Accountable for designing, building, and maintaining key Project component(s).
 * Make the functional area open for participation, with barriers to contribution as low as feasible and reasonable.
 * Foster a community of users and doers around the functional aspect, to share the responsibility, workload, and innovation.
 * Work within given legal constraints and requirements.
 
-##SIG Governance
+## SIG Governance
 
 <div class="captioned-image">
   <img class="img-responsive" src="/about/governance/sig-maturity-crossover.png" alt="Illustration" />
