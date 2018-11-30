@@ -5,3 +5,4 @@ tmp/*
 Guardfile
 output.diff
 crash.log
+_site/*
