@@ -3,6 +3,8 @@
 
 ## test it in a container
 
+Clone this repo, and then, from inside your working copy:
+
 ```
 sudo podman run -d --name centos-jekyll -p 4000:4000 -v $(pwd):/srv/jekyll:Z jekyll/jekyll jekyll serve --watch
 ```
