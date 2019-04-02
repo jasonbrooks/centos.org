@@ -3,15 +3,16 @@ title: CentOS Project
 layout: default
 ---
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script type="text/javascript" >
-$(document).ready(function () {
-        $('#divRss').FeedEk({
-            FeedUrl: 'https://www.centos.org/assets/planet.rss',
-            DescCharacterLimit:100,
-            ShowPubDate: false,
-            MaxCount: 4
-        });
-});
+<script>
+  jQuery(function($) {
+    $("#divRss").rss("https://www.centos.org/assets/planet.rss",{
+        limit: 5,
+        ssl: true,
+        dateFormat: 'dddd MMM Do',
+        entryTemplate: '<li><a href="{url}">{date} : {title}</a><br/>{shortBodyPlain}</li>'
+    },
+    )
+  })
 </script>
 
 <div class="row">
