@@ -11,7 +11,8 @@ sudo podman run -d --name centos-jekyll -p 4000:4000 -v $(pwd):/srv/jekyll:Z jek
 
 ## todo
 
-* Need to figure out `media.erb`. 
+* Check out the logical order of the different architectures in the /download section. 
+  
 
 
 ***

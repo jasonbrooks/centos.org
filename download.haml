@@ -2,6 +2,8 @@
 layout: default
 title: Download CentOS
 ---
+- major = '7'
+- monthstamp  = '1810'
 .jumbotron
   %h1 Download CentOS
   %p
@@ -12,37 +14,142 @@ title: Download CentOS
     providing mirroring or hosting, and helping other users.
   .row
     .col-sm-12
+      %h2.arch x86_64
+      %hr
+        .downloadbutton.downloadsection
+          %a( href="http://isoredirect.centos.org/centos/#{major}/isos/x86_64/CentOS-#{major}-x86_64-DVD-#{monthstamp}.iso" ) DVD ISO
+          %a( href="http://isoredirect.centos.org/centos/#{major}/isos/x86_64/CentOS-#{major}-x86_64-Everything-#{monthstamp}.iso" ) Everything ISO
+          %a( href="http://isoredirect.centos.org/centos/#{major}/isos/x86_64/CentOS-#{major}-x86_64-Minimal-#{monthstamp}.iso" ) Minimal ISO
+          %a( href="http://isoredirect.centos.org/centos/#{major}/isos/x86_64/CentOS-#{major}-x86_64-NetInstall-#{monthstamp}.iso" ) NetInstall ISO
+        .downloadbutton.downloadsection
+          %a( href="http://isoredirect.centos.org/centos/#{major}/isos/x86_64/CentOS-#{major}-x86_64-LiveGNOME-#{monthstamp}.iso" ) LiveGNOME ISO
+          %a( href="http://isoredirect.centos.org/centos/#{major}/isos/x86_64/CentOS-#{major}-x86_64-LiveKDE-#{monthstamp}.iso" ) LiveKDE ISO
+        .downloadbutton.downloadsection.small
+          %a( href="http://mirror.centos.org/centos/#{major}/isos/x86_64/sha256sum.txt" ) sha256sum
+      %h2.arch aarch64
+      %hr
+        .downloadbutton.downloadsection
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/aarch64/CentOS-#{major}-aarch64-Everything-#{monthstamp}.iso" ) Everything ISO
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/aarch64/CentOS-#{major}-aarch64-Minimal-#{monthstamp}.iso" ) Minimal ISO
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/aarch64/CentOS-#{major}-aarch64-NetInstall-#{monthstamp}.iso" ) NetInstall ISO
+        .downloadbutton.downloadsection.small
+          %a( href="http://mirror.centos.org/altarch/#{major}/isos/aarch64/sha256sum.txt" ) sha256sum
+      %h2.arch armhfp
+      %hr
+      %h3 Generic
+      %div
+        .downloadbutton.downloadsection
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/armhfp/CentOS-Userland-#{major}-armv7hl-generic-GNOME-#{monthstamp}-sda.raw.xz" ) GNOME raw.xz
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/armhfp/CentOS-Userland-#{major}-armv7hl-generic-KDE-#{monthstamp}-sda.raw.xz" ) KDE raw.xz
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/armhfp/CentOS-Userland-#{major}-armv7hl-generic-Minimal-#{monthstamp}-sda.raw.xz" ) Minimal raw.xz
+        .downloadbutton.downloadsection.small
+          %a( href="http://mirror.centos.org/altarch/#{major}/isos/armhfp/sha256sum.txt" ) sha256sum
+      %h3 Raspberry Pi 2 / 3
+      %div
+        .downloadbutton.downloadsection
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/armhfp/CentOS-Userland-#{major}-armv7hl-RaspberryPI-GNOME-#{monthstamp}-sda.raw.xz" ) GNOME raw.xz
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/armhfp/CentOS-Userland-#{major}-armv7hl-RaspberryPI-KDE-#{monthstamp}-sda.raw.xz" ) KDE raw.xz 
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/armhfp/CentOS-Userland-#{major}-armv7hl-RaspberryPI-Minimal-#{monthstamp}-sda.raw.xz" ) Minimal raw.xz
+        .downloadbutton.downloadsection.small
+          %a( href="http://mirror.centos.org/altarch/#{major}/isos/armhfp/sha256sum.txt" ) sha256sum
+      %h3 RootFS
+      %div
+        .downloadbutton.downloadsection
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/armhfp/CentOS-Userland-#{major}-armv#{major}hl-RootFS-Minimal-#{monthstamp}-sda.raw.xz" ) Minimal raw.xz
+        .downloadbutton.downloadsection.small
+          %a( href="http://mirror.centos.org/altarch/#{major}/isos/armhfp/sha256sum.txt" ) sha256sum
+      %h2.arch i386
+      %hr
+        .downloadbutton.downloadsection
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/i386/CentOS-#{major}-i386-Everything-#{monthstamp}.iso" ) Everything ISO
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/i386/CentOS-#{major}-i386-Minimal-#{monthstamp}.iso" ) Minimal ISO
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/i386/CentOS-#{major}-i386-NetInstall-#{monthstamp}.iso" ) NetInstall ISO
+        .downloadbutton.downloadsection.small
+          %a( href="http://mirror.centos.org/altarch/#{major}/isos/i386/sha256sum.txt" ) sha256sum
+      %h2.arch ppc64le
+      %hr
+        .downloadbutton.downloadsection
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/ppc64le/CentOS-#{major}-ppc64le-Everything-#{monthstamp}.iso" ) Everything ISO
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/ppc64le/CentOS-#{major}-ppc64le-Minimal-#{monthstamp}.iso" ) Minimal ISO
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/ppc64le/CentOS-#{major}-ppc64le-NetInstall-#{monthstamp}.iso" ) NetInstall ISO
+        .downloadbutton.downloadsection.small
+          %a( href="http://mirror.centos.org/altarch/#{major}/isos/ppc64le/sha256sum.txt" ) sha256sum
+      %h2.arch ppc64
+      %hr
+        .downloadbutton.downloadsection
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/ppc64/CentOS-#{major}-ppc64-Everything-#{monthstamp}.iso" ) Everything ISO
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/ppc64/CentOS-#{major}-ppc64-Minimal-#{monthstamp}.iso" ) Minimal ISO
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/ppc64/CentOS-#{major}-ppc64-NetInstall-#{monthstamp}.iso" ) NetInstall ISO
+        .downloadbutton.downloadsection.small
+          %a( href="http://mirror.centos.org/altarch/#{major}/isos/ppc64/sha256sum.txt" ) sha256sum
+      %h2.arch power9
+      %hr
+        .downloadbutton.downloadsection
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/power9/CentOS-#{major}-power9-Everything-#{monthstamp}.iso" ) Everything ISO
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/power9/CentOS-#{major}-power9-Minimal-#{monthstamp}.iso" ) Minimal ISO
+          %a( href="http://isoredirect.centos.org/altarch/#{major}/isos/power9/CentOS-#{major}-power9-NetInstall-#{monthstamp}.iso" ) NetInstall ISO
+        .downloadbutton.downloadsection.small
+          %a( href="http://mirror.centos.org/altarch/#{major}/isos/power9/sha256sum.txt" ) sha256sum
+      %h2.arch Cloud / Containers
+      %hr
+        .downloadbutton.downloadsection
+          %a( href="https://aws.amazon.com/marketplace/seller-profile?id=16cb8b03-256e-4dde-8f34-1b0f377efe89" ) Amazon
+          %a( href="https://hub.docker.com/_/centos/" ) Docker
+          %a( href="https://hub.docker.com/u/centos/" ) Docker Apps
+          %a( href="https://app.vagrantup.com/centos/boxes/#{major}" ) Vagrant
+      %h3 Generic x86_64
+      %div
+        .downloadbutton.downloadsection
+          %a( href="http://cloud.centos.org/centos/#{major}/images/CentOS-#{major}-x86_64-GenericCloud.qcow2" ) qcow2
+          %a( href="http://cloud.centos.org/centos/#{major}/images/CentOS-#{major}-x86_64-GenericCloud.qcow2c" ) qcow2c
+          %a( href="http://cloud.centos.org/centos/#{major}/images/CentOS-#{major}-x86_64-GenericCloud.qcow2.xz" ) qcow2.xz
+          %a( href="http://cloud.centos.org/centos/#{major}/images/CentOS-#{major}-x86_64-GenericCloud.raw.tar.gz" ) raw.tar.gz
+        .downloadbutton.downloadsection.small
+          %a( href="http://cloud.centos.org/centos/#{major}/images/sha256sum.txt" ) sha256sum
+      %h2.arch Atomic Host
+      %hr
+        .downloadbutton.downloadsection
+          %a( href="https://app.vagrantup.com/centos/boxes/atomic-host" ) Vagrant
+      %h3 x86_64
+      %div
+        .downloadbutton.downloadsection
+          %a( href="http://cloud.centos.org/centos/#{major}/atomic/images/CentOS-Atomic-Host-Installer.iso" ) Installer ISO
+        .downloadbutton.downloadsection.small
+          %a( href="http://cloud.centos.org/centos/#{major}/atomic/images/sha256sum.txt" ) sha256sum
+      %h3 Generic Cloud
+      %div
+        .downloadbutton.downloadsection
+          %a( href="http://cloud.centos.org/centos/#{major}/atomic/images/CentOS-Atomic-Host-GenericCloud.qcow2" ) qcow2
+          %a( href="http://cloud.centos.org/centos/#{major}/atomic/images/CentOS-Atomic-Host-GenericCloud.qcow2.gz" ) qcow2.gz
+          %a( href="http://cloud.centos.org/centos/#{major}/atomic/images/CentOS-Atomic-Host-GenericCloud.qcow2.xz" ) qcow2.xz
+        .downloadbutton.downloadsection.small
+          %a( href="http://cloud.centos.org/centos/#{major}/atomic/images/sha256sum.txt" ) sha256sum
+      %hr
       %p
-        .downloadbutton
-          %a( href="http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1804.iso" ) DVD ISO
-          %a( href="http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Everything-1804.iso" ) Everything ISO
-          %a( href="http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1804.iso" ) Minimal ISO
-      %p
+        %a( href="#x86_64" ) x86_64
         ISOs are also available
-        %a( href="http://isoredirect.centos.org/centos/7/isos/x86_64/" ) via Torrent.
+        %a( href="http://isoredirect.centos.org/centos/#{major}/isos/x86_64/" ) via Torrent.
+      %p
+        CentOS and AltArch images can be found 
+        %a( href="http://isoredirect.centos.org/" )here.
+      %p
+        Cloud, Container and Atomic images can be found
+        %a( href="https://cloud.centos.org/" ) here.
       %p
         How to
         %a( href="https://wiki.centos.org/TipsAndTricks/sha256sum" ) verify
-        your iso
-      %p
-        If the above is not for you,
-        %a( href="http://wiki.centos.org/Download" ) alternative downloads
-        might be.
+        your iso.
       %p
         The
-        %a(href="http://wiki.centos.org/Manuals/ReleaseNotes/CentOS7") release notes
+        %a(href="http://wiki.centos.org/Manuals/ReleaseNotes/CentOS#{major}") release notes
         are continuously updated to include issues and incorporate feedback from users.
-      %hr
-      %h2 Need a Cloud or Container Image?
       %p
-        %a( href="https://aws.amazon.com/marketplace/seller-profile?id=16cb8b03-256e-4dde-8f34-1b0f377efe89" ) Amazon Web Services
-      %p
-        %a( href="https://registry.hub.docker.com/_/centos/" ) Docker registry
+        If you plan to create USB boot media, please
+        %a( href="https://wiki.centos.org/HowTos/InstallFromUSBkey" ) read this first
+        to avoid damage to your system.
   .row
     .col-sm-12
       %hr
-      %p
-        %a(href="http://wiki.centos.org/Download" ) More download choices
       %p
         If you're looking for a specific (or geographically local) mirror, please check out our 
         %a(href="/download/mirrors/") list of current mirrors

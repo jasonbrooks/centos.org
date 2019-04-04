@@ -118,11 +118,12 @@ a.navbar-brand {
   padding-bottom: 12px;
 }
 
-.jumbotron h1 {
+.arch, .jumbotron h1 {
   font-weight: 200;
   color: white;
   text-shadow: 0px 0px 12px rgba(255,255,255,0.4);
 }
+
 .jumbotron p {
   font-weight: 200;
 }
@@ -170,6 +171,16 @@ a.navbar-brand {
   border-radius: 60px;
   text-align: center;
   border: 2px solid #cc6611;
+}
+
+.downloadbutton.downloadsection a {
+  font-size: 20px;
+}
+
+.downloadbutton.downloadsection.small a {
+  font-size: 14px;
+  background: linear-gradient(to bottom, #9CCD2A 0%, #82B310 100%);
+  border: 2px solid #648D05;
 }
 
 .downloadbutton a:active {
