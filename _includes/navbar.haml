@@ -9,8 +9,18 @@
         %img( src="/images/logo_small.png" )
     .navbar-collapse.collapse
       %ul.nav.navbar-nav
-        %li
-          %a( href="/download/" ) Get CentOS 
+        %li.dropdown
+          %a.dropdown-toggle( href="#learn" title="Get CentOS" data-toggle="dropdown" ) 
+            Get CentOS
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a( href="/download/" ) Download
+            %li
+              %a( href="/download/mirrors/" ) Mirrors
+            %li
+              %a( href="/download/altarch-mirrors/" ) Mirrors AltArch
+  
         %li.dropdown 
           %a.dropdown-toggle( href="#learn" title="About CentOS" data-toggle="dropdown" ) 
             About

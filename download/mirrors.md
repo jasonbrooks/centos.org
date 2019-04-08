@@ -8,7 +8,8 @@ layout: default
 CentOS welcomes new mirror sites. If you are considering setting up a
 public mirror site for CentOS, <a href="http://wiki.centos.org/HowTos/CreatePublicMirrors">please follow the mirror guidelines</a> to make
 sure that your mirror is consistent with the other mirror sites.
-If you're searching for mirrors providing AltArch content (like ppc64,ppc64le,aarch64,armfhp) please use <a href="/download/altarch-mirrors/"> this link </a>
+If you're searching for mirrors providing AltArch content (like ppc64,ppc64le,aarch64,armfhp) please use <a href="/download/altarch-mirrors/"> this link </a><br>
+To check the status of a mirror, please visit <a href="http://mirror-status.centos.org/"> mirror-status.centos.org </a>
 </p>
 
 <div id="CSVTable"></div>
